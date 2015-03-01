@@ -1,3 +1,7 @@
+# Things that Andrej and I (Malte) added:
+*.forecast
+
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
