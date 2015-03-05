@@ -6,7 +6,11 @@
 from datetime import datetime
 import time
 import urllib3
+import pickle
 
+citylist = pickle.load(open('cityfile_checked.dump','rb'))
+# get the second substring from every string
+cities_only          = [item[1] for item in citylist] 
 http = urllib3.PoolManager()
 
 
@@ -18,6 +22,8 @@ def get_xml_openweathermap(city):
           + '&units=metric' \
           + '&cnt=16' # 'cnt = 16' means next 16 days
     r = http.request('GET', url)
+    
+    print('I queried openweathermap for %s' %city)
     forecast = str(r.data)
     
     current_time = str(datetime.now())
@@ -31,6 +37,7 @@ def get_xml_openweathermap(city):
 # it is currently 03:00 o'clock, and if so, it performs the scraping task.
 while True:
     if time.strftime("%H") == "03" and time.strftime("%M") == "00":
-        get_xml_openweathermap('Berlin')
+        for city in cities_only:
+            get_xml_openweathermap(city)
     time.sleep(55)
 

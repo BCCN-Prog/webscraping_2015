@@ -1,6 +1,6 @@
 # Things that Andrej and I (Malte) added:
 *.forecast
-
+*.dump
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
