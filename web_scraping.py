@@ -8,12 +8,9 @@ import time
 import urllib3
 import pickle
 
-citylist = pickle.load(open('cityfile_checked.dump','rb'))
-# get the second substring from every string
-cities_only          = [item[1] for item in citylist] 
-http = urllib3.PoolManager()
 
 
+#### FUNCTION DEFINITIONS #####################################################
 
 def get_xml_openweathermap(city):
     url = 'http://api.openweathermap.org/data/2.5/forecast/daily?q=' \
@@ -41,3 +38,11 @@ while True:
             get_xml_openweathermap(city)
     time.sleep(55)
 
+
+
+#### IMPLEMENTATION ###########################################################
+
+citylist = pickle.load(open('cityfile_checked.dump','rb'))
+# get the second substring from every string
+cities_only          = [item[1] for item in citylist] 
+http = urllib3.PoolManager()

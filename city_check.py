@@ -1,5 +1,6 @@
 ''' This script checks which cities are available from the weather
-    providers '''
+    providers and then dumps the final "cleaned" citylist into
+    'cityfile_checked.dump'.'''
 
 
 import pickle
@@ -21,7 +22,7 @@ def check_cities(http, citylist, weatherprovider):
     indices_to_be_deleted = []
     
     for idx, city in enumerate(cities_only):
-        print('Doing query nr %d to %s for %s' % (idx, weatherprovider, city))7
+        print('Doing query nr %d to %s for %s' % (idx, weatherprovider, city))
         
         
         ## WE NEED TO FIND A METHOD THAT WORKS WITH GERMAN UMLAUT
@@ -31,8 +32,9 @@ def check_cities(http, citylist, weatherprovider):
             continue
             
         r = http.request('GET',
-                         'http://api.openweathermap.org/data/2.5/weather?q='
-                         + city + '&mode=xml')
+                         'http://api.openweathermap.org/data/2.5/weather?q='+ \
+                         city + \
+                         '&mode=xml')
         forecast = str(r.data)    
         if "Error: Not found city" in forecast:
             print("%s wasn't found on %s, deleting..." %(city, weatherprovider))
@@ -52,19 +54,25 @@ def delete_cities(citylist, indices_to_be_deleted):
     indices_to_be_deleted.reverse()
     for index in indices_to_be_deleted:
         del citylist[index]    
+        
+    
+    return citylist
 
 
 
 
-#### IMPLEMENTATION #####################################################
+#### IMPLEMENTATION ###########################################################
 
+# Import the cities that are available from the Deutscher Wetterdienst
+# The file 'current_cityfile.dump' is the output of the script 
+# get_cities.py
 citylist = pickle.load(open('current_cityfile.dump','rb'))
 
 http = urllib3.PoolManager()
 
 # get indices to cities to be deleted
 indices_to_be_deleted = check_cities(http, citylist, 'openweathermap')
-delete_cities(citylist, indices_to_be_deleted)
+citylist              = delete_cities(citylist, indices_to_be_deleted)
     
 
 pickle.dump(citylist, open('cityfile_checked.dump','wb'))
