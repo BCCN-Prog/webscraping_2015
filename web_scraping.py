@@ -5,7 +5,7 @@
 
 from datetime import datetime
 import time
-import urllib3
+import urllib
 import pickle
 
 
