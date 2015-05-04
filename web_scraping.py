@@ -1,3 +1,5 @@
+# -*- coding: utf-8 -*-
+
 ''' WARNING: for some reason it only works with Python 2.7!
     This is the actual scraping file that will be executed
     on a server and query openweathermap.org for forecasts
@@ -7,7 +9,9 @@ from datetime import datetime
 import time
 import urllib3
 import pickle
-
+import urllib
+import urllib.request
+import json
 
 
 #### FUNCTION DEFINITIONS #####################################################
@@ -29,13 +33,56 @@ def get_xml_openweathermap(city):
     text_file.write(forecast)
     text_file.close()
 
+def wundergrund_get_city_index(city):
+    '''
+    input must be a string, containing the city name alone
+    python3!!!!!
+    '''
+
+    url = 'http://api.wunderground.com/api/3a8e74a2827886a1/geolookup/'\
+    'conditions/q/DL/'+'Berlin'+'.json'
+    page = urllib.request.urlopen(url)
+    read = page.read()
+    decoded = read.decode('utf8')
+    data = json.loads(decoded)
+
+    if "location" in data.keys():     # "location" case (ambiguity)
+        return data["location"]["l"]
+    else:                               # "Berlin" case (ambiguity)
+        for cities in data["response"]["results"]:
+            if cities["country"] == "DL":
+                return cities["l"]
+
+def wundergrund_get_10days(city):
+    '''
+    input must be a string, containing the city name alone
+    python3!!!
+    city should be in English :)
+    '''
+
+    index = wundergrund_get_city_index(city)
+    url = 'http://api.wunderground.com/api/3a8e74a2827886a1/forecast10day'\
+    +index+'.json'
+    page = urllib.request.urlopen(url)
+    read = page.read()
+    decoded = read.decode('utf8')
+    data = json.loads(decoded)
+
+    print('I queried weatherunderground for %s' %city)
+    current_time = str(datetime.now())
+    out_file = city + '_' + current_time + \
+		     '_weatherunderground_10_days' + '.forecast'
+    with open( out_file, 'w') as outfile:
+        json.dump(data, outfile)
 
 # This script will essentially run forever. Every minute it checks whether
 # it is currently 03:00 o'clock, and if so, it performs the scraping task.
 while True:
     if time.strftime("%H") == "03" and time.strftime("%M") == "00":
         for city in cities_only:
+            print city
             get_xml_openweathermap(city)
+            #wundergrund_get_10days(city)
     time.sleep(55)
 
 
