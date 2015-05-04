@@ -5,6 +5,7 @@
 
 import pickle
 import re # regular expressions package
+import csv
 
 
 #### FUNCTION DEFINITIONS #####################################################
@@ -73,7 +74,10 @@ def delete_multiples(citylist):
 
 #### IMPLEMENTATION ###########################################################
 
-citylist, text_file           = get_cities('TU_Stundenwerte_Beschreibung_Stationen.txt')
-citylist           = delete_multiples(citylist)
+citylist, text_file = get_cities('TU_Stundenwerte_Beschreibung_Stationen.txt')
+citylist            = delete_multiples(citylist)
+
+with open('citylist.txt', 'w', encoding='utf-8') as myfile:
+        myfile.writelines(["%s\n" % item1  for item in citylist for item1 in item]) 
 
 pickle.dump(citylist, open('current_cityfile.dump','wb'))
