@@ -28,6 +28,8 @@ def get_xml_openweathermap(city, http):
 		     '_openweathermap_16_days' + '.forecast', "w")
     text_file.write(forecast)
     text_file.close()
+    
+    return forecast
 
 
 # This script will essentially run forever. Every minute it checks whether
@@ -48,4 +50,4 @@ cities_only          = [item[1] for item in citylist]
 
 
 http = urllib3.PoolManager()
-get_xml_openweathermap('Berlin', http)
+forecast = get_xml_openweathermap('Berlin', http)
