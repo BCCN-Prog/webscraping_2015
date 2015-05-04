@@ -1,0 +1,21 @@
+
+
+Weather.com / google service
+Temperature query (weather.com/ google.com)
+http://dsx.weather.com/%28wxd/v2/MORecord;wxd/v2/wwir;wxd/v2/PastFlu;wxd/v2/SkiResorts;wxd/v2/DIRecord;wxd/v2/DFRecord;wxd/v2/DHRecord;wxd/v2/BERecord;wxd/v2/Pollen;wxd/v2/airportDelays;wxd/v2/TIRecord;wxd/v2/WMRecord%29/%28en_US/GMXX0010:1:GM%29?api=01119904-40b2-4f81-94a0-57867d0fd22c
+
+
+http://dsx.weather.com/(wxd/v2/MORecord;wxd/v2/wwir;wxd/v2/PastFlu;wxd/v2/SkiResorts;wxd/v2/DIRecord;wxd/v2/DFRecord;wxd/v2/DHRecord;wxd/v2/BERecord;wxd/v2/Pollen;wxd/v2/airportDelays;wxd/v2/TIRecord;wxd/v2/WMRecord)/(en_US/GMXX0010:1:GM)?api=01119904-40b2-4f81-94a0-57867d0fd22c
+
+
+city index query
+http://wxdata.weather.com/wxdata/ta/berlin,germany.js?locType=1&cb=twctacb_575661617_4&key=2227ef4c-dfa4-11e0-80d5-0022198344f4&max=20&locale=en_US
+
+
+Plan:
+Translate German city list to weather.comable names.
+Generate city indices for the weather.com api from the city list.
+
+Parsing the json given by the weather.com service using python.
+
+
