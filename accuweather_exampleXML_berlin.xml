@@ -1,0 +1,362 @@
+<?xml version="1.0"  encoding="utf-8"?>
+	<adc_database xmlns="http://www.accuweather.com">
+		<units>
+			<temp>F</temp>
+			<dist>MI</dist>
+			<speed>MPH</speed>
+			<pres>IN</pres>
+			<prec>IN</prec>
+		</units>
+	
+	<local>
+	<city>Berlin</city>
+        
+	<adminArea code="BE">Berlin</adminArea> 
+        <country code="DE">Germany</country>
+	<cityId>178087</cityId>
+	<primaryPostalCode>10178</primaryPostalCode>
+	
+    <locationKey>178087</locationKey>
+	
+	<lat>52.51767</lat> 
+	<lon>13.40554</lon> 
+	<time>10:02</time> 
+	<timeZone>1</timeZone>
+	<obsDaylight>
+	1
+	</obsDaylight>
+	<currentGmtOffset>2</currentGmtOffset>
+	<timeZoneAbbreviation>CEST</timeZoneAbbreviation>	
+	</local>
+	
+                <currentconditions daylight="True">
+                    <url>http://www.accuweather.com/en-us/DE/BE/Berlin/Quick-Look.aspx?p=realtek&amp;cityId=178087</url>
+			<observationtime>10:02 AM</observationtime>
+			<temperature>61</temperature>
+			<realfeel>59</realfeel>
+			<humidity>72%</humidity>
+			<weathertext>Mostly cloudy</weathertext>
+			<weathericon>06</weathericon>
+			<windspeed>16</windspeed>
+			<winddirection>W</winddirection>
+			<precip>0.00</precip>
+			<uvindex index="3">Moderate</uvindex>
+			<apparenttemp>65</apparenttemp>
+		</currentconditions>
+
+			<images>
+				<url>http://www.accuweather.com/en-us/DE/BE/Berlin/Satellite.aspx?partner=realtek</url>
+					<radar>
+						http://sirocco.accuweather.com/sat_mosaic_400x300c/ir/isEUR3.gif
+					</radar>
+				
+			</images>
+		
+			<forecast>
+				<url>http://www.accuweather.com/en-us/DE/BE/Berlin/Forecast.aspx?p=realtek&amp;cityId=178087</url>
+					
+					<day number="1">
+						<url>http://www.accuweather.com/en-us/DE/BE/Berlin/Details1.aspx?partner=realtek&amp;cityId=178087</url>
+					<obsdate>5/4/2015</obsdate>
+					<daycode>Monday</daycode>
+					
+						<sunrise>5:29 AM</sunrise>
+						<sunset>8:37 PM</sunset>
+					
+					<daytime>
+						<txtshort>Pleasant with clouds and sun</txtshort>
+						<txtlong>Comfortable with a blend of sunshine and clouds</txtlong>
+						<weathericon>04</weathericon>
+						<hightemperature>69</hightemperature>
+						<lowtemperature>52</lowtemperature>
+						<realfeelhigh>70</realfeelhigh>
+						<realfeellow>56</realfeellow>
+						<windspeed>10</windspeed>
+						<winddirection>SSW</winddirection>
+						<maxuv>5</maxuv>
+						<rainamount>0.00</rainamount>
+						<snowamount>0.0</snowamount>
+						<tstormprob>0</tstormprob>
+					</daytime>
+					<nighttime>
+						<txtshort>Partly cloudy</txtshort>
+						<txtlong>Partly cloudy</txtlong>
+						<weathericon>36</weathericon>
+						<hightemperature>69</hightemperature>
+						<lowtemperature>52</lowtemperature>
+						<realfeelhigh>64</realfeelhigh>
+						<realfeellow>52</realfeellow>
+						<windspeed>5</windspeed>
+						<winddirection>SE</winddirection>
+						<maxuv>5</maxuv>
+						<rainamount>0.00</rainamount>
+						<snowamount>0.0</snowamount>
+						<tstormprob>0</tstormprob>
+					</nighttime>
+
+					</day>
+				
+					
+					<day number="2">
+						<url>http://www.accuweather.com/en-us/DE/BE/Berlin/Details2.aspx?partner=realtek&amp;cityId=178087</url>
+					<obsdate>5/5/2015</obsdate>
+					<daycode>Tuesday</daycode>
+					
+						<sunrise>5:27 AM</sunrise>
+						<sunset>8:39 PM</sunset>
+					
+					<daytime>
+						<txtshort>An afternoon t-storm or two</txtshort>
+						<txtlong>Very warm with periods of clouds and sunshine; an afternoon thunderstorm or two</txtlong>
+						<weathericon>17</weathericon>
+						<hightemperature>78</hightemperature>
+						<lowtemperature>54</lowtemperature>
+						<realfeelhigh>78</realfeelhigh>
+						<realfeellow>59</realfeellow>
+						<windspeed>11</windspeed>
+						<winddirection>S</winddirection>
+						<maxuv>5</maxuv>
+						<rainamount>0.10</rainamount>
+						<snowamount>0.0</snowamount>
+						<tstormprob>60</tstormprob>
+					</daytime>
+					<nighttime>
+						<txtshort>A shower early; clouds</txtshort>
+						<txtlong>A passing evening shower; otherwise, considerable cloudiness</txtlong>
+						<weathericon>12</weathericon>
+						<hightemperature>78</hightemperature>
+						<lowtemperature>54</lowtemperature>
+						<realfeelhigh>70</realfeelhigh>
+						<realfeellow>52</realfeellow>
+						<windspeed>10</windspeed>
+						<winddirection>SW</winddirection>
+						<maxuv>5</maxuv>
+						<rainamount>0.02</rainamount>
+						<snowamount>0.0</snowamount>
+						<tstormprob>60</tstormprob>
+					</nighttime>
+
+					</day>
+				
+					
+					<day number="3">
+						<url>http://www.accuweather.com/en-us/DE/BE/Berlin/Details3.aspx?partner=realtek&amp;cityId=178087</url>
+					<obsdate>5/6/2015</obsdate>
+					<daycode>Wednesday</daycode>
+					
+						<sunrise>5:25 AM</sunrise>
+						<sunset>8:40 PM</sunset>
+					
+					<daytime>
+						<txtshort>Periods of sun; not as warm</txtshort>
+						<txtlong>Not as warm with intervals of clouds and sunshine</txtlong>
+						<weathericon>04</weathericon>
+						<hightemperature>67</hightemperature>
+						<lowtemperature>48</lowtemperature>
+						<realfeelhigh>68</realfeelhigh>
+						<realfeellow>52</realfeellow>
+						<windspeed>8</windspeed>
+						<winddirection>WSW</winddirection>
+						<maxuv>4</maxuv>
+						<rainamount>0.00</rainamount>
+						<snowamount>0.0</snowamount>
+						<tstormprob>0</tstormprob>
+					</daytime>
+					<nighttime>
+						<txtshort>Clear to partly cloudy</txtshort>
+						<txtlong>Clear to partly cloudy</txtlong>
+						<weathericon>34</weathericon>
+						<hightemperature>67</hightemperature>
+						<lowtemperature>48</lowtemperature>
+						<realfeelhigh>59</realfeelhigh>
+						<realfeellow>44</realfeellow>
+						<windspeed>7</windspeed>
+						<winddirection>WSW</winddirection>
+						<maxuv>4</maxuv>
+						<rainamount>0.00</rainamount>
+						<snowamount>0.0</snowamount>
+						<tstormprob>0</tstormprob>
+					</nighttime>
+
+					</day>
+				
+					
+					<day number="4">
+						<url>http://www.accuweather.com/en-us/DE/BE/Berlin/Details4.aspx?partner=realtek&amp;cityId=178087</url>
+					<obsdate>5/7/2015</obsdate>
+					<daycode>Thursday</daycode>
+					
+						<sunrise>5:24 AM</sunrise>
+						<sunset>8:42 PM</sunset>
+					
+					<daytime>
+						<txtshort>Sunshine and some clouds</txtshort>
+						<txtlong>Sunshine and some clouds</txtlong>
+						<weathericon>03</weathericon>
+						<hightemperature>63</hightemperature>
+						<lowtemperature>43</lowtemperature>
+						<realfeelhigh>62</realfeelhigh>
+						<realfeellow>48</realfeellow>
+						<windspeed>12</windspeed>
+						<winddirection>W</winddirection>
+						<maxuv>5</maxuv>
+						<rainamount>0.00</rainamount>
+						<snowamount>0.0</snowamount>
+						<tstormprob>0</tstormprob>
+					</daytime>
+					<nighttime>
+						<txtshort>Clear</txtshort>
+						<txtlong>Clear</txtlong>
+						<weathericon>33</weathericon>
+						<hightemperature>63</hightemperature>
+						<lowtemperature>43</lowtemperature>
+						<realfeelhigh>53</realfeelhigh>
+						<realfeellow>41</realfeellow>
+						<windspeed>5</windspeed>
+						<winddirection>W</winddirection>
+						<maxuv>5</maxuv>
+						<rainamount>0.00</rainamount>
+						<snowamount>0.0</snowamount>
+						<tstormprob>0</tstormprob>
+					</nighttime>
+
+					</day>
+				
+					
+					<day number="5">
+						<url>http://www.accuweather.com/en-us/DE/BE/Berlin/Details5.aspx?partner=realtek&amp;cityId=178087</url>
+					<obsdate>5/8/2015</obsdate>
+					<daycode>Friday</daycode>
+					
+						<sunrise>5:22 AM</sunrise>
+						<sunset>8:44 PM</sunset>
+					
+					<daytime>
+						<txtshort>Partly sunny</txtshort>
+						<txtlong>Partly sunny</txtlong>
+						<weathericon>03</weathericon>
+						<hightemperature>65</hightemperature>
+						<lowtemperature>49</lowtemperature>
+						<realfeelhigh>71</realfeelhigh>
+						<realfeellow>52</realfeellow>
+						<windspeed>5</windspeed>
+						<winddirection>N</winddirection>
+						<maxuv>5</maxuv>
+						<rainamount>0.00</rainamount>
+						<snowamount>0.0</snowamount>
+						<tstormprob>0</tstormprob>
+					</daytime>
+					<nighttime>
+						<txtshort>Partly cloudy</txtshort>
+						<txtlong>Partly cloudy</txtlong>
+						<weathericon>35</weathericon>
+						<hightemperature>65</hightemperature>
+						<lowtemperature>49</lowtemperature>
+						<realfeelhigh>57</realfeelhigh>
+						<realfeellow>47</realfeellow>
+						<windspeed>5</windspeed>
+						<winddirection>ENE</winddirection>
+						<maxuv>5</maxuv>
+						<rainamount>0.00</rainamount>
+						<snowamount>0.0</snowamount>
+						<tstormprob>0</tstormprob>
+					</nighttime>
+
+					</day>
+				
+					
+					<day number="6">
+						<url>http://www.accuweather.com/en-us/DE/BE/Berlin/Details6.aspx?partner=realtek&amp;cityId=178087</url>
+					<obsdate>5/9/2015</obsdate>
+					<daycode>Saturday</daycode>
+					
+						<sunrise>5:20 AM</sunrise>
+						<sunset>8:45 PM</sunset>
+					
+					<daytime>
+						<txtshort>Partly sunny</txtshort>
+						<txtlong>Partly sunny</txtlong>
+						<weathericon>03</weathericon>
+						<hightemperature>67</hightemperature>
+						<lowtemperature>49</lowtemperature>
+						<realfeelhigh>69</realfeelhigh>
+						<realfeellow>54</realfeellow>
+						<windspeed>11</windspeed>
+						<winddirection>NNE</winddirection>
+						<maxuv>6</maxuv>
+						<rainamount>0.00</rainamount>
+						<snowamount>0.0</snowamount>
+						<tstormprob>0</tstormprob>
+					</daytime>
+					<nighttime>
+						<txtshort>Partly cloudy</txtshort>
+						<txtlong>Partly cloudy</txtlong>
+						<weathericon>36</weathericon>
+						<hightemperature>67</hightemperature>
+						<lowtemperature>49</lowtemperature>
+						<realfeelhigh>53</realfeelhigh>
+						<realfeellow>45</realfeellow>
+						<windspeed>8</windspeed>
+						<winddirection>NNW</winddirection>
+						<maxuv>6</maxuv>
+						<rainamount>0.00</rainamount>
+						<snowamount>0.0</snowamount>
+						<tstormprob>0</tstormprob>
+					</nighttime>
+
+					</day>
+				
+					
+					<day number="7">
+						<url>http://www.accuweather.com/en-us/DE/BE/Berlin/Details7.aspx?partner=realtek&amp;cityId=178087</url>
+					<obsdate>5/10/2015</obsdate>
+					<daycode>Sunday</daycode>
+					
+						<sunrise>5:18 AM</sunrise>
+						<sunset>8:47 PM</sunset>
+					
+					<daytime>
+						<txtshort>Clouds and limited sun</txtshort>
+						<txtlong>Clouds and limited sun</txtlong>
+						<weathericon>06</weathericon>
+						<hightemperature>62</hightemperature>
+						<lowtemperature>43</lowtemperature>
+						<realfeelhigh>62</realfeelhigh>
+						<realfeellow>52</realfeellow>
+						<windspeed>6</windspeed>
+						<winddirection>W</winddirection>
+						<maxuv>4</maxuv>
+						<rainamount>0.00</rainamount>
+						<snowamount>0.0</snowamount>
+						<tstormprob>0</tstormprob>
+					</daytime>
+					<nighttime>
+						<txtshort>Mainly clear</txtshort>
+						<txtlong>Mainly clear</txtlong>
+						<weathericon>34</weathericon>
+						<hightemperature>62</hightemperature>
+						<lowtemperature>43</lowtemperature>
+						<realfeelhigh>57</realfeelhigh>
+						<realfeellow>42</realfeellow>
+						<windspeed>4</windspeed>
+						<winddirection>W</winddirection>
+						<maxuv>4</maxuv>
+						<rainamount>0.00</rainamount>
+						<snowamount>0.0</snowamount>
+						<tstormprob>0</tstormprob>
+					</nighttime>
+
+					</day>
+				
+			</forecast>
+			
+			    <indices>
+					<indice name="outdoor" value="9"></indice>
+
+		        </indices>
+		    
+		<copyright>Copyright 2015 AccuWeather.com</copyright>
+		<use>This document is intended only for use by authorized licensees of AccuWeather.com. Unauthorized use is prohibited. All Rights Reserved.</use>
+		<product>realtek</product>
+		<redistribution>Redistribution Prohibited.</redistribution>
+	</adc_database>
