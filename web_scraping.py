@@ -16,7 +16,7 @@ import json
 
 #### FUNCTION DEFINITIONS #####################################################
 
-def get_xml_openweathermap(city):
+def get_xml_openweathermap(city, http):
     url = 'http://api.openweathermap.org/data/2.5/forecast/daily?q=' \
           + city \
           + '&mode=xml' \
@@ -32,6 +32,8 @@ def get_xml_openweathermap(city):
 		     '_openweathermap_16_days' + '.forecast', "w")
     text_file.write(forecast)
     text_file.close()
+    
+    return forecast
 
 def wundergrund_get_city_index(city):
     '''
@@ -77,6 +79,7 @@ def wundergrund_get_10days(city):
 
 # This script will essentially run forever. Every minute it checks whether
 # it is currently 03:00 o'clock, and if so, it performs the scraping task.
+
 while True:
     if time.strftime("%H") == "03" and time.strftime("%M") == "00":
         for city in cities_only:
@@ -92,4 +95,7 @@ while True:
 citylist = pickle.load(open('cityfile_checked.dump','rb'))
 # get the second substring from every string
 cities_only          = [item[1] for item in citylist] 
+
+
 http = urllib3.PoolManager()
+forecast = get_xml_openweathermap('Berlin', http)

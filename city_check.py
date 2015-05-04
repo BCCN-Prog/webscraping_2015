@@ -34,7 +34,7 @@ def check_cities(http, citylist, weatherprovider):
         r = http.request('GET',
                          'http://api.openweathermap.org/data/2.5/weather?q='+ \
                          city + \
-                         '&mode=xml')
+                         ', Germany&mode=xml')
         forecast = str(r.data)    
         if "Error: Not found city" in forecast:
             print("%s wasn't found on %s, deleting..." %(city, weatherprovider))
@@ -73,6 +73,7 @@ http = urllib3.PoolManager()
 # get indices to cities to be deleted
 indices_to_be_deleted = check_cities(http, citylist, 'openweathermap')
 citylist              = delete_cities(citylist, indices_to_be_deleted)
-    
+
+ 
 
 pickle.dump(citylist, open('cityfile_checked.dump','wb'))
