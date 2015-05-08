@@ -1,6 +1,6 @@
 ''' This file gets the cities from the Deutscher Wetterdienst
     website file (a file of the name
-    'TU_Stundenwerte_Beschreibung_Stationen.txt must already be in the
+    'TU_Stundenwerte_Beschreibung_Stationen.txt' must already be in the
     current folder) and saves it into the file 'current_cityfile.dump'.'''
 
 import pickle
