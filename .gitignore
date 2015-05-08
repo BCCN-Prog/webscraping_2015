@@ -1,3 +1,6 @@
+# kill Maltimore's *~ files
+*~
+
 # Things that Andrej and I (Malte) added:
 *.forecast
 *.dump
