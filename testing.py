@@ -1,2 +1,1 @@
-
-import ws.plugins_master_testing
+import ws.plugins_master
