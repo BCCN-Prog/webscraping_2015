@@ -17,7 +17,7 @@ def generate_forecast_filepath(pname, city):
     forecasts/city/pname
     """
     posix_time = time.time()
-    utc_posix_time = posix_time - time.timezone
+    utc_posix_time = posix_time + time.timezone
 
     forecast_dir = os.path.join('forecasts', city, pname)
     if not os.path.exists(forecast_dir):
