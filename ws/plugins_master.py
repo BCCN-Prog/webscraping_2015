@@ -1,6 +1,7 @@
 from .plugins import *
 import urllib
 import time
+import pickle
 
 
 def download_from_url(url):
@@ -33,10 +34,12 @@ def save_to_disk(data, filepath):
     fs.write(data)
     fs.close()
 
+print('plugins_master was run')
 
 citylist = pickle.load(open('citylist.dump', 'rb'))
 
 for city in citylist:
+    print("I'm working on city " + str(city))
     for pname in list_plugins():
         p = load_plugin(pname)
         url = p.build_url(city)
