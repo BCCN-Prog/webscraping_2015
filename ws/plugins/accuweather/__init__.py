@@ -15,10 +15,9 @@ lookupmatrix = pickle.load(open( \
 lookuplist = lookupmatrix.tolist()
 
 def build_url(city):
-    print(city)
     # check whether input is a string
     if type(city) != str:
-        raise(bad.City())
+        raise(bad.Type("The input city " +str(city) +" wasn't of type string"))
         
     
     index = lookuplist[1].index(city)
@@ -27,10 +26,5 @@ def build_url(city):
     url = 'http://realtek.accu-weather.com/widget/realtek/weather-data.asp' \
           + '?location=cityId:' \
           + str(accuweather_index)
-          
-    
-          
-    return url
-    
 
-#print(build_url('babelsberg'))
+    return url

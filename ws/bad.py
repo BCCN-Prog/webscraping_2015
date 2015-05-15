@@ -2,4 +2,7 @@
 
 class City(Exception):
     """Cannot fetch weather forcast for city."""
+    print("Cannot fetch weather forcast for city.")
+    
+class Type(Exception):
     pass
