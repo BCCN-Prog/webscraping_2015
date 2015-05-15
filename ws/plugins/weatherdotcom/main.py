@@ -3,7 +3,7 @@
 ##### This is weather.com ###
 
 import urllib
-import ws.bad
+import ws.bad as bad
 import json
 
 def weathercom_get_city_index(city): 
@@ -44,7 +44,7 @@ def build_url(city):
                 if cities["country"] == "DL":
                     cityname = cities["l"]
         except:
-            raise bad.city()
+            raise bad.City()
             
     forecasturl = 'http://api.wunderground.com/api/3a8e74a2827886a1/forecast10day'\
     +cityname+'.json'
