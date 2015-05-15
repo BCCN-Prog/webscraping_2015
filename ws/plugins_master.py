@@ -41,8 +41,10 @@ citylist = pickle.load(open('citylist.dump', 'rb'))
 for city in citylist:
     print("I'm working on city " + str(city))
     for pname in list_plugins():
+        print('Working on ' +str(pname) + ' provider')
+        print(type(pname))
         p = load_plugin(pname)
-        url = p.build_url(city)
+        url = p.build_url(str(city))
         forecast_data = download_from_url(url)
         filepath = generate_forecast_filepath(pname, city)
         save_to_disk(forecast_data, filepath)

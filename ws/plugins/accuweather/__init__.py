@@ -3,7 +3,7 @@ import numpy as np
 import pickle
 import os
 import sys
-#import ws.bad
+import ws.bad as bad
 
 mydir = os.path.abspath(os.path.dirname(__file__))
 
@@ -15,10 +15,10 @@ lookupmatrix = pickle.load(open( \
 lookuplist = lookupmatrix.tolist()
 
 def build_url(city):
-    
+    print(city)
     # check whether input is a string
     if type(city) != str:
-        raise(bad.type('input is not string'))
+        raise(bad.City())
         
     
     index = lookuplist[1].index(city)
