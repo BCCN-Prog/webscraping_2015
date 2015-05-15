@@ -1,6 +1,7 @@
 from .plugins import *
 import urllib
 
+
 l = list_plugins()
 print(l)
 
@@ -35,6 +36,7 @@ def save_to_disk(data, filepath):
     text_file.close()
 
     return forecast
+
 
 plugins = list_plugins()
 for city in citylist:
