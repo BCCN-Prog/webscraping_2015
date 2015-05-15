@@ -44,4 +44,4 @@ def list_plugins():
                 not in _bad_plugins()):
             l.append(sub_package)
 
-    return l
+    return sorted(l)
