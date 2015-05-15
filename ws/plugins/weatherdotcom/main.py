@@ -3,6 +3,7 @@
 ##### This is weather.com ###
 
 import urllib
+import ws.bad
 
 def weathercom_get_city_index(city): 
     '''
