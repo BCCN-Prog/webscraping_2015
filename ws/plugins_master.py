@@ -1,11 +1,7 @@
 from .plugins import *
 import urllib
+import time
 
-l = list_plugins()
-print(l)
-
-o = load_plugin(l[0]).build_url('test')
-print(o)
 
 def download_from_url(url):
     http = urllib.PoolManager()
@@ -15,31 +11,36 @@ def download_from_url(url):
     return data
 
 
-def generate_forecast_filepath(pname, city, ):
+def generate_forecast_filepath(pname, city):
     """
     forecasts/pname/city/
     """
     posix_time = time.time()
     utc_posix_time = posix_time - time.timezone
-    # create directory
 
-    if not os.path.exists(directory):
-        os.makedirs(directory)
+    forecast_dir = os.path.join('forecasts', pname, city)
+    if not os.path.exists(forecast_dir):
+        os.makedirs(forecast_dir)
 
+    filename = utc_posix_time.replace('.', 's', 1) + '.forecast'
+    forecast_path = os.path.join(forecast_dir, filename)
 
-    filepath = city + '_' + current_time + \ '_openweathermap_16_days' + '.forecast'
+    return forecast_path
+
 
 def save_to_disk(data, filepath):
-    text_file = open(, "w")
-    text_file.write(forecast)
-    text_file.close()
+    fs = open(filepath, 'w')
+    fs.write(data)
+    fs.close()
 
-    return forecast
 
-plugins = list_plugins()
+citylist = pickle.load(open('citylist.dump', 'rb'))
+
 for city in citylist:
-    for pname in plugins:
+    for pname in list_plugins():
         p = load_plugin(pname)
         url = p.build_url(city)
-        weather_data = download_from_url(url)
+        forecast_data = download_from_url(url)
+        filepath = generate_forecast_filepath(pname, city)
+        save_to_disk(forecast_data, filepath)
 
