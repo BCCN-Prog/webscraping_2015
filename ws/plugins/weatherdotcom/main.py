@@ -4,6 +4,7 @@
 
 import urllib
 import ws.bad
+import json
 
 def weathercom_get_city_index(city): 
     '''
