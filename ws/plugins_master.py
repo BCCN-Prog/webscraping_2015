@@ -1,14 +1,13 @@
 from .plugins import *
-import urllib
+import urllib.request
 import time
 import pickle
 import os
 
 
 def download_from_url(url):
-    http = urllib.PoolManager()
-    r = http.request('GET', url)
-    data = str(r.data)
+    r = urllib.request.urlopen(url)
+    data = str(r.read())
 
     return data
 
@@ -24,7 +23,7 @@ def generate_forecast_filepath(pname, city):
     if not os.path.exists(forecast_dir):
         os.makedirs(forecast_dir)
 
-    filename = utc_posix_time.replace('.', 's', 1) + '.forecast'
+    filename = str(utc_posix_time).replace('.', 's', 1) + '.forecast'
     forecast_path = os.path.join(forecast_dir, filename)
 
     return forecast_path
