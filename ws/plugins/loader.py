@@ -35,7 +35,7 @@ def _bad_plugins():
 
 
 def list_plugins():
-    """Return a list with all plugins."""
+    """Return a sorted list with all plugins."""
     l = []
 
     my_dir = os.path.dirname(os.path.realpath(__file__))
