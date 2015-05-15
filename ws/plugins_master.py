@@ -38,14 +38,17 @@ print('plugins_master was run')
 
 citylist = pickle.load(open(os.path.join('ws', 'citylist.dump'), 'rb'))
 
-for city in citylist:
-    print("I'm working on city " + str(city))
-    for pname in list_plugins():
-        print('Working on ' +str(pname) + ' provider')
-        print(type(pname))
-        p = load_plugin(pname)
-        url = p.build_url(str(city))
-        forecast_data = download_from_url(url)
-        filepath = generate_forecast_filepath(pname, city)
-        save_to_disk(forecast_data, filepath)
-
+while True:
+    if time.strftime("%H") == "03" and time.strftime("%M") == "00":
+        for city in citylist:
+            print("I'm working on city " + str(city))
+            for pname in list_plugins():
+                print('Working on ' +str(pname) + ' provider')
+                p = load_plugin(pname)
+                try:
+                    url = p.build_url(str(city))
+                except:
+                    pass
+                forecast_data = download_from_url(url)
+                filepath = generate_forecast_filepath(pname, city)
+                save_to_disk(forecast_data, filepath)
