@@ -1,4 +1,4 @@
 from sys import argv
-from cli import cli
+from ws.cli import cli
 
 cli(argv)

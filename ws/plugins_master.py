@@ -6,7 +6,7 @@ import logging
 import ws.bad as bad
 import urllib.error
 import http.client
-from tools import misc
+from .tools import misc
 
 
 def generate_forecast_filepath(pname, city, basepath=''):
