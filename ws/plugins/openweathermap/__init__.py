@@ -1,6 +1,8 @@
-import ws.bad as bad
+#import ws.bad as bad
+from time import sleep
 
 def build_url(city):
+    sleep(.2)
     # check whether input is a string
     if type(city) != str:
         raise(bad.Type("The input city " +str(city) +" wasn't of type string"))

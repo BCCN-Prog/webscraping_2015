@@ -9,7 +9,10 @@ import ws.bad as bad
 
 def download_from_url(url):
     """Download url and return the content."""
-    r = urllib.request.urlopen(url)
+    try:
+        r = urllib.request.urlopen(url)
+    except:
+        return "Received errorcode from server"
     data = str(r.read())
 
     return data
@@ -60,10 +63,16 @@ def store_forecast(city, pname, basepath=''):
     try:
         url = p.build_url(city)
         forecast_data = download_from_url(url)
+        
+        # check whether downloading from url worked
+        if forecast_data == "Received errorcode from server":
+            raise RuntimeError()
         filepath = generate_forecast_filepath(pname, city, basepath)
         save_to_disk(forecast_data, filepath)
     except bad.City:
         logging.error('plugin %s cannot deal with city %s', pname, city)
+    except:
+        logging.error("Plugin %s received server error for city %s", pname, city)
 
     return forecast_data
 
