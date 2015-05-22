@@ -15,7 +15,7 @@ def build_url(city):
     input must be a string, containing the city name alone
     '''
     
-    url = 'http://api.wunderground.com/api/'+return_wundergroud_key+\
+    url = 'http://api.wunderground.com/api/'+return_wundergroud_key()+\
     '/geolookup/conditions/q/DL/'+city+'.json'
     page = urllib.request.urlopen(url) 
     read = page.read()
@@ -32,7 +32,7 @@ def build_url(city):
         except:
             raise bad.city()
             
-    forecasturl = 'http://api.wunderground.com/api/'+return_wundergroud_key+\
+    forecasturl = 'http://api.wunderground.com/api/'+return_wundergroud_key()+\
     '/forecast10day'+cityname+'.json'
     return forecasturl
 
