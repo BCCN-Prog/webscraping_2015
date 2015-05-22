@@ -7,6 +7,7 @@ import ws.bad as bad
 import urllib.error
 import http.client
 from .tools import misc
+import multiprocessing
 
 
 def generate_forecast_filepath(pname, city, basepath=''):
@@ -18,8 +19,8 @@ def generate_forecast_filepath(pname, city, basepath=''):
     utc_posix_time = posix_time + time.timezone
 
     forecast_dir = os.path.join(basepath, city, pname)
-    if not os.path.exists(forecast_dir):
-        os.makedirs(forecast_dir)
+    # exist_ok=True to make the function thread safe.
+    os.makedirs(forecast_dir, exist_ok=True)
 
     filename = str(utc_posix_time).replace('.', 's', 1) + '.forecast'
     forecast_path = os.path.join(forecast_dir, filename)
@@ -60,8 +61,18 @@ def store_forecast(city, pname, basepath=''):
     return forecast_data
 
 
-def store_forecasts(cities, pnames, basepath=''):
-    """store_forecast but takes list of cities and plugin names."""
+def store_forecasts_loop(cities, pname, basepath=''):
     for city in list(cities):
-        for pname in list(pnames):
-            store_forecast(city, pname, basepath)
+        store_forecast(city, pname, basepath)
+
+
+def store_forecasts(cities, pnames, basepath=''):
+    """store_forecast but takes list of cities and plugin names.
+
+    Each plugin gets its own process. This way a plugin can rate limit without
+    blocking the others.
+    """
+    for pname in list(pnames):
+        p = multiprocessing.Process(target=store_forecasts_loop,
+                                    args=(cities, pname, basepath))
+        p.start()
