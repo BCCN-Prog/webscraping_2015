@@ -1,0 +1,5501 @@
+{
+    "3": {
+        "Bundesland": "Nordrhein-Westfalen",
+        "Stationshoehe": 202.0,
+        "Stationsname": "Aachen",
+        "bis_datum": 20110331,
+        "geoBreite": 50.7827,
+        "geoLaenge": 6.0941,
+        "von_datum": 19500401
+    },
+    "44": {
+        "Bundesland": "Niedersachsen",
+        "Stationshoehe": 44.0,
+        "Stationsname": "Gro\u00dfenkneten",
+        "bis_datum": 20150227,
+        "geoBreite": 52.9335,
+        "geoLaenge": 8.237,
+        "von_datum": 20070401
+    },
+    "52": {
+        "Bundesland": "Schleswig-Holstein",
+        "Stationshoehe": 46.0,
+        "Stationsname": "Ahrensburg-Wulfsdorf",
+        "bis_datum": 19880101,
+        "geoBreite": 53.6623,
+        "geoLaenge": 10.199,
+        "von_datum": 19760101
+    },
+    "71": {
+        "Bundesland": "Baden-W\u00fcrttemberg",
+        "Stationshoehe": 759.0,
+        "Stationsname": "Albstadt-Badkap",
+        "bis_datum": 20150227,
+        "geoBreite": 48.2155,
+        "geoLaenge": 8.9784,
+        "von_datum": 20091201
+    },
+    "73": {
+        "Bundesland": "Bayern",
+        "Stationshoehe": 340.0,
+        "Stationsname": "Aldersbach-Kriestorf",
+        "bis_datum": 20150227,
+        "geoBreite": 48.6159,
+        "geoLaenge": 13.0506,
+        "von_datum": 20070401
+    },
+    "78": {
+        "Bundesland": "Niedersachsen",
+        "Stationshoehe": 65.0,
+        "Stationsname": "Alfhausen",
+        "bis_datum": 20150227,
+        "geoBreite": 52.485,
+        "geoLaenge": 7.9119,
+        "von_datum": 20041101
+    },
+    "91": {
+        "Bundesland": "Hessen",
+        "Stationshoehe": 300.0,
+        "Stationsname": "Alsfeld-Eifa",
+        "bis_datum": 20150227,
+        "geoBreite": 50.7446,
+        "geoLaenge": 9.345,
+        "von_datum": 20040901
+    },
+    "102": {
+        "Bundesland": "Niedersachsen",
+        "Stationshoehe": 32.0,
+        "Stationsname": "Leuchtturm Alte Weser",
+        "bis_datum": 20150131,
+        "geoBreite": 53.8617,
+        "geoLaenge": 8.1266,
+        "von_datum": 20020101
+    },
+    "125": {
+        "Bundesland": "Bayern",
+        "Stationshoehe": 756.0,
+        "Stationsname": "Altenstadt",
+        "bis_datum": 20150227,
+        "geoBreite": 47.8342,
+        "geoLaenge": 10.8667,
+        "von_datum": 19710104
+    },
+    "131": {
+        "Bundesland": "Sachsen",
+        "Stationshoehe": 296.0,
+        "Stationsname": "Geringswalde-Altgeringswalde",
+        "bis_datum": 20150227,
+        "geoBreite": 51.088,
+        "geoLaenge": 12.9328,
+        "von_datum": 20041101
+    },
+    "142": {
+        "Bundesland": "Bayern",
+        "Stationshoehe": 510.0,
+        "Stationsname": "Altom\u00fcnster-Maisbrunn",
+        "bis_datum": 20150227,
+        "geoBreite": 48.4059,
+        "geoLaenge": 11.3117,
+        "von_datum": 19820101
+    },
+    "150": {
+        "Bundesland": "Rheinland-Pfalz",
+        "Stationshoehe": 215.0,
+        "Stationsname": "Alzey",
+        "bis_datum": 20150227,
+        "geoBreite": 49.7272,
+        "geoLaenge": 8.116,
+        "von_datum": 20050701
+    },
+    "151": {
+        "Bundesland": "Bayern",
+        "Stationshoehe": 383.0,
+        "Stationsname": "Amberg-Unterammersricht",
+        "bis_datum": 20150227,
+        "geoBreite": 49.4689,
+        "geoLaenge": 11.8547,
+        "von_datum": 20050301
+    },
+    "154": {
+        "Bundesland": "Bayern",
+        "Stationshoehe": 515.0,
+        "Stationsname": "Amerang-Pfaffing",
+        "bis_datum": 20150227,
+        "geoBreite": 48.0197,
+        "geoLaenge": 12.2924,
+        "von_datum": 20050301
+    },
+    "161": {
+        "Bundesland": "Rheinland-Pfalz",
+        "Stationshoehe": 75.0,
+        "Stationsname": "Andernach",
+        "bis_datum": 20150227,
+        "geoBreite": 50.4238,
+        "geoLaenge": 7.4203,
+        "von_datum": 20110901
+    },
+    "164": {
+        "Bundesland": "Brandenburg",
+        "Stationshoehe": 54.0,
+        "Stationsname": "Angerm\u00fcnde",
+        "bis_datum": 20150227,
+        "geoBreite": 53.0316,
+        "geoLaenge": 13.9907,
+        "von_datum": 19560101
+    },
+    "167": {
+        "Bundesland": "Mecklenburg-Vorpommern",
+        "Stationshoehe": 9.0,
+        "Stationsname": "Anklam",
+        "bis_datum": 20150227,
+        "geoBreite": 53.8412,
+        "geoLaenge": 13.6846,
+        "von_datum": 20040901
+    },
+    "175": {
+        "Bundesland": "Bayern",
+        "Stationshoehe": 413.0,
+        "Stationsname": "Ansbach",
+        "bis_datum": 19760101,
+        "geoBreite": 49.2964,
+        "geoLaenge": 10.5751,
+        "von_datum": 19550101
+    },
+    "181": {
+        "Bundesland": "Sachsen-Anhalt",
+        "Stationshoehe": 30.0,
+        "Stationsname": "Arendsee",
+        "bis_datum": 20081103,
+        "geoBreite": 52.8761,
+        "geoLaenge": 11.5042,
+        "von_datum": 19990928
+    },
+    "183": {
+        "Bundesland": "Mecklenburg-Vorpommern",
+        "Stationshoehe": 42.0,
+        "Stationsname": "Arkona",
+        "bis_datum": 20150227,
+        "geoBreite": 54.6792,
+        "geoLaenge": 13.4343,
+        "von_datum": 19730101
+    },
+    "191": {
+        "Bundesland": "Bayern",
+        "Stationshoehe": 220.0,
+        "Stationsname": "Arnstein-M\u00fcdesheim",
+        "bis_datum": 20150227,
+        "geoBreite": 49.9695,
+        "geoLaenge": 9.9113,
+        "von_datum": 20041104
+    },
+    "198": {
+        "Bundesland": "Th\u00fcringen",
+        "Stationshoehe": 164.0,
+        "Stationsname": "Artern",
+        "bis_datum": 20150227,
+        "geoBreite": 51.3745,
+        "geoLaenge": 11.292,
+        "von_datum": 19610101
+    },
+    "217": {
+        "Bundesland": "Bayern",
+        "Stationshoehe": 672.0,
+        "Stationsname": "Attenkam",
+        "bis_datum": 20150227,
+        "geoBreite": 47.8774,
+        "geoLaenge": 11.3642,
+        "von_datum": 20050101
+    },
+    "222": {
+        "Bundesland": "Sachsen",
+        "Stationshoehe": 387.0,
+        "Stationsname": "Aue",
+        "bis_datum": 20150227,
+        "geoBreite": 50.5907,
+        "geoLaenge": 12.714,
+        "von_datum": 19820101
+    },
+    "232": {
+        "Bundesland": "Bayern",
+        "Stationshoehe": 461.0,
+        "Stationsname": "Augsburg",
+        "bis_datum": 20150227,
+        "geoBreite": 48.4254,
+        "geoLaenge": 10.942,
+        "von_datum": 19550101
+    },
+    "238": {
+        "Bundesland": "Baden-W\u00fcrttemberg",
+        "Stationshoehe": 560.0,
+        "Stationsname": "Aulendorf-Spiegler",
+        "bis_datum": 19960701,
+        "geoBreite": 47.9699,
+        "geoLaenge": 9.6672,
+        "von_datum": 19750601
+    },
+    "257": {
+        "Bundesland": "Baden-W\u00fcrttemberg",
+        "Stationshoehe": 240.0,
+        "Stationsname": "Baden-Baden-Geroldsau",
+        "bis_datum": 20150227,
+        "geoBreite": 48.727,
+        "geoLaenge": 8.2458,
+        "von_datum": 20021101
+    },
+    "259": {
+        "Bundesland": "Baden-W\u00fcrttemberg",
+        "Stationshoehe": 273.0,
+        "Stationsname": "M\u00fcllheim",
+        "bis_datum": 20150227,
+        "geoBreite": 47.8063,
+        "geoLaenge": 7.6384,
+        "von_datum": 20040701
+    },
+    "268": {
+        "Bundesland": "Baden-W\u00fcrttemberg",
+        "Stationshoehe": 622.0,
+        "Stationsname": "Baiersbronn-Obertal",
+        "bis_datum": 20081231,
+        "geoBreite": 48.5293,
+        "geoLaenge": 8.2727,
+        "von_datum": 19960718
+    },
+    "282": {
+        "Bundesland": "Bayern",
+        "Stationshoehe": 240.0,
+        "Stationsname": "Bamberg",
+        "bis_datum": 20150227,
+        "geoBreite": 49.8742,
+        "geoLaenge": 10.9206,
+        "von_datum": 19610101
+    },
+    "284": {
+        "Bundesland": "Bayern",
+        "Stationshoehe": 282.0,
+        "Stationsname": "Bamberg (Sternwarte)",
+        "bis_datum": 19550101,
+        "geoBreite": 49.8847,
+        "geoLaenge": 10.8884,
+        "von_datum": 19470101
+    },
+    "294": {
+        "Bundesland": "Niedersachsen",
+        "Stationshoehe": 110.0,
+        "Stationsname": "Barsinghausen-Hohenbostel",
+        "bis_datum": 20150227,
+        "geoBreite": 52.3198,
+        "geoLaenge": 9.4299,
+        "von_datum": 20040701
+    },
+    "298": {
+        "Bundesland": "Mecklenburg-Vorpommern",
+        "Stationshoehe": 3.0,
+        "Stationsname": "Barth",
+        "bis_datum": 20150227,
+        "geoBreite": 54.3406,
+        "geoLaenge": 12.7108,
+        "von_datum": 19810101
+    },
+    "303": {
+        "Bundesland": "Brandenburg",
+        "Stationshoehe": 55.0,
+        "Stationsname": "Baruth",
+        "bis_datum": 20150227,
+        "geoBreite": 52.0614,
+        "geoLaenge": 13.4996,
+        "von_datum": 19930819
+    },
+    "314": {
+        "Bundesland": "Sachsen",
+        "Stationshoehe": 232.0,
+        "Stationsname": "Kubsch\u00fctz, Kr. Bautzen",
+        "bis_datum": 20150227,
+        "geoBreite": 51.1605,
+        "geoLaenge": 14.5037,
+        "von_datum": 20040501
+    },
+    "320": {
+        "Bundesland": "Bayern",
+        "Stationshoehe": 350.0,
+        "Stationsname": "Heinersreuth-Vollhof",
+        "bis_datum": 20150227,
+        "geoBreite": 49.9667,
+        "geoLaenge": 11.5197,
+        "von_datum": 20060701
+    },
+    "326": {
+        "Bundesland": "Nordrhein-Westfalen",
+        "Stationshoehe": 120.0,
+        "Stationsname": "Beckum-Unterberg",
+        "bis_datum": 20130708,
+        "geoBreite": 51.7204,
+        "geoLaenge": 8.0577,
+        "von_datum": 20040701
+    },
+    "330": {
+        "Bundesland": "Hessen",
+        "Stationshoehe": 450.0,
+        "Stationsname": "Beerfelden",
+        "bis_datum": 20150227,
+        "geoBreite": 49.5617,
+        "geoLaenge": 8.9679,
+        "von_datum": 20040801
+    },
+    "342": {
+        "Bundesland": "Niedersachsen",
+        "Stationshoehe": 103.0,
+        "Stationsname": "Belm",
+        "bis_datum": 20150227,
+        "geoBreite": 52.317,
+        "geoLaenge": 8.1693,
+        "von_datum": 20101201
+    },
+    "348": {
+        "Bundesland": "Rheinland-Pfalz",
+        "Stationshoehe": 127.0,
+        "Stationsname": "Bendorf",
+        "bis_datum": 20110901,
+        "geoBreite": 50.4135,
+        "geoLaenge": 7.5886,
+        "von_datum": 19891215
+    },
+    "361": {
+        "Bundesland": "Bayern",
+        "Stationshoehe": 550.0,
+        "Stationsname": "Berchtesgaden (KKst)",
+        "bis_datum": 19760101,
+        "geoBreite": 47.6344,
+        "geoLaenge": 13.0109,
+        "von_datum": 19480101
+    },
+    "368": {
+        "Bundesland": "Niedersachsen",
+        "Stationshoehe": 70.0,
+        "Stationsname": "Bergen",
+        "bis_datum": 20150227,
+        "geoBreite": 52.8152,
+        "geoLaenge": 9.9248,
+        "von_datum": 20020101
+    },
+    "377": {
+        "Bundesland": "Rheinland-Pfalz",
+        "Stationshoehe": 252.0,
+        "Stationsname": "Bergzabern, Bad",
+        "bis_datum": 20150227,
+        "geoBreite": 49.1071,
+        "geoLaenge": 7.9963,
+        "von_datum": 20041001
+    },
+    "390": {
+        "Bundesland": "Nordrhein-Westfalen",
+        "Stationshoehe": 610.0,
+        "Stationsname": "Berleburg, Bad-St\u00fcnzel",
+        "bis_datum": 20150227,
+        "geoBreite": 50.9837,
+        "geoLaenge": 8.3679,
+        "von_datum": 20040701
+    },
+    "396": {
+        "Bundesland": "Berlin",
+        "Stationshoehe": 37.0,
+        "Stationsname": "Berlin-Alexanderplatz (135m)",
+        "bis_datum": 20150227,
+        "geoBreite": 52.5209,
+        "geoLaenge": 13.4094,
+        "von_datum": 19700501
+    },
+    "397": {
+        "Bundesland": "Berlin",
+        "Stationshoehe": 37.0,
+        "Stationsname": "Berlin-Alexanderplatz (260m)",
+        "bis_datum": 20150227,
+        "geoBreite": 52.5209,
+        "geoLaenge": 13.4094,
+        "von_datum": 19700101
+    },
+    "398": {
+        "Bundesland": "Berlin",
+        "Stationshoehe": 37.0,
+        "Stationsname": "Berlin-Alexanderplatz (365m)",
+        "bis_datum": 20150227,
+        "geoBreite": 52.5208,
+        "geoLaenge": 13.4094,
+        "von_datum": 19700101
+    },
+    "399": {
+        "Bundesland": "Berlin",
+        "Stationshoehe": 37.0,
+        "Stationsname": "Berlin-Alexanderplatz",
+        "bis_datum": 20110801,
+        "geoBreite": 52.5205,
+        "geoLaenge": 13.4105,
+        "von_datum": 19691201
+    },
+    "400": {
+        "Bundesland": "Berlin",
+        "Stationshoehe": 60.0,
+        "Stationsname": "Berlin-Buch",
+        "bis_datum": 20150227,
+        "geoBreite": 52.6309,
+        "geoLaenge": 13.5022,
+        "von_datum": 19910101
+    },
+    "403": {
+        "Bundesland": "Berlin",
+        "Stationshoehe": 51.0,
+        "Stationsname": "Berlin-Dahlem (FU)",
+        "bis_datum": 20150227,
+        "geoBreite": 52.4578,
+        "geoLaenge": 13.3101,
+        "von_datum": 20020101
+    },
+    "410": {
+        "Bundesland": "Berlin",
+        "Stationshoehe": 33.0,
+        "Stationsname": "Berlin-Kaniswall",
+        "bis_datum": 20150227,
+        "geoBreite": 52.404,
+        "geoLaenge": 13.7309,
+        "von_datum": 20040501
+    },
+    "420": {
+        "Bundesland": "Berlin",
+        "Stationshoehe": 60.0,
+        "Stationsname": "Berlin-Marzahn",
+        "bis_datum": 20150227,
+        "geoBreite": 52.5447,
+        "geoLaenge": 13.5598,
+        "von_datum": 20070801
+    },
+    "427": {
+        "Bundesland": "Brandenburg",
+        "Stationshoehe": 46.0,
+        "Stationsname": "Berlin-Sch\u00f6nefeld",
+        "bis_datum": 20150227,
+        "geoBreite": 52.3807,
+        "geoLaenge": 13.5306,
+        "von_datum": 19730101
+    },
+    "430": {
+        "Bundesland": "Berlin",
+        "Stationshoehe": 36.0,
+        "Stationsname": "Berlin-Tegel",
+        "bis_datum": 20150227,
+        "geoBreite": 52.5644,
+        "geoLaenge": 13.3088,
+        "von_datum": 19860101
+    },
+    "433": {
+        "Bundesland": "Berlin",
+        "Stationshoehe": 48.0,
+        "Stationsname": "Berlin-Tempelhof",
+        "bis_datum": 20150227,
+        "geoBreite": 52.4675,
+        "geoLaenge": 13.4021,
+        "von_datum": 19510101
+    },
+    "445": {
+        "Bundesland": "Sachsen-Anhalt",
+        "Stationshoehe": 84.0,
+        "Stationsname": "Bernburg/Saale (Nord)",
+        "bis_datum": 20150227,
+        "geoBreite": 51.8218,
+        "geoLaenge": 11.7109,
+        "von_datum": 20050701
+    },
+    "450": {
+        "Bundesland": "Rheinland-Pfalz",
+        "Stationshoehe": 120.0,
+        "Stationsname": "Bernkastel-Kues",
+        "bis_datum": 20121204,
+        "geoBreite": 49.9186,
+        "geoLaenge": 7.0664,
+        "von_datum": 20051101
+    },
+    "460": {
+        "Bundesland": "Saarland",
+        "Stationshoehe": 363.0,
+        "Stationsname": "Berus",
+        "bis_datum": 20150227,
+        "geoBreite": 49.264,
+        "geoLaenge": 6.6868,
+        "von_datum": 19610101
+    },
+    "474": {
+        "Bundesland": "Baden-W\u00fcrttemberg",
+        "Stationshoehe": 599.0,
+        "Stationsname": "Warthausen-Birkenhard",
+        "bis_datum": 19780601,
+        "geoBreite": 48.1252,
+        "geoLaenge": 9.7639,
+        "von_datum": 19750601
+    },
+    "535": {
+        "Bundesland": "Rheinland-Pfalz",
+        "Stationshoehe": 417.0,
+        "Stationsname": "Blankenrath",
+        "bis_datum": 20150227,
+        "geoBreite": 50.0355,
+        "geoLaenge": 7.3048,
+        "von_datum": 20040601
+    },
+    "553": {
+        "Bundesland": "Nordrhein-Westfalen",
+        "Stationshoehe": 25.0,
+        "Stationsname": "Bocholt (Marienschule)",
+        "bis_datum": 19710101,
+        "geoBreite": 51.838,
+        "geoLaenge": 6.6107,
+        "von_datum": 19510101
+    },
+    "554": {
+        "Bundesland": "Nordrhein-Westfalen",
+        "Stationshoehe": 21.0,
+        "Stationsname": "Bocholt",
+        "bis_datum": 20060228,
+        "geoBreite": 51.8297,
+        "geoLaenge": 6.5354,
+        "von_datum": 19710101
+    },
+    "555": {
+        "Bundesland": "Nordrhein-Westfalen",
+        "Stationshoehe": 101.0,
+        "Stationsname": "Bochum",
+        "bis_datum": 20150227,
+        "geoBreite": 51.4789,
+        "geoLaenge": 7.2697,
+        "von_datum": 20080101
+    },
+    "591": {
+        "Bundesland": "Mecklenburg-Vorpommern",
+        "Stationshoehe": 45.0,
+        "Stationsname": "Boizenburg",
+        "bis_datum": 20150227,
+        "geoBreite": 53.3911,
+        "geoLaenge": 10.6878,
+        "von_datum": 19730101
+    },
+    "596": {
+        "Bundesland": "Mecklenburg-Vorpommern",
+        "Stationshoehe": 15.0,
+        "Stationsname": "Boltenhagen",
+        "bis_datum": 20150227,
+        "geoBreite": 54.0028,
+        "geoLaenge": 11.1908,
+        "von_datum": 19730101
+    },
+    "598": {
+        "Bundesland": "Nordrhein-Westfalen",
+        "Stationshoehe": 62.0,
+        "Stationsname": "Bonn",
+        "bis_datum": 19570101,
+        "geoBreite": 50.7285,
+        "geoLaenge": 7.0839,
+        "von_datum": 19490101
+    },
+    "599": {
+        "Bundesland": "Nordrhein-Westfalen",
+        "Stationshoehe": 62.0,
+        "Stationsname": "Bonn-Friesdorf",
+        "bis_datum": 19971201,
+        "geoBreite": 50.7055,
+        "geoLaenge": 7.1467,
+        "von_datum": 19840101
+    },
+    "601": {
+        "Bundesland": "Nordrhein-Westfalen",
+        "Stationshoehe": 158.0,
+        "Stationsname": "Bonn-Hardth\u00f6he",
+        "bis_datum": 20031031,
+        "geoBreite": 50.6983,
+        "geoLaenge": 7.0356,
+        "von_datum": 20020102
+    },
+    "603": {
+        "Bundesland": "Nordrhein-Westfalen",
+        "Stationshoehe": 159.0,
+        "Stationsname": "Bonn-Roleber",
+        "bis_datum": 20150227,
+        "geoBreite": 50.7349,
+        "geoLaenge": 7.1931,
+        "von_datum": 20010403
+    },
+    "617": {
+        "Bundesland": "Nordrhein-Westfalen",
+        "Stationshoehe": 48.0,
+        "Stationsname": "Borken in Westfalen",
+        "bis_datum": 20150227,
+        "geoBreite": 51.8728,
+        "geoLaenge": 6.8862,
+        "von_datum": 20040601
+    },
+    "656": {
+        "Bundesland": "Niedersachsen",
+        "Stationshoehe": 607.0,
+        "Stationsname": "Braunlage",
+        "bis_datum": 20150227,
+        "geoBreite": 51.7234,
+        "geoLaenge": 10.6021,
+        "von_datum": 19480101
+    },
+    "662": {
+        "Bundesland": "Niedersachsen",
+        "Stationshoehe": 81.0,
+        "Stationsname": "Braunschweig",
+        "bis_datum": 20150227,
+        "geoBreite": 52.2914,
+        "geoLaenge": 10.4465,
+        "von_datum": 19510101
+    },
+    "685": {
+        "Bundesland": "Bayern",
+        "Stationshoehe": 585.0,
+        "Stationsname": "Breitsol",
+        "bis_datum": 20061031,
+        "geoBreite": 49.9017,
+        "geoLaenge": 9.4281,
+        "von_datum": 20020101
+    },
+    "691": {
+        "Bundesland": "Bremen",
+        "Stationshoehe": 4.0,
+        "Stationsname": "Bremen",
+        "bis_datum": 20150227,
+        "geoBreite": 53.0445,
+        "geoLaenge": 8.7985,
+        "von_datum": 19490101
+    },
+    "701": {
+        "Bundesland": "Bremen",
+        "Stationshoehe": 7.0,
+        "Stationsname": "Bremerhaven",
+        "bis_datum": 20150227,
+        "geoBreite": 53.5332,
+        "geoLaenge": 8.5761,
+        "von_datum": 19490101
+    },
+    "704": {
+        "Bundesland": "Niedersachsen",
+        "Stationshoehe": 10.0,
+        "Stationsname": "Bremerv\u00f6rde",
+        "bis_datum": 20150227,
+        "geoBreite": 53.4451,
+        "geoLaenge": 9.139,
+        "von_datum": 19910101
+    },
+    "722": {
+        "Bundesland": "Sachsen-Anhalt",
+        "Stationshoehe": 1134.0,
+        "Stationsname": "Brocken",
+        "bis_datum": 20150227,
+        "geoBreite": 51.7986,
+        "geoLaenge": 10.6183,
+        "von_datum": 19510101
+    },
+    "755": {
+        "Bundesland": "Baden-W\u00fcrttemberg",
+        "Stationshoehe": 340.0,
+        "Stationsname": "Buchen, Kr. Neckar-Odenwald",
+        "bis_datum": 20150227,
+        "geoBreite": 49.5181,
+        "geoLaenge": 9.3214,
+        "von_datum": 20040601
+    },
+    "757": {
+        "Bundesland": "Baden-W\u00fcrttemberg",
+        "Stationshoehe": 445.0,
+        "Stationsname": "Buchenbach",
+        "bis_datum": 20150227,
+        "geoBreite": 47.9624,
+        "geoLaenge": 7.998,
+        "von_datum": 20040601
+    },
+    "766": {
+        "Bundesland": "Rheinland-Pfalz",
+        "Stationshoehe": 477.0,
+        "Stationsname": "B\u00fcchel (Flugplatz)",
+        "bis_datum": 20150227,
+        "geoBreite": 50.1746,
+        "geoLaenge": 7.0595,
+        "von_datum": 20020101
+    },
+    "769": {
+        "Bundesland": "Niedersachsen",
+        "Stationshoehe": 68.0,
+        "Stationsname": "B\u00fcckeburg",
+        "bis_datum": 20150227,
+        "geoBreite": 52.2817,
+        "geoLaenge": 9.0889,
+        "von_datum": 20020101
+    },
+    "817": {
+        "Bundesland": "Hessen",
+        "Stationshoehe": 293.0,
+        "Stationsname": "Burgwald-Bottendorf",
+        "bis_datum": 20150227,
+        "geoBreite": 51.0306,
+        "geoLaenge": 8.8146,
+        "von_datum": 20050201
+    },
+    "840": {
+        "Bundesland": "Sachsen",
+        "Stationshoehe": 897.0,
+        "Stationsname": "Carlsfeld",
+        "bis_datum": 20150227,
+        "geoBreite": 50.4313,
+        "geoLaenge": 12.6114,
+        "von_datum": 19910101
+    },
+    "850": {
+        "Bundesland": "Niedersachsen",
+        "Stationshoehe": 39.0,
+        "Stationsname": "Celle",
+        "bis_datum": 20150227,
+        "geoBreite": 52.5959,
+        "geoLaenge": 10.0296,
+        "von_datum": 20020101
+    },
+    "853": {
+        "Bundesland": "Sachsen",
+        "Stationshoehe": 418.0,
+        "Stationsname": "Chemnitz",
+        "bis_datum": 20150227,
+        "geoBreite": 50.7913,
+        "geoLaenge": 12.872,
+        "von_datum": 19510101
+    },
+    "856": {
+        "Bundesland": "Bayern",
+        "Stationshoehe": 551.0,
+        "Stationsname": "Chieming",
+        "bis_datum": 20150227,
+        "geoBreite": 47.8843,
+        "geoLaenge": 12.5404,
+        "von_datum": 19910101
+    },
+    "863": {
+        "Bundesland": "Niedersachsen",
+        "Stationshoehe": 585.0,
+        "Stationsname": "Clausthal-Zellerfeld",
+        "bis_datum": 20120405,
+        "geoBreite": 51.7904,
+        "geoLaenge": 10.347,
+        "von_datum": 20071001
+    },
+    "867": {
+        "Bundesland": "Bayern",
+        "Stationshoehe": 345.0,
+        "Stationsname": "Lautertal-Oberlauter",
+        "bis_datum": 20150227,
+        "geoBreite": 50.3067,
+        "geoLaenge": 10.968,
+        "von_datum": 19470101
+    },
+    "879": {
+        "Bundesland": "Brandenburg",
+        "Stationshoehe": 68.0,
+        "Stationsname": "Cottbus (Flugplatz)",
+        "bis_datum": 20030611,
+        "geoBreite": 51.7667,
+        "geoLaenge": 14.2833,
+        "von_datum": 20020101
+    },
+    "880": {
+        "Bundesland": "Brandenburg",
+        "Stationshoehe": 69.0,
+        "Stationsname": "Cottbus",
+        "bis_datum": 20150227,
+        "geoBreite": 51.776,
+        "geoLaenge": 14.3168,
+        "von_datum": 19560101
+    },
+    "891": {
+        "Bundesland": "Niedersachsen",
+        "Stationshoehe": 5.0,
+        "Stationsname": "Cuxhaven",
+        "bis_datum": 20150227,
+        "geoBreite": 53.8713,
+        "geoLaenge": 8.7058,
+        "von_datum": 19510101
+    },
+    "896": {
+        "Bundesland": "Th\u00fcringen",
+        "Stationshoehe": 170.0,
+        "Stationsname": "Dachwig",
+        "bis_datum": 20150227,
+        "geoBreite": 51.0773,
+        "geoLaenge": 10.8626,
+        "von_datum": 20040801
+    },
+    "917": {
+        "Bundesland": "Hessen",
+        "Stationshoehe": 162.0,
+        "Stationsname": "Darmstadt",
+        "bis_datum": 20150227,
+        "geoBreite": 49.8809,
+        "geoLaenge": 8.6779,
+        "von_datum": 20040901
+    },
+    "919": {
+        "Bundesland": "Hessen",
+        "Stationshoehe": 169.0,
+        "Stationsname": "Darmstadt-Botanischer Garten",
+        "bis_datum": 19710101,
+        "geoBreite": 49.8697,
+        "geoLaenge": 8.6796,
+        "von_datum": 19580101
+    },
+    "953": {
+        "Bundesland": "Rheinland-Pfalz",
+        "Stationshoehe": 481.0,
+        "Stationsname": "Deuselbach",
+        "bis_datum": 20150227,
+        "geoBreite": 49.7619,
+        "geoLaenge": 7.0541,
+        "von_datum": 19550101
+    },
+    "954": {
+        "Bundesland": "Hamburg",
+        "Stationshoehe": 0.0,
+        "Stationsname": "UFS Deutsche Bucht",
+        "bis_datum": 20150227,
+        "geoBreite": 54.1667,
+        "geoLaenge": 7.45,
+        "von_datum": 20000501
+    },
+    "963": {
+        "Bundesland": "Niedersachsen",
+        "Stationshoehe": 39.0,
+        "Stationsname": "Diepholz",
+        "bis_datum": 20150227,
+        "geoBreite": 52.5881,
+        "geoLaenge": 8.3424,
+        "von_datum": 19940103
+    },
+    "979": {
+        "Bundesland": "Hessen",
+        "Stationshoehe": 314.0,
+        "Stationsname": "Dillenburg",
+        "bis_datum": 20150227,
+        "geoBreite": 50.7313,
+        "geoLaenge": 8.2622,
+        "von_datum": 20040901
+    },
+    "982": {
+        "Bundesland": "Bayern",
+        "Stationshoehe": 420.0,
+        "Stationsname": "Dillingen/Donau",
+        "bis_datum": 19780601,
+        "geoBreite": 48.5701,
+        "geoLaenge": 10.4985,
+        "von_datum": 19760101
+    },
+    "983": {
+        "Bundesland": "Bayern",
+        "Stationshoehe": 419.0,
+        "Stationsname": "Dillingen/Donau-Fristingen",
+        "bis_datum": 20150227,
+        "geoBreite": 48.5562,
+        "geoLaenge": 10.5599,
+        "von_datum": 20061201
+    },
+    "991": {
+        "Bundesland": "Sachsen",
+        "Stationshoehe": 365.0,
+        "Stationsname": "Dippoldiswalde-Reinberg",
+        "bis_datum": 20150227,
+        "geoBreite": 50.9169,
+        "geoLaenge": 13.713,
+        "von_datum": 20050201
+    },
+    "1001": {
+        "Bundesland": "Brandenburg",
+        "Stationshoehe": 97.0,
+        "Stationsname": "Doberlug-Kirchhain",
+        "bis_datum": 20150227,
+        "geoBreite": 51.6451,
+        "geoLaenge": 13.5747,
+        "von_datum": 19810101
+    },
+    "1048": {
+        "Bundesland": "Sachsen",
+        "Stationshoehe": 227.0,
+        "Stationsname": "Dresden-Klotzsche",
+        "bis_datum": 20150227,
+        "geoBreite": 51.128,
+        "geoLaenge": 13.7543,
+        "von_datum": 19730101
+    },
+    "1050": {
+        "Bundesland": "Sachsen",
+        "Stationshoehe": 114.0,
+        "Stationsname": "Dresden-Hosterwitz",
+        "bis_datum": 20150227,
+        "geoBreite": 51.0221,
+        "geoLaenge": 13.847,
+        "von_datum": 20060401
+    },
+    "1051": {
+        "Bundesland": "Sachsen",
+        "Stationshoehe": 119.0,
+        "Stationsname": "Dresden-Strehlen",
+        "bis_datum": 20150227,
+        "geoBreite": 51.024,
+        "geoLaenge": 13.7737,
+        "von_datum": 20070301
+    },
+    "1052": {
+        "Bundesland": "Sachsen-Anhalt",
+        "Stationshoehe": 80.0,
+        "Stationsname": "Drewitz bei Burg",
+        "bis_datum": 20150227,
+        "geoBreite": 52.2172,
+        "geoLaenge": 12.1635,
+        "von_datum": 20040701
+    },
+    "1072": {
+        "Bundesland": "Rheinland-Pfalz",
+        "Stationshoehe": 107.0,
+        "Stationsname": "D\u00fcrkheim, Bad",
+        "bis_datum": 20150227,
+        "geoBreite": 49.4719,
+        "geoLaenge": 8.1929,
+        "von_datum": 20040601
+    },
+    "1078": {
+        "Bundesland": "Nordrhein-Westfalen",
+        "Stationshoehe": 37.0,
+        "Stationsname": "D\u00fcsseldorf",
+        "bis_datum": 20150227,
+        "geoBreite": 51.296,
+        "geoLaenge": 6.7686,
+        "von_datum": 19760301
+    },
+    "1103": {
+        "Bundesland": "Bayern",
+        "Stationshoehe": 592.0,
+        "Stationsname": "Ebersberg-Halbing",
+        "bis_datum": 20150227,
+        "geoBreite": 48.1002,
+        "geoLaenge": 11.9872,
+        "von_datum": 20061001
+    },
+    "1107": {
+        "Bundesland": "Bayern",
+        "Stationshoehe": 346.0,
+        "Stationsname": "Ebrach",
+        "bis_datum": 20150227,
+        "geoBreite": 49.852,
+        "geoLaenge": 10.499,
+        "von_datum": 20041201
+    },
+    "1130": {
+        "Bundesland": "Schleswig-Holstein",
+        "Stationshoehe": 17.0,
+        "Stationsname": "Eggebek",
+        "bis_datum": 20050422,
+        "geoBreite": 54.6282,
+        "geoLaenge": 9.3648,
+        "von_datum": 20020101
+    },
+    "1161": {
+        "Bundesland": "Bayern",
+        "Stationshoehe": 384.0,
+        "Stationsname": "Eichst\u00e4tt-Landershofen",
+        "bis_datum": 20150227,
+        "geoBreite": 48.8779,
+        "geoLaenge": 11.2347,
+        "von_datum": 20050201
+    },
+    "1197": {
+        "Bundesland": "Baden-W\u00fcrttemberg",
+        "Stationshoehe": 460.0,
+        "Stationsname": "Ellwangen-Rindelbach",
+        "bis_datum": 20150227,
+        "geoBreite": 48.9895,
+        "geoLaenge": 10.1312,
+        "von_datum": 19480101
+    },
+    "1200": {
+        "Bundesland": "Schleswig-Holstein",
+        "Stationshoehe": 3.0,
+        "Stationsname": "Elpersb\u00fcttel",
+        "bis_datum": 20150227,
+        "geoBreite": 54.0691,
+        "geoLaenge": 9.0106,
+        "von_datum": 20020101
+    },
+    "1207": {
+        "Bundesland": "Sachsen",
+        "Stationshoehe": 560.0,
+        "Stationsname": "Elster, Bad-Sohl",
+        "bis_datum": 20150227,
+        "geoBreite": 50.2707,
+        "geoLaenge": 12.2738,
+        "von_datum": 20060301
+    },
+    "1214": {
+        "Bundesland": "Baden-W\u00fcrttemberg",
+        "Stationshoehe": 440.0,
+        "Stationsname": "Elzach-Fisnacht",
+        "bis_datum": 20150227,
+        "geoBreite": 48.2012,
+        "geoLaenge": 8.1089,
+        "von_datum": 20040801
+    },
+    "1219": {
+        "Bundesland": "Niedersachsen",
+        "Stationshoehe": 5.0,
+        "Stationsname": "Emden-Nesserland",
+        "bis_datum": 19981102,
+        "geoBreite": 53.3449,
+        "geoLaenge": 7.1909,
+        "von_datum": 19710101
+    },
+    "1221": {
+        "Bundesland": "Niedersachsen",
+        "Stationshoehe": 0.0,
+        "Stationsname": "Emden-Wolthusen",
+        "bis_datum": 19710101,
+        "geoBreite": 53.3707,
+        "geoLaenge": 7.2236,
+        "von_datum": 19490101
+    },
+    "1224": {
+        "Bundesland": "Baden-W\u00fcrttemberg",
+        "Stationshoehe": 201.0,
+        "Stationsname": "Emmendingen-Mundingen",
+        "bis_datum": 20150227,
+        "geoBreite": 48.1378,
+        "geoLaenge": 7.8351,
+        "von_datum": 20021201
+    },
+    "1228": {
+        "Bundesland": "Hamburg",
+        "Stationshoehe": 0.0,
+        "Stationsname": "UFS TW Ems",
+        "bis_datum": 20150212,
+        "geoBreite": 54.1651,
+        "geoLaenge": 6.346,
+        "von_datum": 20020101
+    },
+    "1239": {
+        "Bundesland": "Baden-W\u00fcrttemberg",
+        "Stationshoehe": 540.0,
+        "Stationsname": "Engen/Hegau",
+        "bis_datum": 20080923,
+        "geoBreite": 47.8516,
+        "geoLaenge": 8.7673,
+        "von_datum": 20040701
+    },
+    "1255": {
+        "Bundesland": "Baden-W\u00fcrttemberg",
+        "Stationshoehe": 220.0,
+        "Stationsname": "Eppingen-Elsenz",
+        "bis_datum": 20150227,
+        "geoBreite": 49.1664,
+        "geoLaenge": 8.8523,
+        "von_datum": 20021201
+    },
+    "1262": {
+        "Bundesland": "Bayern",
+        "Stationshoehe": 446.0,
+        "Stationsname": "M\u00fcnchen-Flughafen",
+        "bis_datum": 20150227,
+        "geoBreite": 48.3477,
+        "geoLaenge": 11.8133,
+        "von_datum": 19920517
+    },
+    "1266": {
+        "Bundesland": "Schleswig-Holstein",
+        "Stationshoehe": 18.0,
+        "Stationsname": "Erfde",
+        "bis_datum": 20150227,
+        "geoBreite": 54.2989,
+        "geoLaenge": 9.3161,
+        "von_datum": 20040601
+    },
+    "1270": {
+        "Bundesland": "Th\u00fcringen",
+        "Stationshoehe": 316.0,
+        "Stationsname": "Erfurt-Weimar",
+        "bis_datum": 20150227,
+        "geoBreite": 50.9829,
+        "geoLaenge": 10.9608,
+        "von_datum": 19510101
+    },
+    "1279": {
+        "Bundesland": "Bayern",
+        "Stationshoehe": 268.0,
+        "Stationsname": "M\u00f6hrendorf-Kleinseebach",
+        "bis_datum": 20150227,
+        "geoBreite": 49.6497,
+        "geoLaenge": 11.0073,
+        "von_datum": 19861101
+    },
+    "1297": {
+        "Bundesland": "Hessen",
+        "Stationshoehe": 170.0,
+        "Stationsname": "Eschwege",
+        "bis_datum": 20150227,
+        "geoBreite": 51.1834,
+        "geoLaenge": 10.0638,
+        "von_datum": 20041001
+    },
+    "1300": {
+        "Bundesland": "Nordrhein-Westfalen",
+        "Stationshoehe": 351.0,
+        "Stationsname": "Eslohe",
+        "bis_datum": 20150227,
+        "geoBreite": 51.254,
+        "geoLaenge": 8.1563,
+        "von_datum": 20040601
+    },
+    "1303": {
+        "Bundesland": "Nordrhein-Westfalen",
+        "Stationshoehe": 150.0,
+        "Stationsname": "Essen-Bredeney",
+        "bis_datum": 20150227,
+        "geoBreite": 51.404,
+        "geoLaenge": 6.9676,
+        "von_datum": 19510101
+    },
+    "1327": {
+        "Bundesland": "Nordrhein-Westfalen",
+        "Stationshoehe": 146.0,
+        "Stationsname": "Weilerswist-Lommersum",
+        "bis_datum": 20150227,
+        "geoBreite": 50.7119,
+        "geoLaenge": 6.791,
+        "von_datum": 20040801
+    },
+    "1332": {
+        "Bundesland": "Bayern",
+        "Stationshoehe": 472.0,
+        "Stationsname": "Falkenberg,Kr.Rottal-Inn",
+        "bis_datum": 20150227,
+        "geoBreite": 48.4832,
+        "geoLaenge": 12.724,
+        "von_datum": 20050301
+    },
+    "1339": {
+        "Bundesland": "Niedersachsen",
+        "Stationshoehe": 73.0,
+        "Stationsname": "Fa\u00dfberg",
+        "bis_datum": 20150227,
+        "geoBreite": 52.9157,
+        "geoLaenge": 10.1885,
+        "von_datum": 20020101
+    },
+    "1341": {
+        "Bundesland": "Schleswig-Holstein",
+        "Stationshoehe": 0.0,
+        "Stationsname": "Fehmarnbelt",
+        "bis_datum": 20110929,
+        "geoBreite": 54.6,
+        "geoLaenge": 11.15,
+        "von_datum": 20081201
+    },
+    "1346": {
+        "Bundesland": "Baden-W\u00fcrttemberg",
+        "Stationshoehe": 1490.0,
+        "Stationsname": "Feldberg/Schwarzwald",
+        "bis_datum": 20150227,
+        "geoBreite": 47.8749,
+        "geoLaenge": 8.0038,
+        "von_datum": 19520101
+    },
+    "1357": {
+        "Bundesland": "Bayern",
+        "Stationshoehe": 657.0,
+        "Stationsname": "Fichtelberg/Oberfranken-H\u00fcttstadl",
+        "bis_datum": 20150227,
+        "geoBreite": 49.9807,
+        "geoLaenge": 11.8376,
+        "von_datum": 20050301
+    },
+    "1358": {
+        "Bundesland": "Sachsen",
+        "Stationshoehe": 1213.0,
+        "Stationsname": "Fichtelberg",
+        "bis_datum": 20150227,
+        "geoBreite": 50.4283,
+        "geoLaenge": 12.9535,
+        "von_datum": 19510101
+    },
+    "1411": {
+        "Bundesland": "Th\u00fcringen",
+        "Stationshoehe": 745.0,
+        "Stationsname": "Birx/Rh\u00f6n",
+        "bis_datum": 20150227,
+        "geoBreite": 50.5309,
+        "geoLaenge": 10.048,
+        "von_datum": 20070101
+    },
+    "1420": {
+        "Bundesland": "Hessen",
+        "Stationshoehe": 100.0,
+        "Stationsname": "Frankfurt/Main",
+        "bis_datum": 20150227,
+        "geoBreite": 50.026,
+        "geoLaenge": 8.5215,
+        "von_datum": 19810101
+    },
+    "1421": {
+        "Bundesland": "Hessen",
+        "Stationshoehe": 125.0,
+        "Stationsname": "Frankfurt/Main (Stadt)",
+        "bis_datum": 19840901,
+        "geoBreite": 50.1474,
+        "geoLaenge": 8.6746,
+        "von_datum": 19620101
+    },
+    "1424": {
+        "Bundesland": "Hessen",
+        "Stationshoehe": 124.0,
+        "Stationsname": "Frankfurt/Main-Westend",
+        "bis_datum": 20150227,
+        "geoBreite": 50.1269,
+        "geoLaenge": 8.6694,
+        "von_datum": 20080801
+    },
+    "1425": {
+        "Bundesland": "Hessen",
+        "Stationshoehe": 109.0,
+        "Stationsname": "Frankfurt/Main (Feldbergstr.)",
+        "bis_datum": 19620101,
+        "geoBreite": 50.1213,
+        "geoLaenge": 8.6601,
+        "von_datum": 19480101
+    },
+    "1426": {
+        "Bundesland": "Brandenburg",
+        "Stationshoehe": 65.0,
+        "Stationsname": "Frankfurt/Oder",
+        "bis_datum": 19850101,
+        "geoBreite": 52.3397,
+        "geoLaenge": 14.5079,
+        "von_datum": 19610101
+    },
+    "1443": {
+        "Bundesland": "Baden-W\u00fcrttemberg",
+        "Stationshoehe": 236.0,
+        "Stationsname": "Freiburg",
+        "bis_datum": 20150227,
+        "geoBreite": 48.0233,
+        "geoLaenge": 7.8344,
+        "von_datum": 19510101
+    },
+    "1451": {
+        "Bundesland": "Niedersachsen",
+        "Stationshoehe": 2.0,
+        "Stationsname": "Freiburg/Elbe",
+        "bis_datum": 20150227,
+        "geoBreite": 53.8278,
+        "geoLaenge": 9.2486,
+        "von_datum": 20040601
+    },
+    "1468": {
+        "Bundesland": "Baden-W\u00fcrttemberg",
+        "Stationshoehe": 797.0,
+        "Stationsname": "Freudenstadt",
+        "bis_datum": 20150227,
+        "geoBreite": 48.4537,
+        "geoLaenge": 8.4091,
+        "von_datum": 19510101
+    },
+    "1473": {
+        "Bundesland": "Bayern",
+        "Stationshoehe": 436.0,
+        "Stationsname": "Freystadt-Oberndorf",
+        "bis_datum": 20150227,
+        "geoBreite": 49.1782,
+        "geoLaenge": 11.3736,
+        "von_datum": 20060101
+    },
+    "1490": {
+        "Bundesland": "Baden-W\u00fcrttemberg",
+        "Stationshoehe": 394.0,
+        "Stationsname": "Friedrichshafen",
+        "bis_datum": 19770801,
+        "geoBreite": 47.6452,
+        "geoLaenge": 9.4795,
+        "von_datum": 19650101
+    },
+    "1503": {
+        "Bundesland": "Niedersachsen",
+        "Stationshoehe": 6.0,
+        "Stationsname": "Friesoythe-Altenoythe",
+        "bis_datum": 20150227,
+        "geoBreite": 53.0643,
+        "geoLaenge": 7.9022,
+        "von_datum": 20121001
+    },
+    "1504": {
+        "Bundesland": "Hessen",
+        "Stationshoehe": 172.0,
+        "Stationsname": "Fritzlar (Flugplatz)",
+        "bis_datum": 20150227,
+        "geoBreite": 51.119,
+        "geoLaenge": 9.2799,
+        "von_datum": 20020101
+    },
+    "1515": {
+        "Bundesland": "Bayern",
+        "Stationshoehe": 519.0,
+        "Stationsname": "F\u00fcrstenfeldbruck",
+        "bis_datum": 20030814,
+        "geoBreite": 48.2,
+        "geoLaenge": 11.2667,
+        "von_datum": 20021104
+    },
+    "1526": {
+        "Bundesland": "Hessen",
+        "Stationshoehe": 255.0,
+        "Stationsname": "Fulda",
+        "bis_datum": 20110426,
+        "geoBreite": 50.5335,
+        "geoLaenge": 9.675,
+        "von_datum": 20041101
+    },
+    "1544": {
+        "Bundesland": "Sachsen-Anhalt",
+        "Stationshoehe": 47.0,
+        "Stationsname": "Gardelegen",
+        "bis_datum": 20150227,
+        "geoBreite": 52.5129,
+        "geoLaenge": 11.3941,
+        "von_datum": 19510101
+    },
+    "1550": {
+        "Bundesland": "Bayern",
+        "Stationshoehe": 719.0,
+        "Stationsname": "Garmisch-Partenkirchen",
+        "bis_datum": 20150227,
+        "geoBreite": 47.4831,
+        "geoLaenge": 11.0623,
+        "von_datum": 19480101
+    },
+    "1580": {
+        "Bundesland": "Hessen",
+        "Stationshoehe": 110.0,
+        "Stationsname": "Geisenheim",
+        "bis_datum": 20150227,
+        "geoBreite": 49.9859,
+        "geoLaenge": 7.9549,
+        "von_datum": 19460101
+    },
+    "1584": {
+        "Bundesland": "Baden-W\u00fcrttemberg",
+        "Stationshoehe": 672.0,
+        "Stationsname": "Geisingen",
+        "bis_datum": 20150227,
+        "geoBreite": 47.9241,
+        "geoLaenge": 8.6471,
+        "von_datum": 20090601
+    },
+    "1587": {
+        "Bundesland": "Bayern",
+        "Stationshoehe": 536.0,
+        "Stationsname": "Gelbelsee",
+        "bis_datum": 20150227,
+        "geoBreite": 48.9481,
+        "geoLaenge": 11.4289,
+        "von_datum": 19910101
+    },
+    "1590": {
+        "Bundesland": "Nordrhein-Westfalen",
+        "Stationshoehe": 37.0,
+        "Stationsname": "Geldern-Walbeck",
+        "bis_datum": 20150227,
+        "geoBreite": 51.4943,
+        "geoLaenge": 6.2463,
+        "von_datum": 20030701
+    },
+    "1602": {
+        "Bundesland": "Baden-W\u00fcrttemberg",
+        "Stationshoehe": 176.0,
+        "Stationsname": "Ohlsbach",
+        "bis_datum": 20150227,
+        "geoBreite": 48.4329,
+        "geoLaenge": 7.9931,
+        "von_datum": 20040701
+    },
+    "1605": {
+        "Bundesland": "Sachsen-Anhalt",
+        "Stationshoehe": 35.0,
+        "Stationsname": "Genthin",
+        "bis_datum": 20150227,
+        "geoBreite": 52.3875,
+        "geoLaenge": 12.1601,
+        "von_datum": 19820101
+    },
+    "1612": {
+        "Bundesland": "Th\u00fcringen",
+        "Stationshoehe": 311.0,
+        "Stationsname": "Gera-Leumnitz",
+        "bis_datum": 20150227,
+        "geoBreite": 50.8813,
+        "geoLaenge": 12.1289,
+        "von_datum": 19730101
+    },
+    "1639": {
+        "Bundesland": "Hessen",
+        "Stationshoehe": 203.0,
+        "Stationsname": "Gie\u00dfen/Wettenberg",
+        "bis_datum": 20150227,
+        "geoBreite": 50.6017,
+        "geoLaenge": 8.6439,
+        "von_datum": 19500101
+    },
+    "1645": {
+        "Bundesland": "Hessen",
+        "Stationshoehe": 340.0,
+        "Stationsname": "Gilserberg-Moischeid",
+        "bis_datum": 20150227,
+        "geoBreite": 50.9656,
+        "geoLaenge": 9.05,
+        "von_datum": 20040501
+    },
+    "1666": {
+        "Bundesland": "Schleswig-Holstein",
+        "Stationshoehe": 27.0,
+        "Stationsname": "Gl\u00fccksburg-Meierwik",
+        "bis_datum": 20150227,
+        "geoBreite": 54.8273,
+        "geoLaenge": 9.5057,
+        "von_datum": 20020101
+    },
+    "1684": {
+        "Bundesland": "Sachsen",
+        "Stationshoehe": 238.0,
+        "Stationsname": "G\u00f6rlitz",
+        "bis_datum": 20150227,
+        "geoBreite": 51.1622,
+        "geoLaenge": 14.9506,
+        "von_datum": 19510101
+    },
+    "1691": {
+        "Bundesland": "Niedersachsen",
+        "Stationshoehe": 167.0,
+        "Stationsname": "G\u00f6ttingen",
+        "bis_datum": 20150227,
+        "geoBreite": 51.5003,
+        "geoLaenge": 9.9506,
+        "von_datum": 19480101
+    },
+    "1694": {
+        "Bundesland": "Mecklenburg-Vorpommern",
+        "Stationshoehe": 58.0,
+        "Stationsname": "Goldberg",
+        "bis_datum": 20150227,
+        "geoBreite": 53.606,
+        "geoLaenge": 12.1033,
+        "von_datum": 19810101
+    },
+    "1721": {
+        "Bundesland": "Bayern",
+        "Stationshoehe": 506.0,
+        "Stationsname": "Gr\u00e4fenberg-Kasberg",
+        "bis_datum": 20150227,
+        "geoBreite": 49.6639,
+        "geoLaenge": 11.2239,
+        "von_datum": 20061001
+    },
+    "1735": {
+        "Bundesland": "Bayern",
+        "Stationshoehe": 628.0,
+        "Stationsname": "Grainet-Rehberg",
+        "bis_datum": 20150227,
+        "geoBreite": 48.7893,
+        "geoLaenge": 13.6291,
+        "von_datum": 20050301
+    },
+    "1736": {
+        "Bundesland": "Schleswig-Holstein",
+        "Stationshoehe": 27.0,
+        "Stationsname": "Grambek",
+        "bis_datum": 20150227,
+        "geoBreite": 53.5732,
+        "geoLaenge": 10.6795,
+        "von_datum": 20020124
+    },
+    "1757": {
+        "Bundesland": "Mecklenburg-Vorpommern",
+        "Stationshoehe": 2.0,
+        "Stationsname": "Greifswald",
+        "bis_datum": 20150227,
+        "geoBreite": 54.0967,
+        "geoLaenge": 13.4056,
+        "von_datum": 19780101
+    },
+    "1759": {
+        "Bundesland": "Mecklenburg-Vorpommern",
+        "Stationshoehe": 12.0,
+        "Stationsname": "Greifswalder Oie",
+        "bis_datum": 20150227,
+        "geoBreite": 54.2437,
+        "geoLaenge": 13.9102,
+        "von_datum": 20001025
+    },
+    "1766": {
+        "Bundesland": "Nordrhein-Westfalen",
+        "Stationshoehe": 48.0,
+        "Stationsname": "M\u00fcnster/Osnabr\u00fcck",
+        "bis_datum": 20150227,
+        "geoBreite": 52.1346,
+        "geoLaenge": 7.6964,
+        "von_datum": 19891001
+    },
+    "1803": {
+        "Bundesland": "Mecklenburg-Vorpommern",
+        "Stationshoehe": 34.0,
+        "Stationsname": "Gro\u00df L\u00fcsewitz",
+        "bis_datum": 20150227,
+        "geoBreite": 54.0714,
+        "geoLaenge": 12.3238,
+        "von_datum": 19910101
+    },
+    "1832": {
+        "Bundesland": "Bayern",
+        "Stationshoehe": 1436.0,
+        "Stationsname": "Gro\u00dfer Arber",
+        "bis_datum": 20150227,
+        "geoBreite": 49.113,
+        "geoLaenge": 13.1342,
+        "von_datum": 19821101
+    },
+    "1833": {
+        "Bundesland": "Bayern",
+        "Stationshoehe": 1307.0,
+        "Stationsname": "Grosser Falkenstein",
+        "bis_datum": 19821101,
+        "geoBreite": 49.0851,
+        "geoLaenge": 13.2801,
+        "von_datum": 19480101
+    },
+    "1863": {
+        "Bundesland": "Hessen",
+        "Stationshoehe": 258.0,
+        "Stationsname": "Gr\u00fcndau-Breitenborn",
+        "bis_datum": 20150227,
+        "geoBreite": 50.2663,
+        "geoLaenge": 9.1878,
+        "von_datum": 20071201
+    },
+    "1869": {
+        "Bundesland": "Brandenburg",
+        "Stationshoehe": 56.0,
+        "Stationsname": "Gr\u00fcnow",
+        "bis_datum": 20150227,
+        "geoBreite": 53.3153,
+        "geoLaenge": 13.9338,
+        "von_datum": 19810101
+    },
+    "1957": {
+        "Bundesland": "Sachsen-Anhalt",
+        "Stationshoehe": 93.0,
+        "Stationsname": "Halle-Kr\u00f6llwitz",
+        "bis_datum": 20150227,
+        "geoBreite": 51.5138,
+        "geoLaenge": 11.9499,
+        "von_datum": 19530101
+    },
+    "1964": {
+        "Bundesland": "Rheinland-Pfalz",
+        "Stationshoehe": 328.0,
+        "Stationsname": "Olsdorf",
+        "bis_datum": 20150227,
+        "geoBreite": 49.9445,
+        "geoLaenge": 6.3821,
+        "von_datum": 20050501
+    },
+    "1975": {
+        "Bundesland": "Hamburg",
+        "Stationshoehe": 11.0,
+        "Stationsname": "Hamburg-Fuhlsb\u00fcttel",
+        "bis_datum": 20150227,
+        "geoBreite": 53.6332,
+        "geoLaenge": 9.9881,
+        "von_datum": 19490101
+    },
+    "1981": {
+        "Bundesland": "Hamburg",
+        "Stationshoehe": 3.0,
+        "Stationsname": "Hamburg-Neuwiedenthal",
+        "bis_datum": 20150227,
+        "geoBreite": 53.4777,
+        "geoLaenge": 9.8957,
+        "von_datum": 20050301
+    },
+    "2014": {
+        "Bundesland": "Niedersachsen",
+        "Stationshoehe": 55.0,
+        "Stationsname": "Hannover",
+        "bis_datum": 20150227,
+        "geoBreite": 52.4644,
+        "geoLaenge": 9.6779,
+        "von_datum": 19490101
+    },
+    "2023": {
+        "Bundesland": "Bayern",
+        "Stationshoehe": 502.0,
+        "Stationsname": "Harburg",
+        "bis_datum": 20150227,
+        "geoBreite": 48.7918,
+        "geoLaenge": 10.7062,
+        "von_datum": 20020101
+    },
+    "2039": {
+        "Bundesland": "Niedersachsen",
+        "Stationshoehe": 201.0,
+        "Stationsname": "Harzburg, Bad",
+        "bis_datum": 20150227,
+        "geoBreite": 51.9,
+        "geoLaenge": 10.5701,
+        "von_datum": 20061101
+    },
+    "2044": {
+        "Bundesland": "Sachsen-Anhalt",
+        "Stationshoehe": 404.0,
+        "Stationsname": "Harzgerode",
+        "bis_datum": 20150227,
+        "geoBreite": 51.652,
+        "geoLaenge": 11.1367,
+        "von_datum": 19810101
+    },
+    "2074": {
+        "Bundesland": "Baden-W\u00fcrttemberg",
+        "Stationshoehe": 522.0,
+        "Stationsname": "Hechingen",
+        "bis_datum": 20150227,
+        "geoBreite": 48.3751,
+        "geoLaenge": 8.9801,
+        "von_datum": 20040601
+    },
+    "2080": {
+        "Bundesland": "Baden-W\u00fcrttemberg",
+        "Stationshoehe": 110.0,
+        "Stationsname": "Heidelberg",
+        "bis_datum": 20120912,
+        "geoBreite": 49.4206,
+        "geoLaenge": 8.6676,
+        "von_datum": 20040701
+    },
+    "2081": {
+        "Bundesland": "Baden-W\u00fcrttemberg",
+        "Stationshoehe": 561.0,
+        "Stationsname": "K\u00f6nigstuhl",
+        "bis_datum": 19550101,
+        "geoBreite": 49.3981,
+        "geoLaenge": 8.7251,
+        "von_datum": 19480101
+    },
+    "2088": {
+        "Bundesland": "Baden-W\u00fcrttemberg",
+        "Stationshoehe": 498.0,
+        "Stationsname": "Heidenheim/Brenz",
+        "bis_datum": 20050512,
+        "geoBreite": 48.6765,
+        "geoLaenge": 10.1307,
+        "von_datum": 20040601
+    },
+    "2110": {
+        "Bundesland": "Nordrhein-Westfalen",
+        "Stationshoehe": 57.0,
+        "Stationsname": "Heinsberg-Schleiden",
+        "bis_datum": 20150227,
+        "geoBreite": 51.0412,
+        "geoLaenge": 6.1041,
+        "von_datum": 20030101
+    },
+    "2115": {
+        "Bundesland": "Schleswig-Holstein",
+        "Stationshoehe": 4.0,
+        "Stationsname": "Helgoland",
+        "bis_datum": 20150227,
+        "geoBreite": 54.175,
+        "geoLaenge": 7.892,
+        "von_datum": 19520501
+    },
+    "2166": {
+        "Bundesland": "Sachsen",
+        "Stationshoehe": 344.0,
+        "Stationsname": "Herrnhut",
+        "bis_datum": 19910502,
+        "geoBreite": 51.0167,
+        "geoLaenge": 14.75,
+        "von_datum": 19820101
+    },
+    "2167": {
+        "Bundesland": "Rheinland-Pfalz",
+        "Stationshoehe": 302.0,
+        "Stationsname": "Niederw\u00f6rresbach",
+        "bis_datum": 20120402,
+        "geoBreite": 49.7672,
+        "geoLaenge": 7.3356,
+        "von_datum": 20050301
+    },
+    "2171": {
+        "Bundesland": "Hessen",
+        "Stationshoehe": 272.0,
+        "Stationsname": "Hersfeld, Bad",
+        "bis_datum": 20150227,
+        "geoBreite": 50.8519,
+        "geoLaenge": 9.7378,
+        "von_datum": 19510101
+    },
+    "2174": {
+        "Bundesland": "Niedersachsen",
+        "Stationshoehe": 238.0,
+        "Stationsname": "Herzberg",
+        "bis_datum": 20150227,
+        "geoBreite": 51.6254,
+        "geoLaenge": 10.3704,
+        "von_datum": 20101101
+    },
+    "2201": {
+        "Bundesland": "Mecklenburg-Vorpommern",
+        "Stationshoehe": 1.0,
+        "Stationsname": "Hiddensee-Vitte",
+        "bis_datum": 20150227,
+        "geoBreite": 54.575,
+        "geoLaenge": 13.1044,
+        "von_datum": 20050801
+    },
+    "2211": {
+        "Bundesland": "Rheinland-Pfalz",
+        "Stationshoehe": 295.0,
+        "Stationsname": "Hilgenroth",
+        "bis_datum": 20150227,
+        "geoBreite": 50.7371,
+        "geoLaenge": 7.6528,
+        "von_datum": 20041001
+    },
+    "2252": {
+        "Bundesland": "Sachsen",
+        "Stationshoehe": 270.0,
+        "Stationsname": "Bertsdorf-H\u00f6rnitz",
+        "bis_datum": 20150227,
+        "geoBreite": 50.8994,
+        "geoLaenge": 14.7456,
+        "von_datum": 20050701
+    },
+    "2261": {
+        "Bundesland": "Bayern",
+        "Stationshoehe": 565.0,
+        "Stationsname": "Hof",
+        "bis_datum": 20150227,
+        "geoBreite": 50.3122,
+        "geoLaenge": 11.8761,
+        "von_datum": 19480101
+    },
+    "2290": {
+        "Bundesland": "Bayern",
+        "Stationshoehe": 977.0,
+        "Stationsname": "Hohenpei\u00dfenberg",
+        "bis_datum": 20150227,
+        "geoBreite": 47.8009,
+        "geoLaenge": 11.0109,
+        "von_datum": 19470101
+    },
+    "2303": {
+        "Bundesland": "Schleswig-Holstein",
+        "Stationshoehe": 10.0,
+        "Stationsname": "Hohn",
+        "bis_datum": 20150227,
+        "geoBreite": 54.3146,
+        "geoLaenge": 9.539,
+        "von_datum": 20020101
+    },
+    "2306": {
+        "Bundesland": "Schleswig-Holstein",
+        "Stationshoehe": 8.0,
+        "Stationsname": "Hohwacht",
+        "bis_datum": 20150227,
+        "geoBreite": 54.3195,
+        "geoLaenge": 10.6733,
+        "von_datum": 20050801
+    },
+    "2315": {
+        "Bundesland": "Brandenburg",
+        "Stationshoehe": 81.0,
+        "Stationsname": "Holzdorf (Flugplatz)",
+        "bis_datum": 20150227,
+        "geoBreite": 51.7657,
+        "geoLaenge": 13.1666,
+        "von_datum": 20021101
+    },
+    "2319": {
+        "Bundesland": "Bayern",
+        "Stationshoehe": 685.0,
+        "Stationsname": "Holzkirchen",
+        "bis_datum": 20150227,
+        "geoBreite": 47.8823,
+        "geoLaenge": 11.6962,
+        "von_datum": 20050601
+    },
+    "2323": {
+        "Bundesland": "Niedersachsen",
+        "Stationshoehe": 110.0,
+        "Stationsname": "Bevern, Kr. Holzminden",
+        "bis_datum": 20150227,
+        "geoBreite": 51.8539,
+        "geoLaenge": 9.4964,
+        "von_datum": 20060701
+    },
+    "2338": {
+        "Bundesland": "Nordrhein-Westfalen",
+        "Stationshoehe": 39.0,
+        "Stationsname": "Hopsten (Flugplatz)",
+        "bis_datum": 20051223,
+        "geoBreite": 52.3333,
+        "geoLaenge": 7.55,
+        "von_datum": 20020101
+    },
+    "2362": {
+        "Bundesland": "Rheinland-Pfalz",
+        "Stationshoehe": 328.0,
+        "Stationsname": "H\u00fcmmerich",
+        "bis_datum": 20150227,
+        "geoBreite": 50.5652,
+        "geoLaenge": 7.4839,
+        "von_datum": 20040801
+    },
+    "2374": {
+        "Bundesland": "Schleswig-Holstein",
+        "Stationshoehe": 3.0,
+        "Stationsname": "Husum",
+        "bis_datum": 19740701,
+        "geoBreite": 54.4752,
+        "geoLaenge": 9.0564,
+        "von_datum": 19490101
+    },
+    "2385": {
+        "Bundesland": "Rheinland-Pfalz",
+        "Stationshoehe": 376.0,
+        "Stationsname": "Idar-Oberstein",
+        "bis_datum": 20150227,
+        "geoBreite": 49.6927,
+        "geoLaenge": 7.3264,
+        "von_datum": 20020101
+    },
+    "2410": {
+        "Bundesland": "Bayern",
+        "Stationshoehe": 364.0,
+        "Stationsname": "Ingolstadt (Flugplatz)",
+        "bis_datum": 20150227,
+        "geoBreite": 48.7112,
+        "geoLaenge": 11.5362,
+        "von_datum": 19610102
+    },
+    "2429": {
+        "Bundesland": "Schleswig-Holstein",
+        "Stationshoehe": 21.0,
+        "Stationsname": "Itzehoe",
+        "bis_datum": 20150227,
+        "geoBreite": 53.9897,
+        "geoLaenge": 9.5696,
+        "von_datum": 20020101
+    },
+    "2437": {
+        "Bundesland": "Schleswig-Holstein",
+        "Stationshoehe": 21.0,
+        "Stationsname": "Schleswig-Jagel",
+        "bis_datum": 20150227,
+        "geoBreite": 54.455,
+        "geoLaenge": 9.5194,
+        "von_datum": 20020101
+    },
+    "2444": {
+        "Bundesland": "Th\u00fcringen",
+        "Stationshoehe": 155.0,
+        "Stationsname": "Jena (Sternwarte)",
+        "bis_datum": 20150227,
+        "geoBreite": 50.9251,
+        "geoLaenge": 11.583,
+        "von_datum": 19910801
+    },
+    "2456": {
+        "Bundesland": "Niedersachsen",
+        "Stationshoehe": 7.0,
+        "Stationsname": "Jever",
+        "bis_datum": 20070703,
+        "geoBreite": 53.5322,
+        "geoLaenge": 7.8806,
+        "von_datum": 20011017
+    },
+    "2480": {
+        "Bundesland": "Bayern",
+        "Stationshoehe": 107.0,
+        "Stationsname": "Kahl/Main",
+        "bis_datum": 20150227,
+        "geoBreite": 50.0644,
+        "geoLaenge": 8.9932,
+        "von_datum": 20040901
+    },
+    "2483": {
+        "Bundesland": "Nordrhein-Westfalen",
+        "Stationshoehe": 839.0,
+        "Stationsname": "Kahler Asten",
+        "bis_datum": 20150227,
+        "geoBreite": 51.1803,
+        "geoLaenge": 8.4891,
+        "von_datum": 19510101
+    },
+    "2485": {
+        "Bundesland": "Baden-W\u00fcrttemberg",
+        "Stationshoehe": 489.0,
+        "Stationsname": "Kaisersbach-Cronh\u00fctte",
+        "bis_datum": 20150227,
+        "geoBreite": 48.9171,
+        "geoLaenge": 9.6872,
+        "von_datum": 20110502
+    },
+    "2486": {
+        "Bundesland": "Rheinland-Pfalz",
+        "Stationshoehe": 285.0,
+        "Stationsname": "Kaiserslautern",
+        "bis_datum": 20150227,
+        "geoBreite": 49.4242,
+        "geoLaenge": 7.736,
+        "von_datum": 20050301
+    },
+    "2488": {
+        "Bundesland": "Bayern",
+        "Stationshoehe": 516.0,
+        "Stationsname": "Kaisheim-Neuhof",
+        "bis_datum": 20021001,
+        "geoBreite": 48.7701,
+        "geoLaenge": 10.7876,
+        "von_datum": 19820101
+    },
+    "2494": {
+        "Bundesland": "Nordrhein-Westfalen",
+        "Stationshoehe": 31.0,
+        "Stationsname": "Kalkar",
+        "bis_datum": 20131020,
+        "geoBreite": 51.7329,
+        "geoLaenge": 6.2688,
+        "von_datum": 20020101
+    },
+    "2497": {
+        "Bundesland": "Nordrhein-Westfalen",
+        "Stationshoehe": 505.0,
+        "Stationsname": "Kall-Sistig",
+        "bis_datum": 20150227,
+        "geoBreite": 50.5016,
+        "geoLaenge": 6.5262,
+        "von_datum": 20040801
+    },
+    "2503": {
+        "Bundesland": "Th\u00fcringen",
+        "Stationshoehe": 487.0,
+        "Stationsname": "Kaltennordheim",
+        "bis_datum": 20030505,
+        "geoBreite": 50.6266,
+        "geoLaenge": 10.1455,
+        "von_datum": 19510101
+    },
+    "2521": {
+        "Bundesland": "Bayern",
+        "Stationshoehe": 374.0,
+        "Stationsname": "Karlshuld",
+        "bis_datum": 19940401,
+        "geoBreite": 48.6765,
+        "geoLaenge": 11.2961,
+        "von_datum": 19820101
+    },
+    "2522": {
+        "Bundesland": "Baden-W\u00fcrttemberg",
+        "Stationshoehe": 112.0,
+        "Stationsname": "Karlsruhe",
+        "bis_datum": 20081102,
+        "geoBreite": 49.0382,
+        "geoLaenge": 8.3641,
+        "von_datum": 19480101
+    },
+    "2532": {
+        "Bundesland": "Hessen",
+        "Stationshoehe": 231.0,
+        "Stationsname": "Kassel",
+        "bis_datum": 20131031,
+        "geoBreite": 51.2963,
+        "geoLaenge": 9.4424,
+        "von_datum": 19480101
+    },
+    "2542": {
+        "Bundesland": "Bayern",
+        "Stationshoehe": 716.0,
+        "Stationsname": "Kaufbeuren",
+        "bis_datum": 20150227,
+        "geoBreite": 47.8652,
+        "geoLaenge": 10.6007,
+        "von_datum": 19750601
+    },
+    "2559": {
+        "Bundesland": "Bayern",
+        "Stationshoehe": 705.0,
+        "Stationsname": "Kempten",
+        "bis_datum": 20150227,
+        "geoBreite": 47.7233,
+        "geoLaenge": 10.3348,
+        "von_datum": 19550101
+    },
+    "2564": {
+        "Bundesland": "Schleswig-Holstein",
+        "Stationshoehe": 27.0,
+        "Stationsname": "Kiel-Holtenau",
+        "bis_datum": 20150227,
+        "geoBreite": 54.3761,
+        "geoLaenge": 10.1433,
+        "von_datum": 20020101
+    },
+    "2565": {
+        "Bundesland": "Schleswig-Holstein",
+        "Stationshoehe": 17.0,
+        "Stationsname": "Kiel-Kronshagen",
+        "bis_datum": 19881015,
+        "geoBreite": 54.3378,
+        "geoLaenge": 10.0929,
+        "von_datum": 19490101
+    },
+    "2575": {
+        "Bundesland": "Baden-W\u00fcrttemberg",
+        "Stationshoehe": 426.0,
+        "Stationsname": "Kirchberg/Jagst-Herboldshausen",
+        "bis_datum": 20150227,
+        "geoBreite": 49.1804,
+        "geoLaenge": 9.9799,
+        "von_datum": 20070523
+    },
+    "2578": {
+        "Bundesland": "Mecklenburg-Vorpommern",
+        "Stationshoehe": 12.0,
+        "Stationsname": "Kirchdorf/Poel",
+        "bis_datum": 20150227,
+        "geoBreite": 53.9995,
+        "geoLaenge": 11.4341,
+        "von_datum": 20040701
+    },
+    "2597": {
+        "Bundesland": "Bayern",
+        "Stationshoehe": 282.0,
+        "Stationsname": "Kissingen, Bad",
+        "bis_datum": 20150227,
+        "geoBreite": 50.2241,
+        "geoLaenge": 10.0792,
+        "von_datum": 19480101
+    },
+    "2600": {
+        "Bundesland": "Bayern",
+        "Stationshoehe": 188.0,
+        "Stationsname": "Kitzingen",
+        "bis_datum": 20150227,
+        "geoBreite": 49.7361,
+        "geoLaenge": 10.1782,
+        "von_datum": 20050301
+    },
+    "2601": {
+        "Bundesland": "Hessen",
+        "Stationshoehe": 826.0,
+        "Stationsname": "Kleiner Feldberg/Taunus",
+        "bis_datum": 20150227,
+        "geoBreite": 50.2218,
+        "geoLaenge": 8.4469,
+        "von_datum": 19480101
+    },
+    "2618": {
+        "Bundesland": "Th\u00fcringen",
+        "Stationshoehe": 732.0,
+        "Stationsname": "Kleiner Inselsberg",
+        "bis_datum": 20150227,
+        "geoBreite": 50.8458,
+        "geoLaenge": 10.4803,
+        "von_datum": 20041001
+    },
+    "2627": {
+        "Bundesland": "Brandenburg",
+        "Stationshoehe": 128.0,
+        "Stationsname": "Klettwitz",
+        "bis_datum": 20150227,
+        "geoBreite": 51.5554,
+        "geoLaenge": 13.8846,
+        "von_datum": 20040701
+    },
+    "2629": {
+        "Bundesland": "Nordrhein-Westfalen",
+        "Stationshoehe": 46.0,
+        "Stationsname": "Kleve",
+        "bis_datum": 20150227,
+        "geoBreite": 51.7612,
+        "geoLaenge": 6.0954,
+        "von_datum": 20040701
+    },
+    "2638": {
+        "Bundesland": "Baden-W\u00fcrttemberg",
+        "Stationshoehe": 973.0,
+        "Stationsname": "Klippeneck",
+        "bis_datum": 20150227,
+        "geoBreite": 48.1054,
+        "geoLaenge": 8.7549,
+        "von_datum": 19650701
+    },
+    "2641": {
+        "Bundesland": "Sachsen",
+        "Stationshoehe": 85.0,
+        "Stationsname": "Klitzschen bei Torgau",
+        "bis_datum": 20150227,
+        "geoBreite": 51.519,
+        "geoLaenge": 12.9062,
+        "von_datum": 20040901
+    },
+    "2656": {
+        "Bundesland": "Rheinland-Pfalz",
+        "Stationshoehe": 96.0,
+        "Stationsname": "Koblenz",
+        "bis_datum": 19900101,
+        "geoBreite": 50.3519,
+        "geoLaenge": 7.5906,
+        "von_datum": 19550101
+    },
+    "2667": {
+        "Bundesland": "Nordrhein-Westfalen",
+        "Stationshoehe": 92.0,
+        "Stationsname": "K\u00f6ln-Bonn",
+        "bis_datum": 20150227,
+        "geoBreite": 50.8646,
+        "geoLaenge": 7.1575,
+        "von_datum": 19600101
+    },
+    "2680": {
+        "Bundesland": "Bayern",
+        "Stationshoehe": 288.0,
+        "Stationsname": "K\u00f6nigshofen, Bad",
+        "bis_datum": 20150227,
+        "geoBreite": 50.2841,
+        "geoLaenge": 10.4456,
+        "von_datum": 20050601
+    },
+    "2691": {
+        "Bundesland": "Bayern",
+        "Stationshoehe": 378.0,
+        "Stationsname": "K\u00f6nigsmoos-Untermaxfeld",
+        "bis_datum": 19941101,
+        "geoBreite": 48.6707,
+        "geoLaenge": 11.2173,
+        "von_datum": 19940401
+    },
+    "2700": {
+        "Bundesland": "Bayern",
+        "Stationshoehe": 417.0,
+        "Stationsname": "K\u00f6sching",
+        "bis_datum": 20150227,
+        "geoBreite": 48.8301,
+        "geoLaenge": 11.4872,
+        "von_datum": 20041201
+    },
+    "2704": {
+        "Bundesland": "Sachsen-Anhalt",
+        "Stationshoehe": 76.0,
+        "Stationsname": "K\u00f6then (Anhalt)",
+        "bis_datum": 20150227,
+        "geoBreite": 51.7515,
+        "geoLaenge": 12.0079,
+        "von_datum": 20040501
+    },
+    "2708": {
+        "Bundesland": "Bayern",
+        "Stationshoehe": 740.0,
+        "Stationsname": "Kohlgrub, Bad (Rosshof)",
+        "bis_datum": 20150227,
+        "geoBreite": 47.6652,
+        "geoLaenge": 11.0804,
+        "von_datum": 20060701
+    },
+    "2712": {
+        "Bundesland": "Baden-W\u00fcrttemberg",
+        "Stationshoehe": 443.0,
+        "Stationsname": "Konstanz",
+        "bis_datum": 20150227,
+        "geoBreite": 47.6774,
+        "geoLaenge": 9.1901,
+        "von_datum": 19710101
+    },
+    "2750": {
+        "Bundesland": "Bayern",
+        "Stationshoehe": 312.0,
+        "Stationsname": "Kronach",
+        "bis_datum": 20150227,
+        "geoBreite": 50.2524,
+        "geoLaenge": 11.3208,
+        "von_datum": 20051101
+    },
+    "2761": {
+        "Bundesland": "Bayern",
+        "Stationshoehe": 520.0,
+        "Stationsname": "Krumbach-Edenhausen",
+        "bis_datum": 19780601,
+        "geoBreite": 48.251,
+        "geoLaenge": 10.4163,
+        "von_datum": 19750601
+    },
+    "2773": {
+        "Bundesland": "Bayern",
+        "Stationshoehe": 417.0,
+        "Stationsname": "K\u00fcmmersbruck",
+        "bis_datum": 20150227,
+        "geoBreite": 49.4283,
+        "geoLaenge": 11.9016,
+        "von_datum": 20020101
+    },
+    "2794": {
+        "Bundesland": "Brandenburg",
+        "Stationshoehe": 40.0,
+        "Stationsname": "Kyritz",
+        "bis_datum": 20150227,
+        "geoBreite": 52.9363,
+        "geoLaenge": 12.4093,
+        "von_datum": 19890101
+    },
+    "2796": {
+        "Bundesland": "Mecklenburg-Vorpommern",
+        "Stationshoehe": 40.0,
+        "Stationsname": "Laage (Flugplatz)",
+        "bis_datum": 20150227,
+        "geoBreite": 53.9156,
+        "geoLaenge": 12.279,
+        "von_datum": 20020101
+    },
+    "2812": {
+        "Bundesland": "Baden-W\u00fcrttemberg",
+        "Stationshoehe": 155.0,
+        "Stationsname": "Lahr",
+        "bis_datum": 20150227,
+        "geoBreite": 48.3647,
+        "geoLaenge": 7.828,
+        "von_datum": 19950101
+    },
+    "2814": {
+        "Bundesland": "Baden-W\u00fcrttemberg",
+        "Stationshoehe": 685.0,
+        "Stationsname": "Merklingen",
+        "bis_datum": 20150227,
+        "geoBreite": 48.5121,
+        "geoLaenge": 9.7645,
+        "von_datum": 19750601
+    },
+    "2829": {
+        "Bundesland": "Bayern",
+        "Stationshoehe": 621.0,
+        "Stationsname": "Landsberg (Flugplatz)",
+        "bis_datum": 20150227,
+        "geoBreite": 48.0772,
+        "geoLaenge": 10.9144,
+        "von_datum": 19660101
+    },
+    "2843": {
+        "Bundesland": "Hessen",
+        "Stationshoehe": 125.0,
+        "Stationsname": "Langen (BTZ)",
+        "bis_datum": 20150227,
+        "geoBreite": 50.0075,
+        "geoLaenge": 8.6547,
+        "von_datum": 19900719
+    },
+    "2856": {
+        "Bundesland": "Brandenburg",
+        "Stationshoehe": 91.0,
+        "Stationsname": "Langenlipsdorf",
+        "bis_datum": 20150227,
+        "geoBreite": 51.9173,
+        "geoLaenge": 13.0878,
+        "von_datum": 20040701
+    },
+    "2878": {
+        "Bundesland": "Sachsen-Anhalt",
+        "Stationshoehe": 119.0,
+        "Stationsname": "Lauchst\u00e4dt, Bad",
+        "bis_datum": 19930128,
+        "geoBreite": 51.3912,
+        "geoLaenge": 11.8785,
+        "von_datum": 19930121
+    },
+    "2886": {
+        "Bundesland": "Baden-W\u00fcrttemberg",
+        "Stationshoehe": 539.0,
+        "Stationsname": "Laupheim",
+        "bis_datum": 20150227,
+        "geoBreite": 48.2176,
+        "geoLaenge": 9.9097,
+        "von_datum": 20020101
+    },
+    "2905": {
+        "Bundesland": "Bayern",
+        "Stationshoehe": 550.0,
+        "Stationsname": "Lechfeld",
+        "bis_datum": 20150227,
+        "geoBreite": 48.1849,
+        "geoLaenge": 10.8507,
+        "von_datum": 20020101
+    },
+    "2907": {
+        "Bundesland": "Schleswig-Holstein",
+        "Stationshoehe": 7.0,
+        "Stationsname": "Leck",
+        "bis_datum": 20150227,
+        "geoBreite": 54.7903,
+        "geoLaenge": 8.9514,
+        "von_datum": 19910101
+    },
+    "2920": {
+        "Bundesland": "Bayern",
+        "Stationshoehe": 365.0,
+        "Stationsname": "Leiblfing",
+        "bis_datum": 19841101,
+        "geoBreite": 48.7654,
+        "geoLaenge": 12.5121,
+        "von_datum": 19820101
+    },
+    "2925": {
+        "Bundesland": "Th\u00fcringen",
+        "Stationshoehe": 356.0,
+        "Stationsname": "Leinefelde",
+        "bis_datum": 20150227,
+        "geoBreite": 51.3933,
+        "geoLaenge": 10.3123,
+        "von_datum": 19560101
+    },
+    "2928": {
+        "Bundesland": "Sachsen",
+        "Stationshoehe": 138.0,
+        "Stationsname": "Leipzig-Holzhausen",
+        "bis_datum": 20150227,
+        "geoBreite": 51.3151,
+        "geoLaenge": 12.4462,
+        "von_datum": 19510101
+    },
+    "2932": {
+        "Bundesland": "Sachsen",
+        "Stationshoehe": 131.0,
+        "Stationsname": "Leipzig/Halle",
+        "bis_datum": 20150227,
+        "geoBreite": 51.4348,
+        "geoLaenge": 12.2396,
+        "von_datum": 19720501
+    },
+    "2947": {
+        "Bundesland": "Nordrhein-Westfalen",
+        "Stationshoehe": 286.0,
+        "Stationsname": "Lennestadt-Theten",
+        "bis_datum": 20150227,
+        "geoBreite": 51.1334,
+        "geoLaenge": 8.0352,
+        "von_datum": 20061001
+    },
+    "2951": {
+        "Bundesland": "Brandenburg",
+        "Stationshoehe": 20.0,
+        "Stationsname": "Lenzen/Elbe",
+        "bis_datum": 20150227,
+        "geoBreite": 53.1007,
+        "geoLaenge": 11.4864,
+        "von_datum": 20040601
+    },
+    "2953": {
+        "Bundesland": "Baden-W\u00fcrttemberg",
+        "Stationshoehe": 852.0,
+        "Stationsname": "Lenzkirch-Ruhb\u00fchl",
+        "bis_datum": 20150227,
+        "geoBreite": 47.8597,
+        "geoLaenge": 8.2308,
+        "von_datum": 20070401
+    },
+    "2961": {
+        "Bundesland": "Schleswig-Holstein",
+        "Stationshoehe": 5.0,
+        "Stationsname": "Leuchtturm Kiel",
+        "bis_datum": 20150227,
+        "geoBreite": 54.4996,
+        "geoLaenge": 10.2737,
+        "von_datum": 20020101
+    },
+    "2968": {
+        "Bundesland": "Nordrhein-Westfalen",
+        "Stationshoehe": 43.0,
+        "Stationsname": "K\u00f6ln-Stammheim",
+        "bis_datum": 20150227,
+        "geoBreite": 50.9895,
+        "geoLaenge": 6.9779,
+        "von_datum": 20081201
+    },
+    "2985": {
+        "Bundesland": "Sachsen",
+        "Stationshoehe": 321.0,
+        "Stationsname": "Lichtenhain-Mittelndorf",
+        "bis_datum": 20150227,
+        "geoBreite": 50.9383,
+        "geoLaenge": 14.2093,
+        "von_datum": 19910305
+    },
+    "3015": {
+        "Bundesland": "Brandenburg",
+        "Stationshoehe": 98.0,
+        "Stationsname": "Lindenberg",
+        "bis_datum": 20150227,
+        "geoBreite": 52.2085,
+        "geoLaenge": 14.118,
+        "von_datum": 19510101
+    },
+    "3023": {
+        "Bundesland": "Niedersachsen",
+        "Stationshoehe": 22.0,
+        "Stationsname": "Lingen",
+        "bis_datum": 20150227,
+        "geoBreite": 52.5181,
+        "geoLaenge": 7.3081,
+        "von_datum": 19510101
+    },
+    "3028": {
+        "Bundesland": "Nordrhein-Westfalen",
+        "Stationshoehe": 157.0,
+        "Stationsname": "Lippspringe, Bad",
+        "bis_datum": 20150227,
+        "geoBreite": 51.7855,
+        "geoLaenge": 8.8388,
+        "von_datum": 19710401
+    },
+    "3031": {
+        "Bundesland": "Nordrhein-Westfalen",
+        "Stationshoehe": 92.0,
+        "Stationsname": "Lippstadt-B\u00f6kenf\u00f6rde",
+        "bis_datum": 20150227,
+        "geoBreite": 51.6334,
+        "geoLaenge": 8.3943,
+        "von_datum": 20040701
+    },
+    "3032": {
+        "Bundesland": "Schleswig-Holstein",
+        "Stationshoehe": 26.0,
+        "Stationsname": "List auf Sylt",
+        "bis_datum": 20150227,
+        "geoBreite": 55.011,
+        "geoLaenge": 8.4125,
+        "von_datum": 19490101
+    },
+    "3034": {
+        "Bundesland": "Th\u00fcringen",
+        "Stationshoehe": 500.0,
+        "Stationsname": "Lobenstein, Bad",
+        "bis_datum": 20150227,
+        "geoBreite": 50.4505,
+        "geoLaenge": 11.635,
+        "von_datum": 20070101
+    },
+    "3042": {
+        "Bundesland": "Hessen",
+        "Stationshoehe": 230.0,
+        "Stationsname": "L\u00f6hnberg-Obershausen",
+        "bis_datum": 20150227,
+        "geoBreite": 50.5624,
+        "geoLaenge": 8.2391,
+        "von_datum": 20080601
+    },
+    "3044": {
+        "Bundesland": "Niedersachsen",
+        "Stationshoehe": 22.0,
+        "Stationsname": "L\u00f6ningen",
+        "bis_datum": 20150227,
+        "geoBreite": 52.7216,
+        "geoLaenge": 7.7463,
+        "von_datum": 20070701
+    },
+    "3083": {
+        "Bundesland": "Brandenburg",
+        "Stationshoehe": 57.0,
+        "Stationsname": "L\u00fcbben-Blumenfelde",
+        "bis_datum": 20150227,
+        "geoBreite": 51.9267,
+        "geoLaenge": 13.8797,
+        "von_datum": 20050101
+    },
+    "3085": {
+        "Bundesland": "Schleswig-Holstein",
+        "Stationshoehe": 15.0,
+        "Stationsname": "L\u00fcbeck",
+        "bis_datum": 19850301,
+        "geoBreite": 53.8773,
+        "geoLaenge": 10.6915,
+        "von_datum": 19510101
+    },
+    "3086": {
+        "Bundesland": "Schleswig-Holstein",
+        "Stationshoehe": 16.0,
+        "Stationsname": "L\u00fcbeck-Blankensee",
+        "bis_datum": 20150227,
+        "geoBreite": 53.8025,
+        "geoLaenge": 10.6988,
+        "von_datum": 19850301
+    },
+    "3093": {
+        "Bundesland": "Niedersachsen",
+        "Stationshoehe": 17.0,
+        "Stationsname": "L\u00fcchow",
+        "bis_datum": 20150227,
+        "geoBreite": 52.9724,
+        "geoLaenge": 11.1374,
+        "von_datum": 19541201
+    },
+    "3098": {
+        "Bundesland": "Nordrhein-Westfalen",
+        "Stationshoehe": 387.0,
+        "Stationsname": "L\u00fcdenscheid",
+        "bis_datum": 20150227,
+        "geoBreite": 51.2452,
+        "geoLaenge": 7.6425,
+        "von_datum": 19940101
+    },
+    "3126": {
+        "Bundesland": "Sachsen-Anhalt",
+        "Stationshoehe": 76.0,
+        "Stationsname": "Magdeburg",
+        "bis_datum": 20150227,
+        "geoBreite": 52.1029,
+        "geoLaenge": 11.5826,
+        "von_datum": 19550101
+    },
+    "3137": {
+        "Bundesland": "Rheinland-Pfalz",
+        "Stationshoehe": 195.0,
+        "Stationsname": "Mainz-Lerchenberg (ZDF)",
+        "bis_datum": 20150227,
+        "geoBreite": 49.9672,
+        "geoLaenge": 8.2108,
+        "von_datum": 20080501
+    },
+    "3139": {
+        "Bundesland": "Bayern",
+        "Stationshoehe": 509.0,
+        "Stationsname": "Maisach-Gernlinden",
+        "bis_datum": 20050101,
+        "geoBreite": 48.2166,
+        "geoLaenge": 11.2965,
+        "von_datum": 19831101
+    },
+    "3147": {
+        "Bundesland": "Bayern",
+        "Stationshoehe": 418.0,
+        "Stationsname": "Mallersdorf-Pfaffenberg/Niederbayern",
+        "bis_datum": 20150227,
+        "geoBreite": 48.7726,
+        "geoLaenge": 12.2177,
+        "von_datum": 19850101
+    },
+    "3155": {
+        "Bundesland": "Rheinland-Pfalz",
+        "Stationshoehe": 413.0,
+        "Stationsname": "Manderscheid-Sonnenhof",
+        "bis_datum": 20150227,
+        "geoBreite": 50.1016,
+        "geoLaenge": 6.8015,
+        "von_datum": 20040801
+    },
+    "3158": {
+        "Bundesland": "Brandenburg",
+        "Stationshoehe": 12.0,
+        "Stationsname": "Manschnow",
+        "bis_datum": 20150227,
+        "geoBreite": 52.5468,
+        "geoLaenge": 14.5452,
+        "von_datum": 19890101
+    },
+    "3164": {
+        "Bundesland": "Hessen",
+        "Stationshoehe": 182.0,
+        "Stationsname": "C\u00f6lbe, Kr. Marburg-Biedenkopf",
+        "bis_datum": 20150227,
+        "geoBreite": 50.8492,
+        "geoLaenge": 8.7746,
+        "von_datum": 20060701
+    },
+    "3166": {
+        "Bundesland": "Sachsen",
+        "Stationshoehe": 639.0,
+        "Stationsname": "Marienberg",
+        "bis_datum": 20150227,
+        "geoBreite": 50.651,
+        "geoLaenge": 13.1469,
+        "von_datum": 19820101
+    },
+    "3167": {
+        "Bundesland": "Rheinland-Pfalz",
+        "Stationshoehe": 547.0,
+        "Stationsname": "Marienberg, Bad",
+        "bis_datum": 20150227,
+        "geoBreite": 50.662,
+        "geoLaenge": 7.9602,
+        "von_datum": 19621201
+    },
+    "3170": {
+        "Bundesland": "Schleswig-Holstein",
+        "Stationshoehe": 5.0,
+        "Stationsname": "Marienleuchte",
+        "bis_datum": 20121221,
+        "geoBreite": 54.4937,
+        "geoLaenge": 11.2405,
+        "von_datum": 20020101
+    },
+    "3196": {
+        "Bundesland": "Mecklenburg-Vorpommern",
+        "Stationshoehe": 81.0,
+        "Stationsname": "Marnitz",
+        "bis_datum": 20150227,
+        "geoBreite": 53.3223,
+        "geoLaenge": 11.9319,
+        "von_datum": 19810101
+    },
+    "3204": {
+        "Bundesland": "Th\u00fcringen",
+        "Stationshoehe": 430.0,
+        "Stationsname": "Martinroda",
+        "bis_datum": 20150227,
+        "geoBreite": 50.7335,
+        "geoLaenge": 10.8818,
+        "von_datum": 20080701
+    },
+    "3226": {
+        "Bundesland": "Sachsen-Anhalt",
+        "Stationshoehe": 107.0,
+        "Stationsname": "Aschersleben-Mehringen",
+        "bis_datum": 20150227,
+        "geoBreite": 51.7259,
+        "geoLaenge": 11.5111,
+        "von_datum": 20060801
+    },
+    "3231": {
+        "Bundesland": "Th\u00fcringen",
+        "Stationshoehe": 450.0,
+        "Stationsname": "Meiningen",
+        "bis_datum": 20150227,
+        "geoBreite": 50.5612,
+        "geoLaenge": 10.3771,
+        "von_datum": 19790101
+    },
+    "3234": {
+        "Bundesland": "Sachsen",
+        "Stationshoehe": 157.0,
+        "Stationsname": "Garsebach bei Mei\u00dfen",
+        "bis_datum": 20150227,
+        "geoBreite": 51.1294,
+        "geoLaenge": 13.4327,
+        "von_datum": 20050201
+    },
+    "3244": {
+        "Bundesland": "Bayern",
+        "Stationshoehe": 615.0,
+        "Stationsname": "Memmingen",
+        "bis_datum": 20150227,
+        "geoBreite": 47.982,
+        "geoLaenge": 10.1384,
+        "von_datum": 19750601
+    },
+    "3245": {
+        "Bundesland": "Bayern",
+        "Stationshoehe": 630.0,
+        "Stationsname": "Memmingen (Flugplatz)",
+        "bis_datum": 20021120,
+        "geoBreite": 47.9833,
+        "geoLaenge": 10.2333,
+        "von_datum": 20020102
+    },
+    "3246": {
+        "Bundesland": "Rheinland-Pfalz",
+        "Stationshoehe": 181.0,
+        "Stationsname": "Mendig",
+        "bis_datum": 20070613,
+        "geoBreite": 50.3667,
+        "geoLaenge": 7.3167,
+        "von_datum": 20020101
+    },
+    "3254": {
+        "Bundesland": "Niedersachsen",
+        "Stationshoehe": 19.0,
+        "Stationsname": "Meppen",
+        "bis_datum": 20150227,
+        "geoBreite": 52.7156,
+        "geoLaenge": 7.3176,
+        "von_datum": 20020102
+    },
+    "3257": {
+        "Bundesland": "Baden-W\u00fcrttemberg",
+        "Stationshoehe": 250.0,
+        "Stationsname": "Mergentheim, Bad-Neunkirchen",
+        "bis_datum": 20150227,
+        "geoBreite": 49.4773,
+        "geoLaenge": 9.7623,
+        "von_datum": 20040601
+    },
+    "3268": {
+        "Bundesland": "Baden-W\u00fcrttemberg",
+        "Stationshoehe": 920.0,
+        "Stationsname": "Me\u00dfstetten",
+        "bis_datum": 20150227,
+        "geoBreite": 48.1875,
+        "geoLaenge": 8.9938,
+        "von_datum": 20021101
+    },
+    "3271": {
+        "Bundesland": "Bayern",
+        "Stationshoehe": 313.0,
+        "Stationsname": "Metten",
+        "bis_datum": 20150227,
+        "geoBreite": 48.8548,
+        "geoLaenge": 12.9187,
+        "von_datum": 20041101
+    },
+    "3278": {
+        "Bundesland": "Baden-W\u00fcrttemberg",
+        "Stationshoehe": 355.0,
+        "Stationsname": "Metzingen",
+        "bis_datum": 20150227,
+        "geoBreite": 48.5376,
+        "geoLaenge": 9.2733,
+        "von_datum": 20090401
+    },
+    "3284": {
+        "Bundesland": "Hessen",
+        "Stationshoehe": 240.0,
+        "Stationsname": "Michelstadt",
+        "bis_datum": 20150227,
+        "geoBreite": 49.6691,
+        "geoLaenge": 9.0085,
+        "von_datum": 20050501
+    },
+    "3287": {
+        "Bundesland": "Hessen",
+        "Stationshoehe": 453.0,
+        "Stationsname": "Michelstadt-Vielbrunn",
+        "bis_datum": 20150227,
+        "geoBreite": 49.7176,
+        "geoLaenge": 9.0997,
+        "von_datum": 19871001
+    },
+    "3289": {
+        "Bundesland": "Th\u00fcringen",
+        "Stationshoehe": 349.0,
+        "Stationsname": "Schmieritz-Weltwitz",
+        "bis_datum": 20150227,
+        "geoBreite": 50.7285,
+        "geoLaenge": 11.7841,
+        "von_datum": 20041101
+    },
+    "3307": {
+        "Bundesland": "Bayern",
+        "Stationshoehe": 981.0,
+        "Stationsname": "Mittenwald-Buckelwiesen",
+        "bis_datum": 20150227,
+        "geoBreite": 47.4778,
+        "geoLaenge": 11.2654,
+        "von_datum": 20080401
+    },
+    "3319": {
+        "Bundesland": "Bayern",
+        "Stationshoehe": 239.0,
+        "Stationsname": "R\u00f6llbach",
+        "bis_datum": 20150227,
+        "geoBreite": 49.7645,
+        "geoLaenge": 9.2531,
+        "von_datum": 20060901
+    },
+    "3340": {
+        "Bundesland": "Rheinland-Pfalz",
+        "Stationshoehe": 265.0,
+        "Stationsname": "Montabaur",
+        "bis_datum": 20150227,
+        "geoBreite": 50.4383,
+        "geoLaenge": 7.8061,
+        "von_datum": 20050501
+    },
+    "3348": {
+        "Bundesland": "Niedersachsen",
+        "Stationshoehe": 240.0,
+        "Stationsname": "Moringen-Lutterbeck",
+        "bis_datum": 20150227,
+        "geoBreite": 51.7209,
+        "geoLaenge": 9.8352,
+        "von_datum": 20040601
+    },
+    "3362": {
+        "Bundesland": "Baden-W\u00fcrttemberg",
+        "Stationshoehe": 244.0,
+        "Stationsname": "M\u00fchlacker",
+        "bis_datum": 20150227,
+        "geoBreite": 48.9721,
+        "geoLaenge": 8.8734,
+        "von_datum": 20020101
+    },
+    "3366": {
+        "Bundesland": "Bayern",
+        "Stationshoehe": 406.0,
+        "Stationsname": "M\u00fchldorf",
+        "bis_datum": 20150227,
+        "geoBreite": 48.2791,
+        "geoLaenge": 12.5024,
+        "von_datum": 19550101
+    },
+    "3376": {
+        "Bundesland": "Brandenburg",
+        "Stationshoehe": 63.0,
+        "Stationsname": "M\u00fcncheberg",
+        "bis_datum": 20150227,
+        "geoBreite": 52.5176,
+        "geoLaenge": 14.1232,
+        "von_datum": 19910101
+    },
+    "3379": {
+        "Bundesland": "Bayern",
+        "Stationshoehe": 515.0,
+        "Stationsname": "M\u00fcnchen-Stadt",
+        "bis_datum": 20150227,
+        "geoBreite": 48.1631,
+        "geoLaenge": 11.5429,
+        "von_datum": 19970701
+    },
+    "3382": {
+        "Bundesland": "Bayern",
+        "Stationshoehe": 521.0,
+        "Stationsname": "M\u00fcnchen-Bogenhausen",
+        "bis_datum": 19540101,
+        "geoBreite": 48.1441,
+        "geoLaenge": 11.6,
+        "von_datum": 19480101
+    },
+    "3385": {
+        "Bundesland": "Bayern",
+        "Stationshoehe": 515.0,
+        "Stationsname": "M\u00fcnchen-Nymphenburg",
+        "bis_datum": 19990331,
+        "geoBreite": 48.166,
+        "geoLaenge": 11.5011,
+        "von_datum": 19820101
+    },
+    "3390": {
+        "Bundesland": "Bayern",
+        "Stationshoehe": 529.0,
+        "Stationsname": "M\u00fcnchen-Riem",
+        "bis_datum": 19920517,
+        "geoBreite": 48.1369,
+        "geoLaenge": 11.7094,
+        "von_datum": 19490101
+    },
+    "3402": {
+        "Bundesland": "Baden-W\u00fcrttemberg",
+        "Stationshoehe": 750.0,
+        "Stationsname": "M\u00fcnsingen-Apfelstetten",
+        "bis_datum": 20150227,
+        "geoBreite": 48.3851,
+        "geoLaenge": 9.4837,
+        "von_datum": 20021101
+    },
+    "3404": {
+        "Bundesland": "Nordrhein-Westfalen",
+        "Stationshoehe": 62.0,
+        "Stationsname": "M\u00fcnster",
+        "bis_datum": 19891001,
+        "geoBreite": 51.9494,
+        "geoLaenge": 7.5906,
+        "von_datum": 19480101
+    },
+    "3426": {
+        "Bundesland": "Sachsen",
+        "Stationshoehe": 125.0,
+        "Stationsname": "Muskau, Bad",
+        "bis_datum": 20150227,
+        "geoBreite": 51.5662,
+        "geoLaenge": 14.6989,
+        "von_datum": 20040601
+    },
+    "3442": {
+        "Bundesland": "Hessen",
+        "Stationshoehe": 149.0,
+        "Stationsname": "Nauheim, Bad",
+        "bis_datum": 20150227,
+        "geoBreite": 50.3574,
+        "geoLaenge": 8.7506,
+        "von_datum": 20041001
+    },
+    "3478": {
+        "Bundesland": "Mecklenburg-Vorpommern",
+        "Stationshoehe": 81.0,
+        "Stationsname": "Neubrandenburg",
+        "bis_datum": 20050818,
+        "geoBreite": 53.5468,
+        "geoLaenge": 13.1914,
+        "von_datum": 19760701
+    },
+    "3484": {
+        "Bundesland": "Bayern",
+        "Stationshoehe": 380.0,
+        "Stationsname": "Neuburg/Donau (Flugplatz)",
+        "bis_datum": 20150227,
+        "geoBreite": 48.7097,
+        "geoLaenge": 11.2096,
+        "von_datum": 20020101
+    },
+    "3485": {
+        "Bundesland": "Bayern",
+        "Stationshoehe": 486.0,
+        "Stationsname": "Neuburg/Kammel-Langenhaslach",
+        "bis_datum": 20150227,
+        "geoBreite": 48.3116,
+        "geoLaenge": 10.3771,
+        "von_datum": 20050501
+    },
+    "3490": {
+        "Bundesland": "Rheinland-Pfalz",
+        "Stationshoehe": 111.0,
+        "Stationsname": "Neuenahr, Bad-Ahrweiler",
+        "bis_datum": 20150227,
+        "geoBreite": 50.5346,
+        "geoLaenge": 7.0853,
+        "von_datum": 20040901
+    },
+    "3509": {
+        "Bundesland": "Brandenburg",
+        "Stationshoehe": 77.0,
+        "Stationsname": "Menz",
+        "bis_datum": 20150227,
+        "geoBreite": 53.102,
+        "geoLaenge": 13.0421,
+        "von_datum": 20041001
+    },
+    "3513": {
+        "Bundesland": "Th\u00fcringen",
+        "Stationshoehe": 845.0,
+        "Stationsname": "Neuhaus am Rennweg",
+        "bis_datum": 20150227,
+        "geoBreite": 50.5002,
+        "geoLaenge": 11.1344,
+        "von_datum": 19890501
+    },
+    "3527": {
+        "Bundesland": "Hessen",
+        "Stationshoehe": 500.0,
+        "Stationsname": "Neukirchen-Hauptschwenda",
+        "bis_datum": 20150227,
+        "geoBreite": 50.8924,
+        "geoLaenge": 9.4053,
+        "von_datum": 20040501
+    },
+    "3540": {
+        "Bundesland": "Nordrhein-Westfalen",
+        "Stationshoehe": 195.0,
+        "Stationsname": "Neunkirchen-Seelscheid-Krawinkel",
+        "bis_datum": 20150227,
+        "geoBreite": 50.8446,
+        "geoLaenge": 7.3714,
+        "von_datum": 20041101
+    },
+    "3545": {
+        "Bundesland": "Saarland",
+        "Stationshoehe": 236.0,
+        "Stationsname": "Neunkirchen-Wellesweiler",
+        "bis_datum": 20150227,
+        "geoBreite": 49.3436,
+        "geoLaenge": 7.2295,
+        "von_datum": 20050301
+    },
+    "3552": {
+        "Bundesland": "Brandenburg",
+        "Stationshoehe": 38.0,
+        "Stationsname": "Neuruppin",
+        "bis_datum": 20150227,
+        "geoBreite": 52.9037,
+        "geoLaenge": 12.8072,
+        "von_datum": 19730101
+    },
+    "3571": {
+        "Bundesland": "Bayern",
+        "Stationshoehe": 452.0,
+        "Stationsname": "Neustadt am Kulm-Filchendorf",
+        "bis_datum": 20150227,
+        "geoBreite": 49.8174,
+        "geoLaenge": 11.8638,
+        "von_datum": 20080301
+    },
+    "3575": {
+        "Bundesland": "Rheinland-Pfalz",
+        "Stationshoehe": 163.0,
+        "Stationsname": "Neustadt/Weinstra\u00dfe",
+        "bis_datum": 19830101,
+        "geoBreite": 49.3572,
+        "geoLaenge": 8.1405,
+        "von_datum": 19540101
+    },
+    "3577": {
+        "Bundesland": "Mecklenburg-Vorpommern",
+        "Stationshoehe": 64.0,
+        "Stationsname": "Neustrelitz",
+        "bis_datum": 19760701,
+        "geoBreite": 53.3585,
+        "geoLaenge": 13.0502,
+        "von_datum": 19510101
+    },
+    "3591": {
+        "Bundesland": "Nordrhein-Westfalen",
+        "Stationshoehe": 350.0,
+        "Stationsname": "Nideggen-Schmidt",
+        "bis_datum": 20150227,
+        "geoBreite": 50.6744,
+        "geoLaenge": 6.4237,
+        "von_datum": 20040601
+    },
+    "3603": {
+        "Bundesland": "Baden-W\u00fcrttemberg",
+        "Stationshoehe": 473.0,
+        "Stationsname": "Niederstetten",
+        "bis_datum": 20150227,
+        "geoBreite": 49.3895,
+        "geoLaenge": 9.9666,
+        "von_datum": 20020101
+    },
+    "3605": {
+        "Bundesland": "Baden-W\u00fcrttemberg",
+        "Stationshoehe": 451.0,
+        "Stationsname": "Niederstotzingen",
+        "bis_datum": 19780601,
+        "geoBreite": 48.5334,
+        "geoLaenge": 10.243,
+        "von_datum": 19750601
+    },
+    "3612": {
+        "Bundesland": "Niedersachsen",
+        "Stationshoehe": 25.0,
+        "Stationsname": "Nienburg",
+        "bis_datum": 20150227,
+        "geoBreite": 52.6711,
+        "geoLaenge": 9.2229,
+        "von_datum": 20070401
+    },
+    "3621": {
+        "Bundesland": "Bayern",
+        "Stationshoehe": 435.0,
+        "Stationsname": "Reimlingen",
+        "bis_datum": 20150227,
+        "geoBreite": 48.8254,
+        "geoLaenge": 10.5066,
+        "von_datum": 20060101
+    },
+    "3623": {
+        "Bundesland": "Nordrhein-Westfalen",
+        "Stationshoehe": 111.0,
+        "Stationsname": "N\u00f6rvenich (Flugplatz)",
+        "bis_datum": 20150227,
+        "geoBreite": 50.8294,
+        "geoLaenge": 6.6602,
+        "von_datum": 20020101
+    },
+    "3631": {
+        "Bundesland": "Niedersachsen",
+        "Stationshoehe": 11.0,
+        "Stationsname": "Norderney",
+        "bis_datum": 20150227,
+        "geoBreite": 53.7123,
+        "geoLaenge": 7.1519,
+        "von_datum": 19490101
+    },
+    "3639": {
+        "Bundesland": "Niedersachsen",
+        "Stationshoehe": 25.0,
+        "Stationsname": "Nordholz (Flugplatz)",
+        "bis_datum": 20150227,
+        "geoBreite": 53.7647,
+        "geoLaenge": 8.6583,
+        "von_datum": 20020101
+    },
+    "3659": {
+        "Bundesland": "Rheinland-Pfalz",
+        "Stationshoehe": 627.0,
+        "Stationsname": "N\u00fcrburg",
+        "bis_datum": 19950327,
+        "geoBreite": 50.3391,
+        "geoLaenge": 6.9501,
+        "von_datum": 19510101
+    },
+    "3660": {
+        "Bundesland": "Rheinland-Pfalz",
+        "Stationshoehe": 485.0,
+        "Stationsname": "N\u00fcrburg-Barweiler",
+        "bis_datum": 20150227,
+        "geoBreite": 50.3601,
+        "geoLaenge": 6.8697,
+        "von_datum": 19950302
+    },
+    "3667": {
+        "Bundesland": "Bayern",
+        "Stationshoehe": 368.0,
+        "Stationsname": "N\u00fcrnberg-Netzstall",
+        "bis_datum": 20150227,
+        "geoBreite": 49.4258,
+        "geoLaenge": 11.2539,
+        "von_datum": 20050301
+    },
+    "3668": {
+        "Bundesland": "Bayern",
+        "Stationshoehe": 314.0,
+        "Stationsname": "N\u00fcrnberg",
+        "bis_datum": 20150227,
+        "geoBreite": 49.5031,
+        "geoLaenge": 11.0549,
+        "von_datum": 19510101
+    },
+    "3671": {
+        "Bundesland": "Baden-W\u00fcrttemberg",
+        "Stationshoehe": 280.0,
+        "Stationsname": "N\u00fcrtingen",
+        "bis_datum": 19810401,
+        "geoBreite": 48.6321,
+        "geoLaenge": 9.3261,
+        "von_datum": 19790101
+    },
+    "3679": {
+        "Bundesland": "Bayern",
+        "Stationshoehe": 518.0,
+        "Stationsname": "Kiefersfelden-Gach",
+        "bis_datum": 20150227,
+        "geoBreite": 47.6185,
+        "geoLaenge": 12.1666,
+        "von_datum": 20061101
+    },
+    "3730": {
+        "Bundesland": "Bayern",
+        "Stationshoehe": 806.0,
+        "Stationsname": "Oberstdorf",
+        "bis_datum": 20150227,
+        "geoBreite": 47.3986,
+        "geoLaenge": 10.276,
+        "von_datum": 19480101
+    },
+    "3734": {
+        "Bundesland": "Baden-W\u00fcrttemberg",
+        "Stationshoehe": 230.0,
+        "Stationsname": "Obersulm-Willsbach",
+        "bis_datum": 20150227,
+        "geoBreite": 49.1279,
+        "geoLaenge": 9.3525,
+        "von_datum": 20040701
+    },
+    "3739": {
+        "Bundesland": "Bayern",
+        "Stationshoehe": 596.0,
+        "Stationsname": "Oberviechtach",
+        "bis_datum": 20150227,
+        "geoBreite": 49.452,
+        "geoLaenge": 12.4366,
+        "von_datum": 20050301
+    },
+    "3761": {
+        "Bundesland": "Baden-W\u00fcrttemberg",
+        "Stationshoehe": 276.0,
+        "Stationsname": "\u00d6hringen",
+        "bis_datum": 20150227,
+        "geoBreite": 49.207,
+        "geoLaenge": 9.5175,
+        "von_datum": 19550101
+    },
+    "3791": {
+        "Bundesland": "Niedersachsen",
+        "Stationshoehe": 11.0,
+        "Stationsname": "Oldenburg",
+        "bis_datum": 20121001,
+        "geoBreite": 53.1763,
+        "geoLaenge": 8.1824,
+        "von_datum": 19910101
+    },
+    "3811": {
+        "Bundesland": "Sachsen",
+        "Stationshoehe": 150.0,
+        "Stationsname": "Oschatz",
+        "bis_datum": 20150227,
+        "geoBreite": 51.296,
+        "geoLaenge": 13.0928,
+        "von_datum": 19820701
+    },
+    "3815": {
+        "Bundesland": "Niedersachsen",
+        "Stationshoehe": 95.0,
+        "Stationsname": "Osnabr\u00fcck",
+        "bis_datum": 20101130,
+        "geoBreite": 52.2553,
+        "geoLaenge": 8.0534,
+        "von_datum": 19510101
+    },
+    "3821": {
+        "Bundesland": "Sachsen-Anhalt",
+        "Stationshoehe": 246.0,
+        "Stationsname": "Osterfeld",
+        "bis_datum": 20150227,
+        "geoBreite": 51.0873,
+        "geoLaenge": 11.9292,
+        "von_datum": 19840801
+    },
+    "3836": {
+        "Bundesland": "Bayern",
+        "Stationshoehe": 312.0,
+        "Stationsname": "Ostheim v.d. Rh\u00f6n",
+        "bis_datum": 20150227,
+        "geoBreite": 50.4538,
+        "geoLaenge": 10.221,
+        "von_datum": 20060301
+    },
+    "3857": {
+        "Bundesland": "Bayern",
+        "Stationshoehe": 885.0,
+        "Stationsname": "Oy-Mittelberg-Petersthal",
+        "bis_datum": 20150227,
+        "geoBreite": 47.636,
+        "geoLaenge": 10.3891,
+        "von_datum": 20050101
+    },
+    "3875": {
+        "Bundesland": "Bayern",
+        "Stationshoehe": 549.0,
+        "Stationsname": "Parsberg/Oberpfalz-Eglwang",
+        "bis_datum": 20150227,
+        "geoBreite": 49.1509,
+        "geoLaenge": 11.6897,
+        "von_datum": 20050101
+    },
+    "3879": {
+        "Bundesland": "Bayern",
+        "Stationshoehe": 409.0,
+        "Stationsname": "Passau-Oberhaus",
+        "bis_datum": 19970101,
+        "geoBreite": 48.5779,
+        "geoLaenge": 13.4694,
+        "von_datum": 19480101
+    },
+    "3897": {
+        "Bundesland": "Schleswig-Holstein",
+        "Stationshoehe": 1.0,
+        "Stationsname": "Pelzerhaken",
+        "bis_datum": 20150227,
+        "geoBreite": 54.0893,
+        "geoLaenge": 10.8773,
+        "von_datum": 20020101
+    },
+    "3904": {
+        "Bundesland": "Saarland",
+        "Stationshoehe": 152.0,
+        "Stationsname": "Perl-Nennig",
+        "bis_datum": 20150227,
+        "geoBreite": 49.5356,
+        "geoLaenge": 6.3804,
+        "von_datum": 20040901
+    },
+    "3925": {
+        "Bundesland": "Baden-W\u00fcrttemberg",
+        "Stationshoehe": 333.0,
+        "Stationsname": "Pforzheim-Ispringen",
+        "bis_datum": 20150227,
+        "geoBreite": 48.9318,
+        "geoLaenge": 8.6959,
+        "von_datum": 20050901
+    },
+    "3927": {
+        "Bundesland": "Baden-W\u00fcrttemberg",
+        "Stationshoehe": 630.0,
+        "Stationsname": "Pfullendorf",
+        "bis_datum": 20150227,
+        "geoBreite": 47.9344,
+        "geoLaenge": 9.2869,
+        "von_datum": 20040701
+    },
+    "3939": {
+        "Bundesland": "Rheinland-Pfalz",
+        "Stationshoehe": 385.0,
+        "Stationsname": "Pirmasens",
+        "bis_datum": 20150227,
+        "geoBreite": 49.1911,
+        "geoLaenge": 7.5875,
+        "von_datum": 20041001
+    },
+    "3946": {
+        "Bundesland": "Sachsen",
+        "Stationshoehe": 386.0,
+        "Stationsname": "Plauen",
+        "bis_datum": 20150227,
+        "geoBreite": 50.4819,
+        "geoLaenge": 12.13,
+        "von_datum": 19510101
+    },
+    "3975": {
+        "Bundesland": "Bayern",
+        "Stationshoehe": 522.0,
+        "Stationsname": "Pommelsbrunn-Mittelburg",
+        "bis_datum": 20150227,
+        "geoBreite": 49.4778,
+        "geoLaenge": 11.5355,
+        "von_datum": 20050301
+    },
+    "3987": {
+        "Bundesland": "Brandenburg",
+        "Stationshoehe": 81.0,
+        "Stationsname": "Potsdam",
+        "bis_datum": 20150227,
+        "geoBreite": 52.3813,
+        "geoLaenge": 13.0622,
+        "von_datum": 18930101
+    },
+    "4018": {
+        "Bundesland": "Bayern",
+        "Stationshoehe": 550.0,
+        "Stationsname": "Puch",
+        "bis_datum": 19830901,
+        "geoBreite": 48.1877,
+        "geoLaenge": 11.2206,
+        "von_datum": 19820101
+    },
+    "4024": {
+        "Bundesland": "Mecklenburg-Vorpommern",
+        "Stationshoehe": 40.0,
+        "Stationsname": "Putbus",
+        "bis_datum": 20150227,
+        "geoBreite": 54.3643,
+        "geoLaenge": 13.477,
+        "von_datum": 19820101
+    },
+    "4032": {
+        "Bundesland": "Sachsen-Anhalt",
+        "Stationshoehe": 142.0,
+        "Stationsname": "Quedlinburg",
+        "bis_datum": 20150227,
+        "geoBreite": 51.7954,
+        "geoLaenge": 11.1319,
+        "von_datum": 20061201
+    },
+    "4036": {
+        "Bundesland": "Sachsen-Anhalt",
+        "Stationshoehe": 204.0,
+        "Stationsname": "Querfurt-M\u00fchle Lodersleben",
+        "bis_datum": 20150227,
+        "geoBreite": 51.3895,
+        "geoLaenge": 11.5414,
+        "von_datum": 20070301
+    },
+    "4039": {
+        "Bundesland": "Schleswig-Holstein",
+        "Stationshoehe": 13.0,
+        "Stationsname": "Quickborn",
+        "bis_datum": 20150227,
+        "geoBreite": 53.7331,
+        "geoLaenge": 9.8776,
+        "von_datum": 19880111
+    },
+    "4063": {
+        "Bundesland": "Nordrhein-Westfalen",
+        "Stationshoehe": 41.0,
+        "Stationsname": "Rahden-Kleinendorf",
+        "bis_datum": 20150227,
+        "geoBreite": 52.4461,
+        "geoLaenge": 8.5906,
+        "von_datum": 20030701
+    },
+    "4094": {
+        "Bundesland": "Baden-W\u00fcrttemberg",
+        "Stationshoehe": 440.0,
+        "Stationsname": "Weingarten, Kr. Ravensburg",
+        "bis_datum": 20150227,
+        "geoBreite": 47.8062,
+        "geoLaenge": 9.6206,
+        "von_datum": 20040601
+    },
+    "4104": {
+        "Bundesland": "Bayern",
+        "Stationshoehe": 365.0,
+        "Stationsname": "Regensburg",
+        "bis_datum": 20150227,
+        "geoBreite": 49.0424,
+        "geoLaenge": 12.1021,
+        "von_datum": 19480101
+    },
+    "4127": {
+        "Bundesland": "Nordrhein-Westfalen",
+        "Stationshoehe": 350.0,
+        "Stationsname": "Reichshof-Eckenhagen",
+        "bis_datum": 20150227,
+        "geoBreite": 50.9906,
+        "geoLaenge": 7.6958,
+        "von_datum": 20050101
+    },
+    "4154": {
+        "Bundesland": "Nordrhein-Westfalen",
+        "Stationshoehe": 345.0,
+        "Stationsname": "Remscheid-Lennep",
+        "bis_datum": 20150227,
+        "geoBreite": 51.1798,
+        "geoLaenge": 7.2506,
+        "von_datum": 20110201
+    },
+    "4160": {
+        "Bundesland": "Baden-W\u00fcrttemberg",
+        "Stationshoehe": 478.0,
+        "Stationsname": "Renningen-Ihinger Hof",
+        "bis_datum": 20150227,
+        "geoBreite": 48.7425,
+        "geoLaenge": 8.924,
+        "von_datum": 20040701
+    },
+    "4169": {
+        "Bundesland": "Baden-W\u00fcrttemberg",
+        "Stationshoehe": 131.0,
+        "Stationsname": "Rheinau-Memprechtshofen",
+        "bis_datum": 20150227,
+        "geoBreite": 48.6703,
+        "geoLaenge": 7.9939,
+        "von_datum": 20021101
+    },
+    "4174": {
+        "Bundesland": "Nordrhein-Westfalen",
+        "Stationshoehe": 40.0,
+        "Stationsname": "Rheine-Bentlage",
+        "bis_datum": 20150227,
+        "geoBreite": 52.2887,
+        "geoLaenge": 7.3866,
+        "von_datum": 20020101
+    },
+    "4175": {
+        "Bundesland": "Baden-W\u00fcrttemberg",
+        "Stationshoehe": 287.0,
+        "Stationsname": "Rheinfelden",
+        "bis_datum": 20150101,
+        "geoBreite": 47.5627,
+        "geoLaenge": 7.7936,
+        "von_datum": 20040601
+    },
+    "4177": {
+        "Bundesland": "Baden-W\u00fcrttemberg",
+        "Stationshoehe": 116.0,
+        "Stationsname": "Rheinstetten",
+        "bis_datum": 20150227,
+        "geoBreite": 48.9726,
+        "geoLaenge": 8.3302,
+        "von_datum": 20081101
+    },
+    "4189": {
+        "Bundesland": "Baden-W\u00fcrttemberg",
+        "Stationshoehe": 533.0,
+        "Stationsname": "Altheim, Kreis Biberach",
+        "bis_datum": 20150227,
+        "geoBreite": 48.1479,
+        "geoLaenge": 9.4596,
+        "von_datum": 20040801
+    },
+    "4261": {
+        "Bundesland": "Bayern",
+        "Stationshoehe": 444.0,
+        "Stationsname": "Rosenheim",
+        "bis_datum": 20150227,
+        "geoBreite": 47.8752,
+        "geoLaenge": 12.1279,
+        "von_datum": 20060301
+    },
+    "4271": {
+        "Bundesland": "Mecklenburg-Vorpommern",
+        "Stationshoehe": 4.0,
+        "Stationsname": "Rostock-Warnem\u00fcnde",
+        "bis_datum": 20150227,
+        "geoBreite": 54.1802,
+        "geoLaenge": 12.0805,
+        "von_datum": 19470101
+    },
+    "4275": {
+        "Bundesland": "Niedersachsen",
+        "Stationshoehe": 32.0,
+        "Stationsname": "Rotenburg (W\u00fcmme)",
+        "bis_datum": 20150227,
+        "geoBreite": 53.1288,
+        "geoLaenge": 9.3395,
+        "von_datum": 20041201
+    },
+    "4280": {
+        "Bundesland": "Bayern",
+        "Stationshoehe": 385.0,
+        "Stationsname": "Roth",
+        "bis_datum": 20150227,
+        "geoBreite": 49.2164,
+        "geoLaenge": 11.1036,
+        "von_datum": 20020101
+    },
+    "4287": {
+        "Bundesland": "Bayern",
+        "Stationshoehe": 415.0,
+        "Stationsname": "Rothenburg ob der Tauber",
+        "bis_datum": 20150227,
+        "geoBreite": 49.3847,
+        "geoLaenge": 10.1732,
+        "von_datum": 20050101
+    },
+    "4294": {
+        "Bundesland": "Baden-W\u00fcrttemberg",
+        "Stationshoehe": 360.0,
+        "Stationsname": "Rottenburg-Kiebingen",
+        "bis_datum": 19970101,
+        "geoBreite": 48.4704,
+        "geoLaenge": 8.9687,
+        "von_datum": 19820101
+    },
+    "4300": {
+        "Bundesland": "Baden-W\u00fcrttemberg",
+        "Stationshoehe": 588.0,
+        "Stationsname": "Rottweil",
+        "bis_datum": 20150227,
+        "geoBreite": 48.1813,
+        "geoLaenge": 8.6351,
+        "von_datum": 20040701
+    },
+    "4301": {
+        "Bundesland": "Rheinland-Pfalz",
+        "Stationshoehe": 102.0,
+        "Stationsname": "Kreuznach, Bad",
+        "bis_datum": 20150227,
+        "geoBreite": 49.8502,
+        "geoLaenge": 7.871,
+        "von_datum": 20050301
+    },
+    "4323": {
+        "Bundesland": "Rheinland-Pfalz",
+        "Stationshoehe": 461.0,
+        "Stationsname": "Ruppertsecken",
+        "bis_datum": 20150227,
+        "geoBreite": 49.6467,
+        "geoLaenge": 7.8835,
+        "von_datum": 20050301
+    },
+    "4336": {
+        "Bundesland": "Saarland",
+        "Stationshoehe": 320.0,
+        "Stationsname": "Saarbr\u00fccken-Ensheim",
+        "bis_datum": 20150227,
+        "geoBreite": 49.2128,
+        "geoLaenge": 7.1077,
+        "von_datum": 19620501
+    },
+    "4339": {
+        "Bundesland": "Saarland",
+        "Stationshoehe": 193.0,
+        "Stationsname": "Saarbr\u00fccken-Sankt Johann",
+        "bis_datum": 19710101,
+        "geoBreite": 49.2231,
+        "geoLaenge": 7.0168,
+        "von_datum": 19560101
+    },
+    "4349": {
+        "Bundesland": "Baden-W\u00fcrttemberg",
+        "Stationshoehe": 248.0,
+        "Stationsname": "Sachsenheim",
+        "bis_datum": 20150227,
+        "geoBreite": 48.9569,
+        "geoLaenge": 9.071,
+        "von_datum": 20040601
+    },
+    "4354": {
+        "Bundesland": "Bayern",
+        "Stationshoehe": 456.0,
+        "Stationsname": "Saldenburg-Entschenreuth",
+        "bis_datum": 20150227,
+        "geoBreite": 48.7832,
+        "geoLaenge": 13.3145,
+        "von_datum": 20060101
+    },
+    "4371": {
+        "Bundesland": "Nordrhein-Westfalen",
+        "Stationshoehe": 135.0,
+        "Stationsname": "Salzuflen, Bad",
+        "bis_datum": 20150227,
+        "geoBreite": 52.1042,
+        "geoLaenge": 8.7521,
+        "von_datum": 19500101
+    },
+    "4373": {
+        "Bundesland": "Sachsen-Anhalt",
+        "Stationshoehe": 23.0,
+        "Stationsname": "Salzwedel",
+        "bis_datum": 19720101,
+        "geoBreite": 52.8568,
+        "geoLaenge": 11.143,
+        "von_datum": 19520101
+    },
+    "4377": {
+        "Bundesland": "Bayern",
+        "Stationshoehe": 510.0,
+        "Stationsname": "Sandberg",
+        "bis_datum": 20150227,
+        "geoBreite": 50.3519,
+        "geoLaenge": 10.0032,
+        "von_datum": 20050901
+    },
+    "4393": {
+        "Bundesland": "Schleswig-Holstein",
+        "Stationshoehe": 5.0,
+        "Stationsname": "Sankt Peter-Ording",
+        "bis_datum": 20150227,
+        "geoBreite": 54.3279,
+        "geoLaenge": 8.603,
+        "von_datum": 19991201
+    },
+    "4411": {
+        "Bundesland": "Hessen",
+        "Stationshoehe": 155.0,
+        "Stationsname": "Schaafheim-Schlierbach",
+        "bis_datum": 20150227,
+        "geoBreite": 49.9195,
+        "geoLaenge": 8.9671,
+        "von_datum": 20020124
+    },
+    "4445": {
+        "Bundesland": "Sachsen-Anhalt",
+        "Stationshoehe": 609.0,
+        "Stationsname": "Wernigerode-Schierke",
+        "bis_datum": 20150227,
+        "geoBreite": 51.7658,
+        "geoLaenge": 10.6533,
+        "von_datum": 19891001
+    },
+    "4464": {
+        "Bundesland": "Th\u00fcringen",
+        "Stationshoehe": 501.0,
+        "Stationsname": "Schleiz",
+        "bis_datum": 20150227,
+        "geoBreite": 50.5679,
+        "geoLaenge": 11.8041,
+        "von_datum": 19890801
+    },
+    "4466": {
+        "Bundesland": "Schleswig-Holstein",
+        "Stationshoehe": 43.0,
+        "Stationsname": "Schleswig",
+        "bis_datum": 20150227,
+        "geoBreite": 54.5275,
+        "geoLaenge": 9.5486,
+        "von_datum": 19510101
+    },
+    "4480": {
+        "Bundesland": "Hessen",
+        "Stationshoehe": 230.0,
+        "Stationsname": "Schl\u00fcchtern-Herolz",
+        "bis_datum": 20150227,
+        "geoBreite": 50.3444,
+        "geoLaenge": 9.5539,
+        "von_datum": 20040901
+    },
+    "4485": {
+        "Bundesland": "Th\u00fcringen",
+        "Stationshoehe": 296.0,
+        "Stationsname": "Schmalkalden, Kurort",
+        "bis_datum": 20150227,
+        "geoBreite": 50.7252,
+        "geoLaenge": 10.454,
+        "von_datum": 20050201
+    },
+    "4501": {
+        "Bundesland": "Th\u00fcringen",
+        "Stationshoehe": 937.0,
+        "Stationsname": "Schm\u00fccke",
+        "bis_datum": 20150227,
+        "geoBreite": 50.6546,
+        "geoLaenge": 10.7693,
+        "von_datum": 19780701
+    },
+    "4508": {
+        "Bundesland": "Rheinland-Pfalz",
+        "Stationshoehe": 649.0,
+        "Stationsname": "Schneifelforsthaus",
+        "bis_datum": 20150227,
+        "geoBreite": 50.2988,
+        "geoLaenge": 6.4165,
+        "von_datum": 20040801
+    },
+    "4548": {
+        "Bundesland": "Bayern",
+        "Stationshoehe": 609.0,
+        "Stationsname": "Selb/Oberfranken-Lauterbach",
+        "bis_datum": 20150227,
+        "geoBreite": 50.2046,
+        "geoLaenge": 12.1435,
+        "von_datum": 20070701
+    },
+    "4559": {
+        "Bundesland": "Bayern",
+        "Stationshoehe": 399.0,
+        "Stationsname": "Schorndorf-Kn\u00f6bling",
+        "bis_datum": 20150227,
+        "geoBreite": 49.1646,
+        "geoLaenge": 12.6176,
+        "von_datum": 20050501
+    },
+    "4560": {
+        "Bundesland": "Hessen",
+        "Stationshoehe": 265.0,
+        "Stationsname": "Schotten",
+        "bis_datum": 20150227,
+        "geoBreite": 50.4927,
+        "geoLaenge": 9.1228,
+        "von_datum": 20050201
+    },
+    "4584": {
+        "Bundesland": "Bayern",
+        "Stationshoehe": 444.0,
+        "Stationsname": "Schwaigermoos",
+        "bis_datum": 19700401,
+        "geoBreite": 48.3667,
+        "geoLaenge": 11.8,
+        "von_datum": 19680401
+    },
+    "4592": {
+        "Bundesland": "Bayern",
+        "Stationshoehe": 356.0,
+        "Stationsname": "Schwandorf",
+        "bis_datum": 20150227,
+        "geoBreite": 49.3278,
+        "geoLaenge": 12.0871,
+        "von_datum": 20051201
+    },
+    "4605": {
+        "Bundesland": "Th\u00fcringen",
+        "Stationshoehe": 277.0,
+        "Stationsname": "Schwarzburg",
+        "bis_datum": 20150227,
+        "geoBreite": 50.6444,
+        "geoLaenge": 11.1933,
+        "von_datum": 20041101
+    },
+    "4625": {
+        "Bundesland": "Mecklenburg-Vorpommern",
+        "Stationshoehe": 59.0,
+        "Stationsname": "Schwerin",
+        "bis_datum": 20150227,
+        "geoBreite": 53.6425,
+        "geoLaenge": 11.3872,
+        "von_datum": 19500101
+    },
+    "4629": {
+        "Bundesland": "Schleswig-Holstein",
+        "Stationshoehe": 37.0,
+        "Stationsname": "Schwesing",
+        "bis_datum": 19991201,
+        "geoBreite": 54.5166,
+        "geoLaenge": 9.142,
+        "von_datum": 19930401
+    },
+    "4642": {
+        "Bundesland": "Sachsen-Anhalt",
+        "Stationshoehe": 21.0,
+        "Stationsname": "Seehausen",
+        "bis_datum": 20150227,
+        "geoBreite": 52.8911,
+        "geoLaenge": 11.7297,
+        "von_datum": 19761001
+    },
+    "4651": {
+        "Bundesland": "Niedersachsen",
+        "Stationshoehe": 186.0,
+        "Stationsname": "Seesen",
+        "bis_datum": 20150227,
+        "geoBreite": 51.9044,
+        "geoLaenge": 10.1888,
+        "von_datum": 20041101
+    },
+    "4692": {
+        "Bundesland": "Nordrhein-Westfalen",
+        "Stationshoehe": 229.0,
+        "Stationsname": "Siegen (Kl\u00e4ranlage)",
+        "bis_datum": 20150227,
+        "geoBreite": 50.8534,
+        "geoLaenge": 7.9966,
+        "von_datum": 20080301
+    },
+    "4702": {
+        "Bundesland": "Baden-W\u00fcrttemberg",
+        "Stationshoehe": 645.0,
+        "Stationsname": "Sigmaringen (Flugplatz)",
+        "bis_datum": 20071115,
+        "geoBreite": 48.1,
+        "geoLaenge": 9.25,
+        "von_datum": 20021103
+    },
+    "4703": {
+        "Bundesland": "Baden-W\u00fcrttemberg",
+        "Stationshoehe": 580.0,
+        "Stationsname": "Sigmaringen-Laiz",
+        "bis_datum": 20150227,
+        "geoBreite": 48.0719,
+        "geoLaenge": 9.1942,
+        "von_datum": 20021101
+    },
+    "4704": {
+        "Bundesland": "Bayern",
+        "Stationshoehe": 507.0,
+        "Stationsname": "Sigmarszell-Zeisertsweiler",
+        "bis_datum": 20150227,
+        "geoBreite": 47.5776,
+        "geoLaenge": 9.7404,
+        "von_datum": 20050501
+    },
+    "4706": {
+        "Bundesland": "Bayern",
+        "Stationshoehe": 360.0,
+        "Stationsname": "Simbach/Inn",
+        "bis_datum": 20150227,
+        "geoBreite": 48.2719,
+        "geoLaenge": 13.0273,
+        "von_datum": 20050301
+    },
+    "4709": {
+        "Bundesland": "Rheinland-Pfalz",
+        "Stationshoehe": 445.0,
+        "Stationsname": "Simmern-Wahlbach",
+        "bis_datum": 20150227,
+        "geoBreite": 49.9996,
+        "geoLaenge": 7.5981,
+        "von_datum": 20111101
+    },
+    "4719": {
+        "Bundesland": "Baden-W\u00fcrttemberg",
+        "Stationshoehe": 169.0,
+        "Stationsname": "Sinsheim",
+        "bis_datum": 20070828,
+        "geoBreite": 49.2447,
+        "geoLaenge": 8.8787,
+        "von_datum": 20020101
+    },
+    "4745": {
+        "Bundesland": "Niedersachsen",
+        "Stationshoehe": 76.0,
+        "Stationsname": "Soltau",
+        "bis_datum": 20150227,
+        "geoBreite": 52.9604,
+        "geoLaenge": 9.7931,
+        "von_datum": 19660101
+    },
+    "4748": {
+        "Bundesland": "Th\u00fcringen",
+        "Stationshoehe": 216.0,
+        "Stationsname": "Sondershausen",
+        "bis_datum": 20101231,
+        "geoBreite": 51.352,
+        "geoLaenge": 10.9059,
+        "von_datum": 20041101
+    },
+    "4752": {
+        "Bundesland": "Th\u00fcringen",
+        "Stationshoehe": 626.0,
+        "Stationsname": "Sonneberg-Neufang",
+        "bis_datum": 20080701,
+        "geoBreite": 50.3746,
+        "geoLaenge": 11.1828,
+        "von_datum": 19510101
+    },
+    "4763": {
+        "Bundesland": "Hessen",
+        "Stationshoehe": 265.0,
+        "Stationsname": "Sontra",
+        "bis_datum": 20150227,
+        "geoBreite": 51.0607,
+        "geoLaenge": 9.9266,
+        "von_datum": 20041001
+    },
+    "4841": {
+        "Bundesland": "Niedersachsen",
+        "Stationshoehe": 1.0,
+        "Stationsname": "Steinau, Kr. Cuxhaven",
+        "bis_datum": 20150227,
+        "geoBreite": 53.6946,
+        "geoLaenge": 8.8735,
+        "von_datum": 20040701
+    },
+    "4857": {
+        "Bundesland": "Niedersachsen",
+        "Stationshoehe": 1.0,
+        "Stationsname": "Mittelnkirchen-Hohenfelde",
+        "bis_datum": 20150227,
+        "geoBreite": 53.5512,
+        "geoLaenge": 9.6082,
+        "von_datum": 20040901
+    },
+    "4878": {
+        "Bundesland": "Sachsen-Anhalt",
+        "Stationshoehe": 494.0,
+        "Stationsname": "Oberharz am Brocken-Stiege",
+        "bis_datum": 20131211,
+        "geoBreite": 51.6681,
+        "geoLaenge": 10.8823,
+        "von_datum": 20050201
+    },
+    "4887": {
+        "Bundesland": "Baden-W\u00fcrttemberg",
+        "Stationshoehe": 734.0,
+        "Stationsname": "St\u00f6tten",
+        "bis_datum": 20150227,
+        "geoBreite": 48.6657,
+        "geoLaenge": 9.8646,
+        "von_datum": 19480101
+    },
+    "4896": {
+        "Bundesland": "Schleswig-Holstein",
+        "Stationshoehe": 40.0,
+        "Stationsname": "Wagersrott",
+        "bis_datum": 20150227,
+        "geoBreite": 54.665,
+        "geoLaenge": 9.8035,
+        "von_datum": 20050701
+    },
+    "4911": {
+        "Bundesland": "Bayern",
+        "Stationshoehe": 350.0,
+        "Stationsname": "Straubing",
+        "bis_datum": 20150227,
+        "geoBreite": 48.8275,
+        "geoLaenge": 12.5598,
+        "von_datum": 19940501
+    },
+    "4926": {
+        "Bundesland": "Baden-W\u00fcrttemberg",
+        "Stationshoehe": 224.0,
+        "Stationsname": "Stuttgart (Neckartal)",
+        "bis_datum": 20130514,
+        "geoBreite": 48.7896,
+        "geoLaenge": 9.2167,
+        "von_datum": 19790401
+    },
+    "4927": {
+        "Bundesland": "Baden-W\u00fcrttemberg",
+        "Stationshoehe": 286.0,
+        "Stationsname": "Stuttgart-Stadt",
+        "bis_datum": 19840801,
+        "geoBreite": 48.7693,
+        "geoLaenge": 9.1814,
+        "von_datum": 19760101
+    },
+    "4928": {
+        "Bundesland": "Baden-W\u00fcrttemberg",
+        "Stationshoehe": 314.0,
+        "Stationsname": "Stuttgart (Schnarrenberg)",
+        "bis_datum": 20150227,
+        "geoBreite": 48.8282,
+        "geoLaenge": 9.2,
+        "von_datum": 19770701
+    },
+    "4931": {
+        "Bundesland": "Baden-W\u00fcrttemberg",
+        "Stationshoehe": 371.0,
+        "Stationsname": "Stuttgart-Echterdingen",
+        "bis_datum": 20150227,
+        "geoBreite": 48.6883,
+        "geoLaenge": 9.2235,
+        "von_datum": 19880101
+    },
+    "4933": {
+        "Bundesland": "Baden-W\u00fcrttemberg",
+        "Stationshoehe": 401.0,
+        "Stationsname": "Stuttgart-Hohenheim",
+        "bis_datum": 19760101,
+        "geoBreite": 48.7137,
+        "geoLaenge": 9.2092,
+        "von_datum": 19510101
+    },
+    "4978": {
+        "Bundesland": "Hessen",
+        "Stationshoehe": 395.0,
+        "Stationsname": "Tann/Rh\u00f6n",
+        "bis_datum": 20150227,
+        "geoBreite": 50.639,
+        "geoLaenge": 10.0228,
+        "von_datum": 20021101
+    },
+    "4997": {
+        "Bundesland": "Th\u00fcringen",
+        "Stationshoehe": 193.0,
+        "Stationsname": "Starkenberg-Tegkwitz",
+        "bis_datum": 20150227,
+        "geoBreite": 50.9777,
+        "geoLaenge": 12.3432,
+        "von_datum": 20050301
+    },
+    "5009": {
+        "Bundesland": "Mecklenburg-Vorpommern",
+        "Stationshoehe": 38.0,
+        "Stationsname": "Teterow",
+        "bis_datum": 20150227,
+        "geoBreite": 53.761,
+        "geoLaenge": 12.5574,
+        "von_datum": 19730101
+    },
+    "5014": {
+        "Bundesland": "Niedersachsen",
+        "Stationshoehe": 7.0,
+        "Stationsname": "Worpswede-H\u00fcttenbusch",
+        "bis_datum": 20150227,
+        "geoBreite": 53.2758,
+        "geoLaenge": 8.9857,
+        "von_datum": 20040701
+    },
+    "5017": {
+        "Bundesland": "Bayern",
+        "Stationshoehe": 633.0,
+        "Stationsname": "Teuschnitz",
+        "bis_datum": 20150227,
+        "geoBreite": 50.4002,
+        "geoLaenge": 11.3889,
+        "von_datum": 20051101
+    },
+    "5029": {
+        "Bundesland": "Saarland",
+        "Stationshoehe": 386.0,
+        "Stationsname": "Tholey",
+        "bis_datum": 20150227,
+        "geoBreite": 49.4738,
+        "geoLaenge": 7.0386,
+        "von_datum": 19690101
+    },
+    "5046": {
+        "Bundesland": "Bayern",
+        "Stationshoehe": 500.0,
+        "Stationsname": "Tirschenreuth-Loderm\u00fchl",
+        "bis_datum": 20150227,
+        "geoBreite": 49.8578,
+        "geoLaenge": 12.3541,
+        "von_datum": 20080301
+    },
+    "5064": {
+        "Bundesland": "Nordrhein-Westfalen",
+        "Stationshoehe": 37.0,
+        "Stationsname": "T\u00f6nisvorst",
+        "bis_datum": 20150227,
+        "geoBreite": 51.2898,
+        "geoLaenge": 6.4443,
+        "von_datum": 20041201
+    },
+    "5097": {
+        "Bundesland": "Mecklenburg-Vorpommern",
+        "Stationshoehe": 10.0,
+        "Stationsname": "Tribsees",
+        "bis_datum": 20150227,
+        "geoBreite": 54.0661,
+        "geoLaenge": 12.7675,
+        "von_datum": 20050101
+    },
+    "5099": {
+        "Bundesland": "Rheinland-Pfalz",
+        "Stationshoehe": 132.0,
+        "Stationsname": "Trier-Zewen",
+        "bis_datum": 20150227,
+        "geoBreite": 49.7326,
+        "geoLaenge": 6.6131,
+        "von_datum": 20080601
+    },
+    "5100": {
+        "Bundesland": "Rheinland-Pfalz",
+        "Stationshoehe": 265.0,
+        "Stationsname": "Trier-Petrisberg",
+        "bis_datum": 20150227,
+        "geoBreite": 49.7479,
+        "geoLaenge": 6.6582,
+        "von_datum": 19410101
+    },
+    "5109": {
+        "Bundesland": "Mecklenburg-Vorpommern",
+        "Stationshoehe": 69.0,
+        "Stationsname": "Trollenhagen",
+        "bis_datum": 20150227,
+        "geoBreite": 53.5997,
+        "geoLaenge": 13.3039,
+        "von_datum": 20020101
+    },
+    "5111": {
+        "Bundesland": "Bayern",
+        "Stationshoehe": 559.0,
+        "Stationsname": "Trostberg",
+        "bis_datum": 20150227,
+        "geoBreite": 48.031,
+        "geoLaenge": 12.5396,
+        "von_datum": 20060401
+    },
+    "5133": {
+        "Bundesland": "Hessen",
+        "Stationshoehe": 295.0,
+        "Stationsname": "Twistetal-M\u00fchlhausen",
+        "bis_datum": 20150227,
+        "geoBreite": 51.3343,
+        "geoLaenge": 8.9132,
+        "von_datum": 20040901
+    },
+    "5142": {
+        "Bundesland": "Mecklenburg-Vorpommern",
+        "Stationshoehe": 1.0,
+        "Stationsname": "Ueckerm\u00fcnde",
+        "bis_datum": 20150227,
+        "geoBreite": 53.7444,
+        "geoLaenge": 14.0697,
+        "von_datum": 19510101
+    },
+    "5146": {
+        "Bundesland": "Niedersachsen",
+        "Stationshoehe": 50.0,
+        "Stationsname": "Uelzen",
+        "bis_datum": 20150227,
+        "geoBreite": 52.9413,
+        "geoLaenge": 10.5287,
+        "von_datum": 20040601
+    },
+    "5149": {
+        "Bundesland": "Bayern",
+        "Stationshoehe": 308.0,
+        "Stationsname": "Gollhofen",
+        "bis_datum": 20150227,
+        "geoBreite": 49.5742,
+        "geoLaenge": 10.1916,
+        "von_datum": 20050101
+    },
+    "5155": {
+        "Bundesland": "Baden-W\u00fcrttemberg",
+        "Stationshoehe": 567.0,
+        "Stationsname": "Ulm",
+        "bis_datum": 20140901,
+        "geoBreite": 48.3837,
+        "geoLaenge": 9.9524,
+        "von_datum": 19480101
+    },
+    "5158": {
+        "Bundesland": "Sachsen-Anhalt",
+        "Stationshoehe": 162.0,
+        "Stationsname": "Ummendorf",
+        "bis_datum": 20150227,
+        "geoBreite": 52.1601,
+        "geoLaenge": 11.1759,
+        "von_datum": 19890101
+    },
+    "5229": {
+        "Bundesland": "Baden-W\u00fcrttemberg",
+        "Stationshoehe": 720.0,
+        "Stationsname": "Villingen-Schwenningen",
+        "bis_datum": 20150227,
+        "geoBreite": 48.0452,
+        "geoLaenge": 8.4608,
+        "von_datum": 20040801
+    },
+    "5275": {
+        "Bundesland": "Baden-W\u00fcrttemberg",
+        "Stationshoehe": 105.0,
+        "Stationsname": "Wagh\u00e4usel-Kirrlach",
+        "bis_datum": 20150227,
+        "geoBreite": 49.2447,
+        "geoLaenge": 8.5373,
+        "von_datum": 20040601
+    },
+    "5277": {
+        "Bundesland": "Hessen",
+        "Stationshoehe": 349.0,
+        "Stationsname": "Wahlen",
+        "bis_datum": 20090630,
+        "geoBreite": 50.8113,
+        "geoLaenge": 9.1275,
+        "von_datum": 20020101
+    },
+    "5279": {
+        "Bundesland": "Hessen",
+        "Stationshoehe": 176.0,
+        "Stationsname": "Wahlsburg-Lippoldsberg",
+        "bis_datum": 20150227,
+        "geoBreite": 51.6184,
+        "geoLaenge": 9.5761,
+        "von_datum": 20040901
+    },
+    "5280": {
+        "Bundesland": "Schleswig-Holstein",
+        "Stationshoehe": 35.0,
+        "Stationsname": "Wittenborn",
+        "bis_datum": 20150227,
+        "geoBreite": 53.9223,
+        "geoLaenge": 10.2268,
+        "von_datum": 20070301
+    },
+    "5282": {
+        "Bundesland": "Sachsen",
+        "Stationshoehe": 246.0,
+        "Stationsname": "Wahnsdorf bei Dresden",
+        "bis_datum": 19710101,
+        "geoBreite": 51.1197,
+        "geoLaenge": 13.6744,
+        "von_datum": 19410101
+    },
+    "5300": {
+        "Bundesland": "Hessen",
+        "Stationshoehe": 380.0,
+        "Stationsname": "Waldems-Reinborn",
+        "bis_datum": 20150227,
+        "geoBreite": 50.2599,
+        "geoLaenge": 8.3602,
+        "von_datum": 20040701
+    },
+    "5335": {
+        "Bundesland": "Th\u00fcringen",
+        "Stationshoehe": 348.0,
+        "Stationsname": "Waltershausen",
+        "bis_datum": 20150227,
+        "geoBreite": 50.8963,
+        "geoLaenge": 10.5484,
+        "von_datum": 20060801
+    },
+    "5347": {
+        "Bundesland": "Nordrhein-Westfalen",
+        "Stationshoehe": 236.0,
+        "Stationsname": "Warburg",
+        "bis_datum": 20150227,
+        "geoBreite": 51.504,
+        "geoLaenge": 9.1118,
+        "von_datum": 20010402
+    },
+    "5349": {
+        "Bundesland": "Mecklenburg-Vorpommern",
+        "Stationshoehe": 73.0,
+        "Stationsname": "Waren (M\u00fcritz)",
+        "bis_datum": 20150227,
+        "geoBreite": 53.5196,
+        "geoLaenge": 12.6654,
+        "von_datum": 19810101
+    },
+    "5371": {
+        "Bundesland": "Hessen",
+        "Stationshoehe": 921.0,
+        "Stationsname": "Wasserkuppe",
+        "bis_datum": 20150227,
+        "geoBreite": 50.4973,
+        "geoLaenge": 9.9428,
+        "von_datum": 19480101
+    },
+    "5397": {
+        "Bundesland": "Bayern",
+        "Stationshoehe": 440.0,
+        "Stationsname": "Weiden",
+        "bis_datum": 20150227,
+        "geoBreite": 49.6663,
+        "geoLaenge": 12.1845,
+        "von_datum": 19510101
+    },
+    "5404": {
+        "Bundesland": "Bayern",
+        "Stationshoehe": 477.0,
+        "Stationsname": "Weihenstephan-D\u00fcrnast",
+        "bis_datum": 20150227,
+        "geoBreite": 48.4025,
+        "geoLaenge": 11.6946,
+        "von_datum": 19750101
+    },
+    "5419": {
+        "Bundesland": "Th\u00fcringen",
+        "Stationshoehe": 264.0,
+        "Stationsname": "Weimar",
+        "bis_datum": 20070630,
+        "geoBreite": 50.9744,
+        "geoLaenge": 11.308,
+        "von_datum": 19510101
+    },
+    "5424": {
+        "Bundesland": "Th\u00fcringen",
+        "Stationshoehe": 325.0,
+        "Stationsname": "Weimar-Sch\u00f6ndorf",
+        "bis_datum": 20150227,
+        "geoBreite": 51.0179,
+        "geoLaenge": 11.3542,
+        "von_datum": 20070601
+    },
+    "5426": {
+        "Bundesland": "Rheinland-Pfalz",
+        "Stationshoehe": 553.0,
+        "Stationsname": "Weinbiet",
+        "bis_datum": 20150227,
+        "geoBreite": 49.3758,
+        "geoLaenge": 8.1213,
+        "von_datum": 19540101
+    },
+    "5433": {
+        "Bundesland": "Saarland",
+        "Stationshoehe": 380.0,
+        "Stationsname": "Weiskirchen/Saar",
+        "bis_datum": 20150227,
+        "geoBreite": 49.5534,
+        "geoLaenge": 6.812,
+        "von_datum": 20040901
+    },
+    "5440": {
+        "Bundesland": "Bayern",
+        "Stationshoehe": 439.0,
+        "Stationsname": "Wei\u00dfenburg-Emetzheim",
+        "bis_datum": 20150227,
+        "geoBreite": 49.0114,
+        "geoLaenge": 10.9319,
+        "von_datum": 19550101
+    },
+    "5467": {
+        "Bundesland": "Bayern",
+        "Stationshoehe": 1832.0,
+        "Stationsname": "Wendelstein",
+        "bis_datum": 20120921,
+        "geoBreite": 47.7035,
+        "geoLaenge": 12.0119,
+        "von_datum": 19560701
+    },
+    "5480": {
+        "Bundesland": "Nordrhein-Westfalen",
+        "Stationshoehe": 85.0,
+        "Stationsname": "Werl",
+        "bis_datum": 20150227,
+        "geoBreite": 51.5765,
+        "geoLaenge": 7.888,
+        "von_datum": 20030910
+    },
+    "5490": {
+        "Bundesland": "Sachsen-Anhalt",
+        "Stationshoehe": 234.0,
+        "Stationsname": "Wernigerode",
+        "bis_datum": 20150227,
+        "geoBreite": 51.8454,
+        "geoLaenge": 10.7686,
+        "von_datum": 19510101
+    },
+    "5516": {
+        "Bundesland": "Schleswig-Holstein",
+        "Stationshoehe": 3.0,
+        "Stationsname": "Fehmarn",
+        "bis_datum": 20150227,
+        "geoBreite": 54.5284,
+        "geoLaenge": 11.0605,
+        "von_datum": 19960531
+    },
+    "5538": {
+        "Bundesland": "Bayern",
+        "Stationshoehe": 550.0,
+        "Stationsname": "Wielenbach (Demollstr.)",
+        "bis_datum": 20150227,
+        "geoBreite": 47.8827,
+        "geoLaenge": 11.1576,
+        "von_datum": 20050101
+    },
+    "5541": {
+        "Bundesland": "Hessen",
+        "Stationshoehe": 263.0,
+        "Stationsname": "Wiesbaden-Auringen",
+        "bis_datum": 20150227,
+        "geoBreite": 50.1321,
+        "geoLaenge": 8.3169,
+        "von_datum": 20040801
+    },
+    "5546": {
+        "Bundesland": "Brandenburg",
+        "Stationshoehe": 187.0,
+        "Stationsname": "Wiesenburg",
+        "bis_datum": 20150227,
+        "geoBreite": 52.1207,
+        "geoLaenge": 12.4585,
+        "von_datum": 19860701
+    },
+    "5562": {
+        "Bundesland": "Baden-W\u00fcrttemberg",
+        "Stationshoehe": 570.0,
+        "Stationsname": "Neubulach-Oberhaugstett",
+        "bis_datum": 20150227,
+        "geoBreite": 48.6516,
+        "geoLaenge": 8.6801,
+        "von_datum": 20040601
+    },
+    "5629": {
+        "Bundesland": "Sachsen-Anhalt",
+        "Stationshoehe": 105.0,
+        "Stationsname": "Wittenberg",
+        "bis_datum": 20150227,
+        "geoBreite": 51.8892,
+        "geoLaenge": 12.6445,
+        "von_datum": 19510101
+    },
+    "5640": {
+        "Bundesland": "Niedersachsen",
+        "Stationshoehe": 8.0,
+        "Stationsname": "Wittmundhafen",
+        "bis_datum": 20150227,
+        "geoBreite": 53.5504,
+        "geoLaenge": 7.6672,
+        "von_datum": 20020101
+    },
+    "5643": {
+        "Bundesland": "Brandenburg",
+        "Stationshoehe": 66.0,
+        "Stationsname": "Wittstock-Rote M\u00fchle",
+        "bis_datum": 20150227,
+        "geoBreite": 53.1864,
+        "geoLaenge": 12.4949,
+        "von_datum": 20041101
+    },
+    "5663": {
+        "Bundesland": "Mecklenburg-Vorpommern",
+        "Stationshoehe": 118.0,
+        "Stationsname": "Woldegk",
+        "bis_datum": 19960101,
+        "geoBreite": 53.4618,
+        "geoLaenge": 13.6099,
+        "von_datum": 19820101
+    },
+    "5664": {
+        "Bundesland": "Baden-W\u00fcrttemberg",
+        "Stationshoehe": 291.0,
+        "Stationsname": "Wolfach",
+        "bis_datum": 20150227,
+        "geoBreite": 48.2953,
+        "geoLaenge": 8.2391,
+        "von_datum": 20040701
+    },
+    "5676": {
+        "Bundesland": "Niedersachsen",
+        "Stationshoehe": 82.0,
+        "Stationsname": "Wolfsburg (S\u00fcdwest)",
+        "bis_datum": 20150227,
+        "geoBreite": 52.3961,
+        "geoLaenge": 10.6898,
+        "von_datum": 20100901
+    },
+    "5692": {
+        "Bundesland": "Rheinland-Pfalz",
+        "Stationshoehe": 88.0,
+        "Stationsname": "Worms",
+        "bis_datum": 20150227,
+        "geoBreite": 49.6051,
+        "geoLaenge": 8.3659,
+        "von_datum": 20040901
+    },
+    "5705": {
+        "Bundesland": "Bayern",
+        "Stationshoehe": 268.0,
+        "Stationsname": "W\u00fcrzburg",
+        "bis_datum": 20150227,
+        "geoBreite": 49.7703,
+        "geoLaenge": 9.9577,
+        "von_datum": 19480101
+    },
+    "5715": {
+        "Bundesland": "Niedersachsen",
+        "Stationshoehe": 57.0,
+        "Stationsname": "Wunstorf",
+        "bis_datum": 20150227,
+        "geoBreite": 52.4605,
+        "geoLaenge": 9.4311,
+        "von_datum": 20020101
+    },
+    "5717": {
+        "Bundesland": "Nordrhein-Westfalen",
+        "Stationshoehe": 130.0,
+        "Stationsname": "Wuppertal-Buchenhofen",
+        "bis_datum": 20150227,
+        "geoBreite": 51.2248,
+        "geoLaenge": 7.1053,
+        "von_datum": 20060901
+    },
+    "5719": {
+        "Bundesland": "Nordrhein-Westfalen",
+        "Stationshoehe": 235.0,
+        "Stationsname": "Remscheid",
+        "bis_datum": 20091210,
+        "geoBreite": 51.2051,
+        "geoLaenge": 7.2,
+        "von_datum": 20041001
+    },
+    "5731": {
+        "Bundesland": "Baden-W\u00fcrttemberg",
+        "Stationshoehe": 398.0,
+        "Stationsname": "Wut\u00f6schingen-Ofteringen",
+        "bis_datum": 20150227,
+        "geoBreite": 47.678,
+        "geoLaenge": 8.3799,
+        "von_datum": 20040801
+    },
+    "5732": {
+        "Bundesland": "Schleswig-Holstein",
+        "Stationshoehe": 8.0,
+        "Stationsname": "Wrixum/F\u00f6hr",
+        "bis_datum": 19710101,
+        "geoBreite": 54.6928,
+        "geoLaenge": 8.5271,
+        "von_datum": 19510101
+    },
+    "5745": {
+        "Bundesland": "Brandenburg",
+        "Stationshoehe": 51.0,
+        "Stationsname": "Zehdenick",
+        "bis_datum": 20150227,
+        "geoBreite": 52.9664,
+        "geoLaenge": 13.3268,
+        "von_datum": 19810101
+    },
+    "5750": {
+        "Bundesland": "Sachsen-Anhalt",
+        "Stationshoehe": 170.0,
+        "Stationsname": "Zeitz",
+        "bis_datum": 20150227,
+        "geoBreite": 51.0314,
+        "geoLaenge": 12.1495,
+        "von_datum": 20060301
+    },
+    "5779": {
+        "Bundesland": "Sachsen",
+        "Stationshoehe": 877.0,
+        "Stationsname": "Zinnwald-Georgenfeld",
+        "bis_datum": 20150227,
+        "geoBreite": 50.7314,
+        "geoLaenge": 13.7516,
+        "von_datum": 19710101
+    },
+    "5792": {
+        "Bundesland": "Bayern",
+        "Stationshoehe": 2964.0,
+        "Stationsname": "Zugspitze",
+        "bis_datum": 20150227,
+        "geoBreite": 47.4209,
+        "geoLaenge": 10.9847,
+        "von_datum": 19500101
+    },
+    "5797": {
+        "Bundesland": "Sachsen",
+        "Stationshoehe": 353.0,
+        "Stationsname": "Lichtentanne",
+        "bis_datum": 20150227,
+        "geoBreite": 50.688,
+        "geoLaenge": 12.4328,
+        "von_datum": 20051201
+    },
+    "5800": {
+        "Bundesland": "Bayern",
+        "Stationshoehe": 615.0,
+        "Stationsname": "Zwiesel",
+        "bis_datum": 20150227,
+        "geoBreite": 49.028,
+        "geoLaenge": 13.2385,
+        "von_datum": 20020101
+    },
+    "5802": {
+        "Bundesland": "Bayern",
+        "Stationshoehe": 615.0,
+        "Stationsname": "Zwieselberg",
+        "bis_datum": 20031001,
+        "geoBreite": 49.0007,
+        "geoLaenge": 13.2137,
+        "von_datum": 19480101
+    },
+    "5822": {
+        "Bundesland": "Niedersachsen",
+        "Stationshoehe": 40.0,
+        "Stationsname": "Bassum",
+        "bis_datum": 20150227,
+        "geoBreite": 52.8629,
+        "geoLaenge": 8.6982,
+        "von_datum": 20040701
+    },
+    "5825": {
+        "Bundesland": "Brandenburg",
+        "Stationshoehe": 40.0,
+        "Stationsname": "Berge",
+        "bis_datum": 20150227,
+        "geoBreite": 52.6198,
+        "geoLaenge": 12.7867,
+        "von_datum": 20040501
+    },
+    "5832": {
+        "Bundesland": "Niedersachsen",
+        "Stationshoehe": 50.0,
+        "Stationsname": "Dannenberg",
+        "bis_datum": 19541201,
+        "geoBreite": 53.1007,
+        "geoLaenge": 11.0455,
+        "von_datum": 19510101
+    },
+    "5839": {
+        "Bundesland": "Niedersachsen",
+        "Stationshoehe": -0.0,
+        "Stationsname": "Emden",
+        "bis_datum": 20150227,
+        "geoBreite": 53.3881,
+        "geoLaenge": 7.2287,
+        "von_datum": 19970701
+    },
+    "5856": {
+        "Bundesland": "Bayern",
+        "Stationshoehe": 476.0,
+        "Stationsname": "F\u00fcrstenzell",
+        "bis_datum": 20150227,
+        "geoBreite": 48.5451,
+        "geoLaenge": 13.3531,
+        "von_datum": 19970101
+    },
+    "5871": {
+        "Bundesland": "Rheinland-Pfalz",
+        "Stationshoehe": 497.0,
+        "Stationsname": "Hahn",
+        "bis_datum": 20150227,
+        "geoBreite": 49.9462,
+        "geoLaenge": 7.2645,
+        "von_datum": 19970701
+    },
+    "5906": {
+        "Bundesland": "Baden-W\u00fcrttemberg",
+        "Stationshoehe": 96.0,
+        "Stationsname": "Mannheim",
+        "bis_datum": 20150227,
+        "geoBreite": 49.509,
+        "geoLaenge": 8.5541,
+        "von_datum": 19480101
+    },
+    "5930": {
+        "Bundesland": "Schleswig-Holstein",
+        "Stationshoehe": 2.0,
+        "Stationsname": "Sch\u00f6nhagen (Ostseebad)",
+        "bis_datum": 20150227,
+        "geoBreite": 54.641,
+        "geoLaenge": 10.0238,
+        "von_datum": 19910101
+    },
+    "5941": {
+        "Bundesland": "Bayern",
+        "Stationshoehe": 685.0,
+        "Stationsname": "Reit im Winkl",
+        "bis_datum": 20150227,
+        "geoBreite": 47.6752,
+        "geoLaenge": 12.4696,
+        "von_datum": 20070301
+    },
+    "6093": {
+        "Bundesland": "Niedersachsen",
+        "Stationshoehe": 62.0,
+        "Stationsname": "Wendisch Evern",
+        "bis_datum": 20150227,
+        "geoBreite": 53.2138,
+        "geoLaenge": 10.4704,
+        "von_datum": 20040501
+    },
+    "6105": {
+        "Bundesland": "Schleswig-Holstein",
+        "Stationshoehe": 14.0,
+        "Stationsname": "Ostenfeld (Rendsburg)",
+        "bis_datum": 20150227,
+        "geoBreite": 54.3192,
+        "geoLaenge": 9.8052,
+        "von_datum": 20040501
+    },
+    "6109": {
+        "Bundesland": "Mecklenburg-Vorpommern",
+        "Stationshoehe": 50.0,
+        "Stationsname": "Grambow-Schwennenz",
+        "bis_datum": 20150227,
+        "geoBreite": 53.3837,
+        "geoLaenge": 14.3728,
+        "von_datum": 20040901
+    },
+    "6129": {
+        "Bundesland": "Sachsen",
+        "Stationshoehe": 290.0,
+        "Stationsname": "Sohland/Spree",
+        "bis_datum": 20150227,
+        "geoBreite": 51.0594,
+        "geoLaenge": 14.4262,
+        "von_datum": 20041101
+    },
+    "6157": {
+        "Bundesland": "Niedersachsen",
+        "Stationshoehe": 8.0,
+        "Stationsname": "Wangerland-Hooksiel",
+        "bis_datum": 20150227,
+        "geoBreite": 53.6409,
+        "geoLaenge": 8.081,
+        "von_datum": 20071001
+    },
+    "6158": {
+        "Bundesland": "Bayern",
+        "Stationshoehe": 455.0,
+        "Stationsname": "Weidenbach-Weiherschneidbach",
+        "bis_datum": 20150227,
+        "geoBreite": 49.2247,
+        "geoLaenge": 10.6084,
+        "von_datum": 20041101
+    },
+    "6159": {
+        "Bundesland": "Niedersachsen",
+        "Stationshoehe": 8.0,
+        "Stationsname": "D\u00f6rpen",
+        "bis_datum": 20150227,
+        "geoBreite": 52.9542,
+        "geoLaenge": 7.3196,
+        "von_datum": 20081201
+    },
+    "6163": {
+        "Bundesland": "Schleswig-Holstein",
+        "Stationshoehe": 26.0,
+        "Stationsname": "D\u00f6rnick",
+        "bis_datum": 20150227,
+        "geoBreite": 54.1654,
+        "geoLaenge": 10.3519,
+        "von_datum": 20010401
+    },
+    "6170": {
+        "Bundesland": "Brandenburg",
+        "Stationshoehe": 40.0,
+        "Stationsname": "Coschen",
+        "bis_datum": 20150227,
+        "geoBreite": 52.0192,
+        "geoLaenge": 14.7254,
+        "von_datum": 20040601
+    },
+    "6182": {
+        "Bundesland": "Bayern",
+        "Stationshoehe": 404.0,
+        "Stationsname": "Mallersdorf-Pfaffenberg",
+        "bis_datum": 20120327,
+        "geoBreite": 48.7757,
+        "geoLaenge": 12.1743,
+        "von_datum": 20000401
+    },
+    "6184": {
+        "Bundesland": "Niedersachsen",
+        "Stationshoehe": 6.0,
+        "Stationsname": "Wilhelmshaven (Flugplatz)",
+        "bis_datum": 20090615,
+        "geoBreite": 53.5333,
+        "geoLaenge": 8.1667,
+        "von_datum": 20020101
+    },
+    "6186": {
+        "Bundesland": "Rheinland-Pfalz",
+        "Stationshoehe": 268.0,
+        "Stationsname": "Nast\u00e4tten",
+        "bis_datum": 20150227,
+        "geoBreite": 50.1988,
+        "geoLaenge": 7.8647,
+        "von_datum": 20040801
+    },
+    "6197": {
+        "Bundesland": "Nordrhein-Westfalen",
+        "Stationshoehe": 258.0,
+        "Stationsname": "L\u00fcgde-Paenbruch",
+        "bis_datum": 20150227,
+        "geoBreite": 51.8664,
+        "geoLaenge": 9.2709,
+        "von_datum": 20020101
+    },
+    "6199": {
+        "Bundesland": "Mecklenburg-Vorpommern",
+        "Stationshoehe": 16.0,
+        "Stationsname": "Steinhagen-Negast",
+        "bis_datum": 20150227,
+        "geoBreite": 54.2484,
+        "geoLaenge": 13.0418,
+        "von_datum": 20041001
+    },
+    "6217": {
+        "Bundesland": "Saarland",
+        "Stationshoehe": 190.0,
+        "Stationsname": "Saarbr\u00fccken-Burbach",
+        "bis_datum": 20150227,
+        "geoBreite": 49.2406,
+        "geoLaenge": 6.9351,
+        "von_datum": 20041001
+    },
+    "6258": {
+        "Bundesland": "Baden-W\u00fcrttemberg",
+        "Stationshoehe": 459.0,
+        "Stationsname": "Friedrichshafen-Unterraderach",
+        "bis_datum": 20150227,
+        "geoBreite": 47.6845,
+        "geoLaenge": 9.4409,
+        "von_datum": 20030101
+    },
+    "6259": {
+        "Bundesland": "Baden-W\u00fcrttemberg",
+        "Stationshoehe": 523.0,
+        "Stationsname": "Gro\u00dferlach-Mannenweiler",
+        "bis_datum": 20150227,
+        "geoBreite": 49.021,
+        "geoLaenge": 9.6032,
+        "von_datum": 20040601
+    },
+    "6260": {
+        "Bundesland": "Baden-W\u00fcrttemberg",
+        "Stationshoehe": 385.0,
+        "Stationsname": "Ingelfingen-Stachenhausen",
+        "bis_datum": 20150227,
+        "geoBreite": 49.3325,
+        "geoLaenge": 9.7039,
+        "von_datum": 20021201
+    },
+    "6262": {
+        "Bundesland": "Baden-W\u00fcrttemberg",
+        "Stationshoehe": 413.0,
+        "Stationsname": "Schw\u00e4bisch Gm\u00fcnd-Weiler",
+        "bis_datum": 20150227,
+        "geoBreite": 48.7696,
+        "geoLaenge": 9.8738,
+        "von_datum": 20021101
+    },
+    "6263": {
+        "Bundesland": "Baden-W\u00fcrttemberg",
+        "Stationshoehe": 445.0,
+        "Stationsname": "Singen",
+        "bis_datum": 20150227,
+        "geoBreite": 47.7738,
+        "geoLaenge": 8.8218,
+        "von_datum": 20040701
+    },
+    "6264": {
+        "Bundesland": "Nordrhein-Westfalen",
+        "Stationshoehe": 457.0,
+        "Stationsname": "Brilon-Th\u00fclen",
+        "bis_datum": 20150227,
+        "geoBreite": 51.4143,
+        "geoLaenge": 8.6498,
+        "von_datum": 20040601
+    },
+    "6265": {
+        "Bundesland": "Brandenburg",
+        "Stationshoehe": 36.0,
+        "Stationsname": "Wusterwitz",
+        "bis_datum": 20150227,
+        "geoBreite": 52.3613,
+        "geoLaenge": 12.3867,
+        "von_datum": 20040501
+    },
+    "6266": {
+        "Bundesland": "Sachsen-Anhalt",
+        "Stationshoehe": 112.0,
+        "Stationsname": "Pabstorf",
+        "bis_datum": 20150227,
+        "geoBreite": 52.0305,
+        "geoLaenge": 10.9625,
+        "von_datum": 20040901
+    },
+    "6272": {
+        "Bundesland": "Th\u00fcringen",
+        "Stationshoehe": 283.0,
+        "Stationsname": "Moorgrund Gr\u00e4fen-Nitzendorf",
+        "bis_datum": 20150227,
+        "geoBreite": 50.8424,
+        "geoLaenge": 10.2516,
+        "von_datum": 20041001
+    },
+    "6273": {
+        "Bundesland": "Sachsen-Anhalt",
+        "Stationshoehe": 36.0,
+        "Stationsname": "Demker",
+        "bis_datum": 20150227,
+        "geoBreite": 52.5072,
+        "geoLaenge": 11.8549,
+        "von_datum": 20040601
+    },
+    "6275": {
+        "Bundesland": "Baden-W\u00fcrttemberg",
+        "Stationshoehe": 325.0,
+        "Stationsname": "Notzingen",
+        "bis_datum": 20150227,
+        "geoBreite": 48.6707,
+        "geoLaenge": 9.4625,
+        "von_datum": 20040701
+    },
+    "6305": {
+        "Bundesland": "Th\u00fcringen",
+        "Stationshoehe": 190.0,
+        "Stationsname": "M\u00fchlhausen/Th\u00fcringen-G\u00f6rmar",
+        "bis_datum": 20150227,
+        "geoBreite": 51.2065,
+        "geoLaenge": 10.4948,
+        "von_datum": 20041201
+    },
+    "6310": {
+        "Bundesland": "Mecklenburg-Vorpommern",
+        "Stationshoehe": 1.0,
+        "Stationsname": "Karlshagen",
+        "bis_datum": 20150227,
+        "geoBreite": 54.1049,
+        "geoLaenge": 13.8239,
+        "von_datum": 20040801
+    },
+    "6312": {
+        "Bundesland": "Bayern",
+        "Stationshoehe": 362.0,
+        "Stationsname": "Markt Erlbach-Mosbach",
+        "bis_datum": 20150227,
+        "geoBreite": 49.5314,
+        "geoLaenge": 10.6418,
+        "von_datum": 20041101
+    },
+    "6314": {
+        "Bundesland": "Sachsen",
+        "Stationshoehe": 308.0,
+        "Stationsname": "Nossen",
+        "bis_datum": 20150227,
+        "geoBreite": 51.0507,
+        "geoLaenge": 13.3008,
+        "von_datum": 20050801
+    },
+    "6336": {
+        "Bundesland": "Bayern",
+        "Stationshoehe": 285.0,
+        "Stationsname": "Lohr/Main-Halsbach",
+        "bis_datum": 20150227,
+        "geoBreite": 50.0133,
+        "geoLaenge": 9.6539,
+        "von_datum": 20051101
+    },
+    "6337": {
+        "Bundesland": "Nordrhein-Westfalen",
+        "Stationshoehe": 59.0,
+        "Stationsname": "L\u00fcdinghausen-Brochtrup",
+        "bis_datum": 20150227,
+        "geoBreite": 51.7663,
+        "geoLaenge": 7.5193,
+        "von_datum": 20040801
+    },
+    "6344": {
+        "Bundesland": "Hessen",
+        "Stationshoehe": 168.0,
+        "Stationsname": "Runkel-Ennerich",
+        "bis_datum": 20150227,
+        "geoBreite": 50.3944,
+        "geoLaenge": 8.1433,
+        "von_datum": 20041201
+    },
+    "6346": {
+        "Bundesland": "Bayern",
+        "Stationshoehe": 530.0,
+        "Stationsname": "Maisach-Galgen",
+        "bis_datum": 20150227,
+        "geoBreite": 48.2072,
+        "geoLaenge": 11.2034,
+        "von_datum": 20050201
+    },
+    "6347": {
+        "Bundesland": "Bayern",
+        "Stationshoehe": 304.0,
+        "Stationsname": "Schonungen-Mainberg",
+        "bis_datum": 20150227,
+        "geoBreite": 50.0578,
+        "geoLaenge": 10.2974,
+        "von_datum": 20050301
+    },
+    "7075": {
+        "Bundesland": "Bayern",
+        "Stationshoehe": 425.0,
+        "Stationsname": "Elsendorf-Horneck",
+        "bis_datum": 20150227,
+        "geoBreite": 48.7021,
+        "geoLaenge": 11.8494,
+        "von_datum": 20050201
+    },
+    "7099": {
+        "Bundesland": "Niedersachsen",
+        "Stationshoehe": 187.0,
+        "Stationsname": "Liebenburg-Othfresen",
+        "bis_datum": 20150227,
+        "geoBreite": 52.0111,
+        "geoLaenge": 10.3966,
+        "von_datum": 20041101
+    },
+    "7105": {
+        "Bundesland": "Bayern",
+        "Stationshoehe": 721.0,
+        "Stationsname": "Siegsdorf-H\u00f6ll",
+        "bis_datum": 20150227,
+        "geoBreite": 47.8349,
+        "geoLaenge": 12.6549,
+        "von_datum": 20050601
+    },
+    "7106": {
+        "Bundesland": "Nordrhein-Westfalen",
+        "Stationshoehe": 105.0,
+        "Stationsname": "Bielefeld-Deppendorf",
+        "bis_datum": 20150227,
+        "geoBreite": 52.0714,
+        "geoLaenge": 8.4568,
+        "von_datum": 20060901
+    },
+    "7187": {
+        "Bundesland": "Baden-W\u00fcrttemberg",
+        "Stationshoehe": 193.0,
+        "Stationsname": "Freudenberg/Main-Boxtal",
+        "bis_datum": 20150227,
+        "geoBreite": 49.7636,
+        "geoLaenge": 9.4053,
+        "von_datum": 20041201
+    },
+    "7244": {
+        "Bundesland": "Brandenburg",
+        "Stationshoehe": 62.0,
+        "Stationsname": "Neuglobsow (HM)",
+        "bis_datum": 20040930,
+        "geoBreite": 53.1424,
+        "geoLaenge": 13.0319,
+        "von_datum": 19810101
+    },
+    "7298": {
+        "Bundesland": "Schleswig-Holstein",
+        "Stationshoehe": 5.0,
+        "Stationsname": "Hattstedt",
+        "bis_datum": 20150227,
+        "geoBreite": 54.5266,
+        "geoLaenge": 9.0425,
+        "von_datum": 20050701
+    },
+    "7319": {
+        "Bundesland": "Bayern",
+        "Stationshoehe": 434.0,
+        "Stationsname": "Donauw\u00f6rth-Osterweiler",
+        "bis_datum": 20150227,
+        "geoBreite": 48.7351,
+        "geoLaenge": 10.7415,
+        "von_datum": 20050301
+    },
+    "7321": {
+        "Bundesland": "Th\u00fcringen",
+        "Stationshoehe": 160.0,
+        "Stationsname": "Olbersleben",
+        "bis_datum": 20150227,
+        "geoBreite": 51.1509,
+        "geoLaenge": 11.3319,
+        "von_datum": 20050901
+    },
+    "7325": {
+        "Bundesland": "Bayern",
+        "Stationshoehe": 2650.0,
+        "Stationsname": "Schneefernerhaus",
+        "bis_datum": 20150227,
+        "geoBreite": 47.4167,
+        "geoLaenge": 10.9794,
+        "von_datum": 20110901
+    },
+    "7329": {
+        "Bundesland": "Sachsen",
+        "Stationshoehe": 465.0,
+        "Stationsname": "Treuen",
+        "bis_datum": 20150227,
+        "geoBreite": 50.5457,
+        "geoLaenge": 12.2852,
+        "von_datum": 20051101
+    },
+    "7330": {
+        "Bundesland": "Nordrhein-Westfalen",
+        "Stationshoehe": 159.0,
+        "Stationsname": "Arnsberg-Neheim",
+        "bis_datum": 20150227,
+        "geoBreite": 51.4634,
+        "geoLaenge": 7.978,
+        "von_datum": 20051001
+    },
+    "7331": {
+        "Bundesland": "Baden-W\u00fcrttemberg",
+        "Stationshoehe": 468.0,
+        "Stationsname": "Hermaringen-Allewind",
+        "bis_datum": 20150227,
+        "geoBreite": 48.6096,
+        "geoLaenge": 10.2682,
+        "von_datum": 20050901
+    },
+    "7341": {
+        "Bundesland": "Hessen",
+        "Stationshoehe": 119.0,
+        "Stationsname": "Offenbach-Wetterpark",
+        "bis_datum": 20150227,
+        "geoBreite": 50.09,
+        "geoLaenge": 8.7862,
+        "von_datum": 20050716
+    },
+    "7343": {
+        "Bundesland": "Sachsen",
+        "Stationshoehe": 688.0,
+        "Stationsname": "Deutschneudorf-Br\u00fcderwiese",
+        "bis_datum": 20150227,
+        "geoBreite": 50.6199,
+        "geoLaenge": 13.4816,
+        "von_datum": 20060401
+    },
+    "7350": {
+        "Bundesland": "Bayern",
+        "Stationshoehe": 588.0,
+        "Stationsname": "Prackenbach-Neuh\u00e4usl",
+        "bis_datum": 20150227,
+        "geoBreite": 49.1087,
+        "geoLaenge": 12.8231,
+        "von_datum": 20060801
+    },
+    "7351": {
+        "Bundesland": "Mecklenburg-Vorpommern",
+        "Stationshoehe": 115.0,
+        "Stationsname": "Feldberg/Mecklenburg",
+        "bis_datum": 20150227,
+        "geoBreite": 53.3175,
+        "geoLaenge": 13.4175,
+        "von_datum": 20050908
+    },
+    "7364": {
+        "Bundesland": "Sachsen-Anhalt",
+        "Stationshoehe": 74.0,
+        "Stationsname": "Je\u00dfnitz",
+        "bis_datum": 20150227,
+        "geoBreite": 51.682,
+        "geoLaenge": 12.3042,
+        "von_datum": 20070101
+    },
+    "7367": {
+        "Bundesland": "Niedersachsen",
+        "Stationshoehe": 144.0,
+        "Stationsname": "Alfeld",
+        "bis_datum": 20150227,
+        "geoBreite": 51.9644,
+        "geoLaenge": 9.8072,
+        "von_datum": 20071201
+    },
+    "7368": {
+        "Bundesland": "Th\u00fcringen",
+        "Stationshoehe": 312.0,
+        "Stationsname": "Eisenach",
+        "bis_datum": 20150227,
+        "geoBreite": 51.0007,
+        "geoLaenge": 10.3621,
+        "von_datum": 20071101
+    },
+    "7369": {
+        "Bundesland": "Bayern",
+        "Stationshoehe": 475.0,
+        "Stationsname": "Feuchtwangen-Heilbronn",
+        "bis_datum": 20150227,
+        "geoBreite": 49.1623,
+        "geoLaenge": 10.3662,
+        "von_datum": 20071101
+    },
+    "7370": {
+        "Bundesland": "Bayern",
+        "Stationshoehe": 499.0,
+        "Stationsname": "Waldm\u00fcnchen",
+        "bis_datum": 20150227,
+        "geoBreite": 49.3909,
+        "geoLaenge": 12.6838,
+        "von_datum": 20061211
+    },
+    "7373": {
+        "Bundesland": "Niedersachsen",
+        "Stationshoehe": 3.0,
+        "Stationsname": "Borkum-Flugplatz",
+        "bis_datum": 20150227,
+        "geoBreite": 53.5984,
+        "geoLaenge": 6.7024,
+        "von_datum": 20060301
+    },
+    "7374": {
+        "Bundesland": "Nordrhein-Westfalen",
+        "Stationshoehe": 46.0,
+        "Stationsname": "Ahaus",
+        "bis_datum": 20150227,
+        "geoBreite": 52.0814,
+        "geoLaenge": 6.941,
+        "von_datum": 20060301
+    },
+    "7389": {
+        "Bundesland": "Brandenburg",
+        "Stationshoehe": 82.0,
+        "Stationsname": "Heckelberg",
+        "bis_datum": 20150227,
+        "geoBreite": 52.7461,
+        "geoLaenge": 13.8427,
+        "von_datum": 20061201
+    },
+    "7393": {
+        "Bundesland": "Sachsen",
+        "Stationshoehe": 116.0,
+        "Stationsname": "Hoyerswerda",
+        "bis_datum": 20150227,
+        "geoBreite": 51.4493,
+        "geoLaenge": 14.2533,
+        "von_datum": 20100101
+    },
+    "7394": {
+        "Bundesland": "Bayern",
+        "Stationshoehe": 622.0,
+        "Stationsname": "Wunsiedel-Sch\u00f6nbrunn",
+        "bis_datum": 20150227,
+        "geoBreite": 50.0315,
+        "geoLaenge": 11.9745,
+        "von_datum": 20060601
+    },
+    "7395": {
+        "Bundesland": "Bayern",
+        "Stationshoehe": 350.0,
+        "Stationsname": "Gottfrieding",
+        "bis_datum": 20150227,
+        "geoBreite": 48.6596,
+        "geoLaenge": 12.5388,
+        "von_datum": 20071201
+    },
+    "7396": {
+        "Bundesland": "Hessen",
+        "Stationshoehe": 743.0,
+        "Stationsname": "Hoherodskopf/Vogelsberg",
+        "bis_datum": 20150227,
+        "geoBreite": 50.5084,
+        "geoLaenge": 9.2247,
+        "von_datum": 20080501
+    },
+    "7403": {
+        "Bundesland": "Baden-W\u00fcrttemberg",
+        "Stationshoehe": 672.0,
+        "Stationsname": "Leutkirch-Herlazhofen",
+        "bis_datum": 20150227,
+        "geoBreite": 47.7955,
+        "geoLaenge": 10.0324,
+        "von_datum": 20070330
+    },
+    "7410": {
+        "Bundesland": "Hessen",
+        "Stationshoehe": 350.0,
+        "Stationsname": "Neu-Ulrichstein",
+        "bis_datum": 20150227,
+        "geoBreite": 50.7519,
+        "geoLaenge": 9.0226,
+        "von_datum": 20110201
+    },
+    "7412": {
+        "Bundesland": "Bayern",
+        "Stationshoehe": 340.0,
+        "Stationsname": "Neuh\u00fctten/Spessart",
+        "bis_datum": 20150227,
+        "geoBreite": 50.0083,
+        "geoLaenge": 9.4239,
+        "von_datum": 20061001
+    },
+    "7419": {
+        "Bundesland": "Th\u00fcringen",
+        "Stationshoehe": 390.0,
+        "Stationsname": "Langenwetzendorf-G\u00f6ttendorf",
+        "bis_datum": 20150227,
+        "geoBreite": 50.661,
+        "geoLaenge": 12.0757,
+        "von_datum": 20061201
+    },
+    "7420": {
+        "Bundesland": "Sachsen-Anhalt",
+        "Stationshoehe": 246.0,
+        "Stationsname": "Naumburg/Saale-Kreipitzsch",
+        "bis_datum": 20150227,
+        "geoBreite": 51.1043,
+        "geoLaenge": 11.711,
+        "von_datum": 20070401
+    },
+    "7424": {
+        "Bundesland": "Bayern",
+        "Stationshoehe": 458.0,
+        "Stationsname": "Piding",
+        "bis_datum": 20150227,
+        "geoBreite": 47.7724,
+        "geoLaenge": 12.9073,
+        "von_datum": 20061201
+    },
+    "7427": {
+        "Bundesland": "Schleswig-Holstein",
+        "Stationshoehe": 17.0,
+        "Stationsname": "Padenstedt (Pony-Park)",
+        "bis_datum": 20150227,
+        "geoBreite": 54.019,
+        "geoLaenge": 9.9257,
+        "von_datum": 20070901
+    },
+    "7428": {
+        "Bundesland": "Th\u00fcringen",
+        "Stationshoehe": 397.0,
+        "Stationsname": "Veilsdorf",
+        "bis_datum": 20150227,
+        "geoBreite": 50.4166,
+        "geoLaenge": 10.8156,
+        "von_datum": 20070501
+    },
+    "7431": {
+        "Bundesland": "Bayern",
+        "Stationshoehe": 604.0,
+        "Stationsname": "Oberhaching-Laufzorn",
+        "bis_datum": 20150227,
+        "geoBreite": 48.0131,
+        "geoLaenge": 11.5525,
+        "von_datum": 20071101
+    },
+    "7432": {
+        "Bundesland": "Niedersachsen",
+        "Stationshoehe": 72.0,
+        "Stationsname": "Wittingen-Vorhop",
+        "bis_datum": 20150227,
+        "geoBreite": 52.6425,
+        "geoLaenge": 10.6631,
+        "von_datum": 20070501
+    },
+    "13667": {
+        "Bundesland": "Baden-W\u00fcrttemberg",
+        "Stationshoehe": 269.0,
+        "Stationsname": "Freiburg-Stadt",
+        "bis_datum": 20080706,
+        "geoBreite": 48.0008,
+        "geoLaenge": 7.8452,
+        "von_datum": 20061123
+    },
+    "13670": {
+        "Bundesland": "Nordrhein-Westfalen",
+        "Stationshoehe": 25.0,
+        "Stationsname": "Duisburg-Baerl",
+        "bis_datum": 20150227,
+        "geoBreite": 51.5087,
+        "geoLaenge": 6.7015,
+        "von_datum": 20070601
+    },
+    "13674": {
+        "Bundesland": "Baden-W\u00fcrttemberg",
+        "Stationshoehe": 237.0,
+        "Stationsname": "Waibstadt",
+        "bis_datum": 20150227,
+        "geoBreite": 49.2942,
+        "geoLaenge": 8.9054,
+        "von_datum": 20070801
+    },
+    "13675": {
+        "Bundesland": "Niedersachsen",
+        "Stationshoehe": 77.0,
+        "Stationsname": "Hameln-Hastenbeck",
+        "bis_datum": 20150227,
+        "geoBreite": 52.0817,
+        "geoLaenge": 9.4072,
+        "von_datum": 20071101
+    },
+    "13696": {
+        "Bundesland": "Nordrhein-Westfalen",
+        "Stationshoehe": 68.0,
+        "Stationsname": "Waltrop-Abdinghof",
+        "bis_datum": 20150227,
+        "geoBreite": 51.5968,
+        "geoLaenge": 7.4048,
+        "von_datum": 20071201
+    },
+    "13700": {
+        "Bundesland": "Nordrhein-Westfalen",
+        "Stationshoehe": 205.0,
+        "Stationsname": "Gevelsberg-Oberbr\u00f6king",
+        "bis_datum": 20150227,
+        "geoBreite": 51.3329,
+        "geoLaenge": 7.3411,
+        "von_datum": 20080501
+    },
+    "13710": {
+        "Bundesland": "Bayern",
+        "Stationshoehe": 490.0,
+        "Stationsname": "Landshut-Reithof",
+        "bis_datum": 20150227,
+        "geoBreite": 48.5734,
+        "geoLaenge": 12.2574,
+        "von_datum": 20080401
+    },
+    "13711": {
+        "Bundesland": "Th\u00fcringen",
+        "Stationshoehe": 280.0,
+        "Stationsname": "Kr\u00f6lpa-Rockendorf",
+        "bis_datum": 20150227,
+        "geoBreite": 50.6813,
+        "geoLaenge": 11.515,
+        "von_datum": 20071201
+    },
+    "13713": {
+        "Bundesland": "Nordrhein-Westfalen",
+        "Stationshoehe": 380.0,
+        "Stationsname": "Meinerzhagen-Redlendorf",
+        "bis_datum": 20150227,
+        "geoBreite": 51.0898,
+        "geoLaenge": 7.6289,
+        "von_datum": 20071101
+    },
+    "13776": {
+        "Bundesland": "Niedersachsen",
+        "Stationshoehe": 85.0,
+        "Stationsname": "Hildesheim-Drispenstedt",
+        "bis_datum": 20110104,
+        "geoBreite": 52.1789,
+        "geoLaenge": 9.9524,
+        "von_datum": 20080301
+    },
+    "13777": {
+        "Bundesland": "Niedersachsen",
+        "Stationshoehe": 110.0,
+        "Stationsname": "Helmstedt-Emmerstedt",
+        "bis_datum": 20150227,
+        "geoBreite": 52.2464,
+        "geoLaenge": 10.9589,
+        "von_datum": 20080601
+    },
+    "13903": {
+        "Bundesland": "Niedersachsen",
+        "Stationshoehe": 15.0,
+        "Stationsname": "Bake Zulu",
+        "bis_datum": 20110103,
+        "geoBreite": 54.0167,
+        "geoLaenge": 8.3167,
+        "von_datum": 20080916
+    },
+    "13904": {
+        "Bundesland": "Hamburg",
+        "Stationshoehe": 3.0,
+        "Stationsname": "Nordseeboje 2",
+        "bis_datum": 20100426,
+        "geoBreite": 55.0,
+        "geoLaenge": 6.3333,
+        "von_datum": 20080915
+    },
+    "14003": {
+        "Bundesland": "Bayern",
+        "Stationshoehe": 728.0,
+        "Stationsname": "Kaufbeuren (Flugplatz)",
+        "bis_datum": 19920629,
+        "geoBreite": 47.8619,
+        "geoLaenge": 10.6144,
+        "von_datum": 19610103
+    },
+    "14138": {
+        "Bundesland": "Brandenburg",
+        "Stationshoehe": 73.0,
+        "Stationsname": "Falkenberg (Grenzschichtmessfeld)",
+        "bis_datum": 20150227,
+        "geoBreite": 52.1655,
+        "geoLaenge": 14.1224,
+        "von_datum": 20090915
+    },
+    "15000": {
+        "Bundesland": "Nordrhein-Westfalen",
+        "Stationshoehe": 231.0,
+        "Stationsname": "Aachen-Orsbach",
+        "bis_datum": 20150227,
+        "geoBreite": 50.7982,
+        "geoLaenge": 6.0244,
+        "von_datum": 20110401
+    },
+    "15207": {
+        "Bundesland": "Hessen",
+        "Stationshoehe": 317.0,
+        "Stationsname": "Schauenburg-Elgershausen",
+        "bis_datum": 20150227,
+        "geoBreite": 51.2835,
+        "geoLaenge": 9.359,
+        "von_datum": 20131101
+    },
+    "15444": {
+        "Bundesland": "Baden-W\u00fcrttemberg",
+        "Stationshoehe": 593.0,
+        "Stationsname": "Ulm-M\u00e4hringen",
+        "bis_datum": 20150227,
+        "geoBreite": 48.4418,
+        "geoLaenge": 9.9216,
+        "von_datum": 20140901
+    }
+}
