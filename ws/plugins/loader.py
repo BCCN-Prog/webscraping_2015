@@ -1,6 +1,7 @@
 import os
 import re
 import importlib as imp
+import ws.bad as bad
 
 
 def load_plugin(plugin):
@@ -9,6 +10,10 @@ def load_plugin(plugin):
     'plugin' is the package name as a string.
     """
     sub_package = None
+    plugin = str(plugin)
+
+    if len(plugin) == 0:
+        raise bad.PluginExistsNot('plugin must be provided')
 
     if re.match('^[\w-]+$', plugin):
         plugin_path = os.path.join(os.path.dirname(os.path.realpath(__file__)),
@@ -16,6 +21,8 @@ def load_plugin(plugin):
         if os.path.isdir(plugin_path):
             # http://stackoverflow.com/a/10675081
             sub_package = imp.import_module('.' + plugin, package='ws.plugins')
+        else:
+            raise bad.PluginExistsNot('plugin %s does not exist' % plugin)
 
     return sub_package
 

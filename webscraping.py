@@ -1,4 +1,5 @@
 from sys import argv
 import cli
 
-cli.cli(argv)
+if __name__ == '__main__':
+    cli.cli(argv)

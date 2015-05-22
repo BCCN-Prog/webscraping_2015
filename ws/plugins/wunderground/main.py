@@ -8,20 +8,20 @@ import json
 import time
 import pandas as pd
 import numpy as np
-#import bad
+import ws.bad as bad
 
 def build_url(city):
     '''
     input must be a string, containing the city name alone
     '''
-    
+
     url = 'http://api.wunderground.com/api/'+return_wundergroud_key()+\
     '/geolookup/conditions/q/DL/'+city+'.json'
-    page = urllib.request.urlopen(url) 
+    page = urllib.request.urlopen(url)
     read = page.read()
     decoded = read.decode('utf8')
     data = json.loads(decoded)
-    
+
     if "location" in data.keys():     # "location" case
         cityname =  data["location"]["l"]
     else:                               # "Berlin" case (ambiguity)
@@ -30,14 +30,14 @@ def build_url(city):
                 if cities["country"] == "DL":
                     cityname = cities["l"]
         except:
-            raise bad.city()
-            
+            raise bad.City()
+
     forecasturl = 'http://api.wunderground.com/api/'+return_wundergroud_key()+\
     '/forecast10day'+cityname+'.json'
     return forecasturl
 
 def pandize(url,cityname):
-    page = urllib.request.urlopen(url) 
+    page = urllib.request.urlopen(url)
     read = page.read()
     decoded = read.decode('utf8')
     data = json.loads(decoded)
@@ -78,7 +78,7 @@ def clocktester(n):
     for i in range(n):
         clocktesterarray[i] = time.time()
         clocker()
-        
+
 def clocker():
     '''Let the clocked function work at full speed while possibl, then wait
     until the period ends that allows it to go again.'''
@@ -114,7 +114,7 @@ def return_wundergroud_key():
     'a930fdbbb56c3b59',\
     '3ef23167f819b269'\
     ]
-    
+
     try:
         if len(wunderground_keys_) > 0:
             clocker()
@@ -126,4 +126,4 @@ def return_wundergroud_key():
     except:
         wunderground_keys_ = key_well_.copy()
         clocker()
-        return wunderground_keys_.pop()        
+        return wunderground_keys_.pop()

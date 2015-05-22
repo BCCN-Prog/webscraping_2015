@@ -5,17 +5,20 @@ import logging
 import getopt
 import textwrap
 import sys
+import os
 
 
-def help_msg():
-    help_str = textwrap.dedent("""\
-                               Do you need help?
-    """)
-    print(help_str)
+def print_readme():
+    """Print README.txt"""
+    readme_file = os.path.normpath(os.path.join(os.path.dirname(os.path.realpath(__file__)),
+                                                '..', 'README.txt'))
+    with open(readme_file, 'r') as fp:
+            print(fp.read())
 
 
 def cli(argv):
-    basepath = ''
+    """The CLI, argv is sys.argv"""
+    basepath = 'forecasts'
     pname = None
     city = None
     verbosity = logging.WARNING
@@ -24,12 +27,16 @@ def cli(argv):
         opts, args = getopt.getopt(argv[1:], 'h', ['verbosity=', 'provider=',
                                                   'city=', 'folder='])
     except getopt.GetoptError:
-        logging.error("wrong usage")
-        help_msg()
+        print(('Because you obviously did not read README.txt, '
+              'I will print it for you.'))
+        print()
+        print('------------README.txt------------')
+        print_readme()
         sys.exit(2)
 
     for opt, arg in opts:
         if opt == '--verbosity':
+            # levels https://docs.python.org/3/library/logging.html#logging-levels
             if int(arg) <= 0:
                 # default
                 pass
@@ -42,12 +49,15 @@ def cli(argv):
         elif opt == '--folder':
             basepath = arg
         elif opt == '-h':
-            help_msg()
+            print_readme()
             sys.exit()
         elif opt == '--provider':
             pname = arg
 
-    logging.basicConfig(format="%(levelname)s: %(message)s", level=verbosity)
+    # attributes https://docs.python.org/3/library/logging.html#logrecord-attributes
+    logging.basicConfig(format=("%(asctime)s "
+                                "[%(levelname)s,%(filename)s,%(funcName)s]: "
+                                "%(message)s"), level=verbosity)
 
     if city == None:
         city = get_citylist()
@@ -58,5 +68,14 @@ def cli(argv):
         pname = list_plugins()
     else:
         pname = pname.split(",")
+
+
+    if len(city) < 10:
+        logging.info('cities to fetch forcast for cities %s',  str(city))
+    else:
+        logging.info('will fetch forcast for %d cities',  len(city))
+    logging.info('providers to use: %s',  str(pname))
+    logging.info('verbosity level is %s', logging.getLevelName(verbosity))
+    logging.info('folder to store forcasts in is %s', str(basepath))
 
     store_forecasts(city, pname, basepath)
