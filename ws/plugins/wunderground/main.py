@@ -8,7 +8,7 @@ import json
 import time
 import pandas as pd
 import numpy as np
-# import ws.bad as bad
+ import ws.bad as bad
 
 def build_url(city):
     '''
@@ -79,8 +79,8 @@ def clocktester(n):
         clocktesterarray[i] = time.time()
         clocker()
 
-
-
+def clocker():
+    time.sleep(0.0112) # = ~ 1/85 (there are 90 keys)
 
 def clocker_old():
     '''Let the clocked function work at full speed while possibl, then wait
