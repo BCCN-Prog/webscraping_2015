@@ -8,7 +8,7 @@ import json
 import time
 import pandas as pd
 import numpy as np
- import ws.bad as bad
+import ws.bad as bad
 
 def build_url(city):
     '''
