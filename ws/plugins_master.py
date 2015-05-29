@@ -45,12 +45,12 @@ def store_forecast(city, pname, basepath=''):
 
     forecast_data = None
     p = load_plugin(str(pname))
-    
+
     try:
         url = p.build_url(str(city))
     except bad.City:
         logging.error('plugin %s cannot deal with city %s', pname, city)
-        
+
     failcounter = 0
     continue_loop = True
     while continue_loop:
@@ -71,7 +71,7 @@ def store_forecast(city, pname, basepath=''):
             logging.info("SUCCESS! This time it worked")
         if continue_loop == False:
             break
-            
+
     filepath = generate_forecast_filepath(pname, city, basepath)
     misc.save_to_disk(forecast_data, filepath)
 
