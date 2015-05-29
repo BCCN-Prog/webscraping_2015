@@ -45,19 +45,35 @@ def store_forecast(city, pname, basepath=''):
 
     forecast_data = None
     p = load_plugin(str(pname))
-
+    
     try:
         url = p.build_url(str(city))
-        forecast_data = misc.download_from_url(url)
-        logging.info('Queried %s for %s successfully', pname, city)
-        filepath = generate_forecast_filepath(pname, city, basepath)
-        misc.save_to_disk(forecast_data, filepath)
     except bad.City:
         logging.error('plugin %s cannot deal with city %s', pname, city)
-    except urllib.error.HTTPError as err:
-        logging.error("%s for url %s", err, url)
-    except http.client.IncompleteRead as err:
-        logging.error("%s", err)
+        
+    failcounter = 0
+    continue_loop = True
+    while continue_loop:
+        try:
+            forecast_data = misc.download_from_url(url)
+            continue_loop = False
+            if failcounter == 0:
+                logging.info('Queried %s for %s successfully', pname, city)
+        except urllib.error.HTTPError as err:
+            failcounter += 1
+            logging.error("%s for url %s", err, url)
+            logging.info("Trying again...")
+            logging.info("This was attempt number " +str(failcounter))
+        except http.client.IncompleteRead as err:
+            logging.error("%s", err)
+
+        if failcounter > 0 and continue_loop == False:
+            logging.info("SUCCESS! This time it worked")
+        if continue_loop == False:
+            break
+            
+    filepath = generate_forecast_filepath(pname, city, basepath)
+    misc.save_to_disk(forecast_data, filepath)
 
     return forecast_data
 
