@@ -30,4 +30,4 @@ For example, to get the forecasts from accuweather and wunderground for Berlin,
 Bremen and Munich and save them into the folder myForecasts you have to
 write:
 
-python webscraping.py --provider=accuweather,wunderground --city=berlin,bremen,munich --folder=myForecasts
+python3 webscraping.py --provider=accuweather,wunderground --city=berlin,bremen,munich --folder=myForecasts
