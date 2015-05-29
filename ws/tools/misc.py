@@ -16,6 +16,7 @@ def download_from_url(url):
     """Download url and return the content."""
     logging.debug('url %s', url)
     r = urllib.request.urlopen(url)
-    data = str(r.read())
+    data = r.read()
+    data = data.decode(encoding='UTF-8')
 
     return data
