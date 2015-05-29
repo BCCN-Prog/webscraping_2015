@@ -71,8 +71,11 @@ def store_forecast(city, pname, basepath=''):
 
 
 def store_forecasts_loop(cities, pname, basepath=''):
-    for city in list(cities):
-        store_forecast(city, pname, basepath)
+    try:
+        for city in list(cities):
+            store_forecast(city, pname, basepath)
+    except KeyboardInterrupt as err:
+        raise KeyboardInterrupt(err)
 
 
 def store_forecasts(cities, pnames, basepath=''):
