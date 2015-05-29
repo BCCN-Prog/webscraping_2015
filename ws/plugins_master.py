@@ -49,6 +49,7 @@ def store_forecast(city, pname, basepath=''):
     try:
         url = p.build_url(str(city))
         forecast_data = misc.download_from_url(url)
+        logging.info('Queried %s for %s successfully', pname, city)
         filepath = generate_forecast_filepath(pname, city, basepath)
         misc.save_to_disk(forecast_data, filepath)
     except bad.City:
