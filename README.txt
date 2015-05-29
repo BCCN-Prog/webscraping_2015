@@ -2,7 +2,7 @@ If you want to start the webscraping you should first start your Command Window
 and go to this directory. From here you can use the following command (note that
 you need to have Python 3 installed):
 
-python webscraping.py --provider=my_provider --city=my_city --folder=my_folder
+python3 webscraping.py --provider=my_provider --city=my_city --folder=my_folder
 
 The flags have the following options(for providers and city several options are
 possible, just separate them by a comma without spaces):
@@ -30,4 +30,4 @@ For example, to get the forecasts from accuweather and wunderground for Berlin,
 Bremen and Munich and save them into the folder myForecasts you have to
 write:
 
-python webscraping.py --provider=accuweather,wunderground --city=berlin,bremen,munich --folder=myForecasts
+python3 webscraping.py --provider=accuweather,wunderground --city=berlin,bremen,munich --folder=myForecasts
