@@ -2,7 +2,7 @@ If you want to start the webscraping you should first start your Command Window
 and go to this directory. From here you can use the following command (note that
 you need to have Python 3 installed):
 
-python webscraping.py --provider=my_provider --city=my_city --folder=my_folder
+python3 webscraping.py --provider=my_provider --city=my_city --folder=my_folder
 
 The flags have the following options(for providers and city several options are
 possible, just separate them by a comma without spaces):

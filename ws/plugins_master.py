@@ -56,6 +56,14 @@ def store_forecast(city, pname, basepath=''):
         logging.error('plugin %s cannot deal with city %s', pname, city)
     except urllib.error.HTTPError as err:
         logging.error("%s for url %s", err, url)
+        still_nothing = True
+        while still_nothing == True:
+            try:
+                forecast_data = misc.download_from_url(url)
+                logging.info('SUCCESS! This time it worked.')
+                still_nothing == False
+            except:
+                pass
     except http.client.IncompleteRead as err:
         logging.error("%s", err)
 
