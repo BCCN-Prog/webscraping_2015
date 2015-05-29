@@ -3,7 +3,6 @@ import pandas as pd
 import numpy as np
 
 def build_url(city):
-    sleep(.2)
     # check whether input is a string
     if type(city) != str:
         raise ValueError("The input city " + str(city) + " wasn't of type string")
