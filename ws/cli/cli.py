@@ -11,7 +11,7 @@ import os
 def print_readme():
     """Print README.txt"""
     readme_file = os.path.normpath(os.path.join(os.path.dirname(os.path.realpath(__file__)),
-                                                '..', 'README.txt'))
+                                                '..', '..', 'README.txt'))
     with open(readme_file, 'r') as fp:
             print(fp.read())
 
