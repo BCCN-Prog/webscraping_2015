@@ -8,7 +8,7 @@ import json
 import time
 import pandas as pd
 import numpy as np
-import ws.bad as bad
+ import ws.bad as bad
 
 def build_url(city):
     '''
@@ -36,11 +36,11 @@ def build_url(city):
     '/forecast10day'+cityname+'.json'
     return forecasturl
 
-def pandize(url,cityname):
-    page = urllib.request.urlopen(url)
-    read = page.read()
-    decoded = read.decode('utf8')
-    data = json.loads(decoded)
+def pandize(data, cityname, date):
+#    page = urllib.request.urlopen(url)
+#    read = page.read()
+#    decoded = read.decode('utf8')
+#    data = json.loads(decoded)
     table = pd.DataFrame(columns = ['ref_date','city','pred_offset','Min Air Temp','Max Air Temp','avg_wind_speed',\
     'avg_wind_direction','max_wind_speed','max_wind_direction','avg_humidity'\
     ,'percp_total','percp_day','percp_night','snow_total','snow_day','snow_night'])
@@ -80,6 +80,9 @@ def clocktester(n):
         clocker()
 
 def clocker():
+    time.sleep(0.0112) # = ~ 1/85 (there are 90 keys)
+
+def clocker_old():
     '''Let the clocked function work at full speed while possibl, then wait
     until the period ends that allows it to go again.'''
 
