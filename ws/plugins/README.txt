@@ -9,3 +9,8 @@ Weather underground:
 	read = page.read()
 	decoded = read.decode('utf8')
 	data = json.loads(decoded)
+3) Think of a cityname, e.g. 'Berlin'
+4) And a date in datetime form, e.g.:
+	from datetime import date
+	date = date.today()
+5) pandize(data,'Berlin',date)

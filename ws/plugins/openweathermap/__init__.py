@@ -1,6 +1,7 @@
 from time import sleep
 import pandas as pd
 import numpy as np
+from datetime import timedelta
 
 def build_url(city):
     # check whether input is a string
@@ -15,8 +16,10 @@ def build_url(city):
 
     return url
 
-def parse(data, cityname, date):
+def pandize(data, cityname, date):
     '''
+    Takes JSON-files from openweathermap and turns it into a panda dataframe.    
+    
     REMARK: I noticed that some forecasts include 'rain' and others don't. 
     Therefore, I used an if statement to verify if rain is a key or not. I am not 
     quite sure if rain is the only variable where this is the case. So if there is 
@@ -31,9 +34,9 @@ def parse(data, cityname, date):
     for i in range(13):
         forecast = data["list"][i]
         table.loc[i] = [\
-pd.to_datetime(date, dayfirst=True)\
+date\
 ,cityname\
-,int(i)\
+,date+timedelta(days=i)\
 ,np.NaN\
 ,np.NaN\
 ,np.NaN\

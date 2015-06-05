@@ -9,6 +9,7 @@ import time
 import pandas as pd
 import numpy as np
 import ws.bad as bad
+from datetime import timedelta
 
 def build_url(city):
     '''
@@ -37,6 +38,9 @@ def build_url(city):
     return forecasturl
 
 def pandize(data, cityname, date):
+    '''
+    Takes JSON-files from openweathermap and turns it into a panda dataframe.  
+    '''
 #    page = urllib.request.urlopen(url)
 #    read = page.read()
 #    decoded = read.decode('utf8')
@@ -50,19 +54,11 @@ def pandize(data, cityname, date):
     for i in range(9):
         forecast = data["forecast"]["simpleforecast"]["forecastday"][i]
         table.loc[i] = [\
-pd.to_datetime([\
-str(data["forecast"]["simpleforecast"]["forecastday"][0]['date']['day'])+'.'+\
-str(data["forecast"]["simpleforecast"]["forecastday"][0]['date']['month'])+'.'+\
-str(data["forecast"]["simpleforecast"]["forecastday"][0]['date']['year'])\
-], dayfirst=True)\
+date\
 ,cityname\
 ,int(i)\
 ,np.NaN\
-,pd.to_datetime([\
-str(data["forecast"]["simpleforecast"]["forecastday"][i]['date']['day'])+'.'+\
-str(data["forecast"]["simpleforecast"]["forecastday"][i]['date']['month'])+'.'+\
-str(data["forecast"]["simpleforecast"]["forecastday"][i]['date']['year'])\
-], dayfirst=True)\
+,date+timedelta(days=i)\
 ,np.NaN\
 ,np.NaN\
 ,np.NaN\
