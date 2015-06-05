@@ -64,7 +64,8 @@ def pandize(url, cityname, date):
     'avg_wind_direction','max_wind_speed','max_wind_direction','avg_humidity'\
     ,'percp_total','percp_day','percp_night','snow_total','snow_day','snow_night'])
     dig = data[3]['doc']['DIData']
-    return dig
+    today = data[0]['doc']['MOData']
+    return dig, data, today
 '''
     for i in range(9):
         forecast = data["forecast"]["simpleforecast"]["forecastday"][i]
