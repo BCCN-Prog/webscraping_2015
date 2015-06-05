@@ -41,9 +41,12 @@ def pandize(data, cityname, date):
 #    read = page.read()
 #    decoded = read.decode('utf8')
 #    data = json.loads(decoded)
-    table = pd.DataFrame(columns = ['ref_date','city','pred_offset','Min Air Temp','Max Air Temp','avg_wind_speed',\
-    'avg_wind_direction','max_wind_speed','max_wind_direction','avg_humidity'\
-    ,'percp_total','percp_day','percp_night','snow_total','snow_day','snow_night'])
+    table = pd.DataFrame(columns = ['ref_date','city','pred_offset','Station ID', \
+'Date', 'Quality Level', 'Air Temperature', 'Vapor Pressure', 'Degree of Coverage', \
+'Air Pressure', 'Rel Humidity', 'Wind Speed', 'Max Air Temp', 'Min Air Temp', \
+'Min Groundlvl Temp', 'Max Wind Speed', 'Precipitation', 'Precipitation Ind', \
+'Hrs of Sun', 'Snow Depth','realfeelhigh','realfeellow','winddirection','maxuv', \
+'snowamount', 'tstormprob'])
     for i in range(9):
         forecast = data["forecast"]["simpleforecast"]["forecastday"][i]
         table.loc[i] = [\
@@ -54,19 +57,33 @@ str(data["forecast"]["simpleforecast"]["forecastday"][0]['date']['year'])\
 ], dayfirst=True)\
 ,cityname\
 ,int(i)\
-,forecast["low"]['celsius']\
-,forecast["high"]['celsius']\
-,forecast["avewind"]['kph']
-,forecast["avewind"]['degrees']\
-,forecast["maxwind"]['kph']\
-,forecast["maxwind"]['degrees']\
+,np.NaN\
+,pd.to_datetime([\
+str(data["forecast"]["simpleforecast"]["forecastday"][i]['date']['day'])+'.'+\
+str(data["forecast"]["simpleforecast"]["forecastday"][i]['date']['month'])+'.'+\
+str(data["forecast"]["simpleforecast"]["forecastday"][i]['date']['year'])\
+], dayfirst=True)\
+,np.NaN\
+,np.NaN\
+,np.NaN\
+,np.NaN\
+,np.NaN\
 ,forecast["avehumidity"]\
+,forecast["avewind"]['kph']\
+,forecast["high"]['celsius']\
+,forecast["low"]['celsius']\
+,np.NaN\
+,forecast["maxwind"]['kph']\
 ,forecast["qpf_allday"]["mm"]\
-,forecast["qpf_day"]["mm"]\
-,forecast["qpf_night"]["mm"]\
+,np.NaN\
+,np.NaN\
 ,forecast["snow_allday"]["cm"]\
-,forecast["snow_day"]["cm"]\
-,forecast["snow_night"]["cm"]]
+,np.NaN\
+,np.NaN\
+,np.NaN\
+,np.NaN\
+,np.NaN\
+,np.NaN]
     return table
 
 ###############################
