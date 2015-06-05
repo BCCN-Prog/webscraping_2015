@@ -1,5 +1,6 @@
 import urllib.request
 import ws.bad as bad
+import pandas as pd
 import json
 import logging
 import re
