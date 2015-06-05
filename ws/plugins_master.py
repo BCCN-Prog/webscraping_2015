@@ -8,7 +8,7 @@ import urllib.error
 import http.client
 from .tools import misc
 import multiprocessing
-
+import pandas as pd
 
 def generate_forecast_filepath(pname, city, basepath=''):
     """Generate forecast filepath.
@@ -30,7 +30,6 @@ def generate_forecast_filepath(pname, city, basepath=''):
 
 def get_citylist():
     """Return list with all city names."""
-    # XXX should we use another format than pickle?
     fp = os.path.join(os.path.dirname(os.path.realpath(__file__)), 'citylist.dump')
     citylist = pickle.load(open(fp, 'rb'))
     citylist = [str(i) for i in citylist]
@@ -98,3 +97,8 @@ def store_forecasts(cities, pnames, basepath=''):
         p = multiprocessing.Process(target=store_forecasts_loop,
                                     args=(cities, pname, basepath))
         p.start()
+
+def insert_into_master_frame(pandas_rows):
+    print("function call worked") 
+    # just as a toy example, call pandize for a random forecast
+    
