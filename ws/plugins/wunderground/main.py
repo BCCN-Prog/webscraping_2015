@@ -3,6 +3,7 @@
 <("<)
 """
 
+import pickle
 import urllib
 import json
 import time
@@ -121,7 +122,8 @@ def clocker_old():
 
 
 def return_wundergroud_key():
-    global wunderground_keys_
+    wunderground_keys_ = pickle.load(open('wunderground_keys_', "rb"))
+                
 
     key_well_ = [\
     '3a8e74a2827886a1',\
@@ -138,12 +140,18 @@ def return_wundergroud_key():
     try:
         if len(wunderground_keys_) > 0:
             clocker()
-            return wunderground_keys_.pop()
+            pop = wunderground_keys_.pop()
+            pickle.dump(wunderground_keys_, open( 'wunderground_keys_', "wb" ))
+            return pop
         else:
             wunderground_keys_ = key_well_.copy()
             clocker()
-            return wunderground_keys_.pop()
+            pop = wunderground_keys_.pop()
+            pickle.dump(wunderground_keys_, open( 'wunderground_keys_', "wb" ))
+            return pop
     except:
         wunderground_keys_ = key_well_.copy()
         clocker()
-        return wunderground_keys_.pop()
+        pop = wunderground_keys_.pop()
+        pickle.dump(wunderground_keys_, open( 'wunderground_keys_', "wb" ))
+        return pop
