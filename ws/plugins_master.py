@@ -8,6 +8,7 @@ import urllib.error
 import http.client
 from .tools import misc
 import multiprocessing
+import datetime
 
 
 def generate_forecast_filepath(pname, city, basepath=''):
@@ -70,7 +71,7 @@ def store_forecast(city, pname, basepath=''):
 
         if failcounter > 0 and continue_loop == False:
             logging.info("SUCCESS! This time querying %s worked", pname)
-            
+
         if continue_loop == False:
             break
 
@@ -98,3 +99,36 @@ def store_forecasts(cities, pnames, basepath=''):
         p = multiprocessing.Process(target=store_forecasts_loop,
                                     args=(cities, pname, basepath))
         p.start()
+
+
+def forecasts_newer_than(newer_than, basepath=''):
+    forecast_lists = {}
+    for city in os.listdir(basepath):
+        for provider in os.listdir(os.path.join(basepath, city)):
+            if provider not in forecast_lists:
+                forecast_lists[provider] = []
+            for forecast in os.listdir(os.path.join(basepath, city, provider)):
+                utc_posix_time = float(forecast.replace('s', '.',
+                                                        1)[:-len('.forecast')])
+                if utc_posix_time > newer_than:
+                    filepath = os.path.join(basepath, city, provider, forecast)
+                    with open(filepath, 'r') as fd:
+                        forecast_lists[provider].append([fd.read(), city,
+                                                         datetime.datetime.fromtimestamp(utc_posix_time)])
+
+    return forecast_lists
+
+
+def pandize_plugin_forecasts(forecast_lists, pname, database_filepath):
+    p = load_plugin(str(pname))
+    for forecast_list in forecast_lists:
+        pandas_table = p.pandize(*forecast_list)
+        # XXX: maltimore works on this function
+        #insert_into_master_frame(pandas_table, database_filepath)
+
+
+def pandize_forecasts(pnames, database_filepath='', basepath='', newer_than=0):
+    forecast_lists = forecasts_newer_than(newer_than, basepath)
+    for pname in list(pnames):
+        pandize_plugin_forecasts(forecast_lists[pname], pname,
+                                 database_filepath)
