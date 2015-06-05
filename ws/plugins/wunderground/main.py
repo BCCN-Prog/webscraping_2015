@@ -3,12 +3,14 @@
 <("<)
 """
 
+import pickle
 import urllib
 import json
 import time
 import pandas as pd
 import numpy as np
 import ws.bad as bad
+from datetime import timedelta
 
 def build_url(city):
     '''
@@ -37,6 +39,9 @@ def build_url(city):
     return forecasturl
 
 def pandize(data, cityname, date):
+    '''
+    Takes JSON-files from openweathermap and turns it into a panda dataframe.  
+    '''
 #    page = urllib.request.urlopen(url)
 #    read = page.read()
 #    decoded = read.decode('utf8')
@@ -50,19 +55,11 @@ def pandize(data, cityname, date):
     for i in range(9):
         forecast = data["forecast"]["simpleforecast"]["forecastday"][i]
         table.loc[i] = [\
-pd.to_datetime([\
-str(data["forecast"]["simpleforecast"]["forecastday"][0]['date']['day'])+'.'+\
-str(data["forecast"]["simpleforecast"]["forecastday"][0]['date']['month'])+'.'+\
-str(data["forecast"]["simpleforecast"]["forecastday"][0]['date']['year'])\
-], dayfirst=True)\
+date\
 ,cityname\
 ,int(i)\
 ,np.NaN\
-,pd.to_datetime([\
-str(data["forecast"]["simpleforecast"]["forecastday"][i]['date']['day'])+'.'+\
-str(data["forecast"]["simpleforecast"]["forecastday"][i]['date']['month'])+'.'+\
-str(data["forecast"]["simpleforecast"]["forecastday"][i]['date']['year'])\
-], dayfirst=True)\
+,date+timedelta(days=i)\
 ,np.NaN\
 ,np.NaN\
 ,np.NaN\
@@ -121,7 +118,8 @@ def clocker_old():
 
 
 def return_wundergroud_key():
-    global wunderground_keys_
+    wunderground_keys_ = pickle.load(open('wunderground_keys_', "rb"))
+                
 
     key_well_ = [\
     '3a8e74a2827886a1',\
@@ -138,12 +136,18 @@ def return_wundergroud_key():
     try:
         if len(wunderground_keys_) > 0:
             clocker()
-            return wunderground_keys_.pop()
+            pop = wunderground_keys_.pop()
+            pickle.dump(wunderground_keys_, open( 'wunderground_keys_', "wb" ))
+            return pop
         else:
             wunderground_keys_ = key_well_.copy()
             clocker()
-            return wunderground_keys_.pop()
+            pop = wunderground_keys_.pop()
+            pickle.dump(wunderground_keys_, open( 'wunderground_keys_', "wb" ))
+            return pop
     except:
         wunderground_keys_ = key_well_.copy()
         clocker()
-        return wunderground_keys_.pop()
+        pop = wunderground_keys_.pop()
+        pickle.dump(wunderground_keys_, open( 'wunderground_keys_', "wb" ))
+        return pop
