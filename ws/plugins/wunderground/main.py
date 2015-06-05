@@ -38,14 +38,11 @@ def build_url(city):
     '/forecast10day'+cityname+'.json'
     return forecasturl
 
-def pandize(data, cityname, date):
-    '''
-    Takes JSON-files from openweathermap and turns it into a panda dataframe.  
-    '''
-#    page = urllib.request.urlopen(url)
-#    read = page.read()
-#    decoded = read.decode('utf8')
-#    data = json.loads(decoded)
+def pandize(str_data, cityname, date):
+    page = urllib.request.urlopen(str_data)
+    read = page.read()
+    decoded = read.decode('utf8')
+    data = json.loads(decoded)
     table = pd.DataFrame(columns = ['ref_date','city','pred_offset','Station ID', \
 'Date', 'Quality Level', 'Air Temperature', 'Vapor Pressure', 'Degree of Coverage', \
 'Air Pressure', 'Rel Humidity', 'Wind Speed', 'Max Air Temp', 'Min Air Temp', \
