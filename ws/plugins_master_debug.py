@@ -21,6 +21,7 @@ import http.client
 from ws.tools import misc
 import multiprocessing
 import pandas as pd
+import datetime
 
 def generate_forecast_filepath(pname, city, basepath=''):
     """Generate forecast filepath.
