@@ -10,6 +10,7 @@ from .tools import misc
 import multiprocessing
 import pandas as pd
 import datetime
+import numpy as np
 
 def generate_forecast_filepath(pname, city, basepath=''):
     """Generate forecast filepath.
@@ -134,3 +135,17 @@ def pandize_forecasts(pnames, database_filepath='', basepath='', newer_than=0):
         pandize_plugin_forecasts(forecast_lists[pname], pname,
                                  database_filepath)
 
+def insert_into_master_frame(pandas_part):
+    global master_frame
+    master_frame = master_frame.append(pandas_part)
+
+# yes, this is terrible, but there's no way around it (that's not extremely
+# inconvenient). This is a global variable that will be modified by the 
+# function 
+master_frame = pd.DataFrame(columns=
+    np.array(['Provider','ref_date','city','pred_offset','Station ID', 'Date', \
+        'Quality Level', 'Air Temperature', \
+        'Vapor Pressure', 'Degree of Coverage', 'Air Pressure', 'Rel Humidity', \
+        'Wind Speed', 'Max Air Temp', 'Min Air Temp', 'Min Groundlvl Temp', \
+        'Max Wind Speed', 'Precipitation', 'Precipitation Ind', 'Hrs of Sun', \
+        'Snow Depth']))

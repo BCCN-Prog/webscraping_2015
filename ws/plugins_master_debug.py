@@ -22,6 +22,7 @@ from ws.tools import misc
 import multiprocessing
 import pandas as pd
 import datetime
+import numpy as np
 
 def generate_forecast_filepath(pname, city, basepath=''):
     """Generate forecast filepath.
@@ -137,12 +138,48 @@ def pandize_plugin_forecasts(forecast_lists, pname, database_filepath):
                       forecast_list[2])
         pandas_table = p.pandize(*forecast_list)
         # XXX: maltimore works on this function
-        #insert_into_master_frame(pandas_table, database_filepath)
-
+        insert_into_master_frame(pandas_table)
+    
+    # the following function has to be called in the end
+    # save_master_frame_ito_disk(database_filepath)
 
 def pandize_forecasts(pnames, database_filepath='', basepath='', newer_than=0):
     forecast_lists = forecasts_newer_than(newer_than, basepath)
     for pname in list(pnames):
         pandize_plugin_forecasts(forecast_lists[pname], pname,
                                  database_filepath)
+
+def insert_into_master_frame(pandas_part):
+    global master_frame
+    master_frame = master_frame.append(pandas_part)
+    
+
+# THIS STUFF below IS HERE TO STAY
+master_frame = pd.DataFrame(columns=
+    np.array(['Provider','ref_date','city','pred_offset','Station ID', 'Date', \
+        'Quality Level', 'Air Temperature', \
+        'Vapor Pressure', 'Degree of Coverage', 'Air Pressure', 'Rel Humidity', \
+        'Wind Speed', 'Max Air Temp', 'Min Air Temp', 'Min Groundlvl Temp', \
+        'Max Wind Speed', 'Precipitation', 'Precipitation Ind', 'Hrs of Sun', \
+        'Snow Depth']))
+
+
+
+
+# the following stuff is TO BE DELETED
+#p = load_plugin("openweathermap")
+#
+#path = "/home/maltimore/Dropbox/Studium/programmierprojekt/webscraping/forecasts/albstadt/openweathermap/1434109586s3661375.forecast"
+#with open(path,'r') as fd:
+#    data = fd.read()
+#td = datetime.datetime.today()
+#a = p.pandize(data,'Albstadt',td)
+
+
+b = 'hello'
+
+pnames = ["accuweather"]
+my_basepath = "/home/maltimore/Dropbox/Studium/programmierprojekt/webscraping/forecasts/"
+pandize_forecasts(pnames, basepath = my_basepath)
+
 
