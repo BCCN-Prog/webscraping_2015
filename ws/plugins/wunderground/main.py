@@ -39,10 +39,9 @@ def build_url(city):
     return forecasturl
     
 def temp_debugging_helper_function(url):
-    page = urllib.request.urlopen(str_data)
+    page = urllib.request.urlopen(url)
     read = page.read()
-    decoded = read.decode('utf8')
-    data = json.loads(decoded)
+    data = read.decode('utf8')
     return data
 
 def pandize(str_data, cityname, date):
@@ -87,18 +86,11 @@ date\
 ###############################
 ################################
 
-clocktesterarray = np.zeros(500)
-def clocktester(n):
-    ''' manual testing tool for clocker() function.'''
-    for i in range(n):
-        clocktesterarray[i] = time.time()
-        clocker()
-
 def clocker(key_well_):
     arg = (len(key_well_)+1)*0.2
     time.sleep(arg) # 2 seconds at the moment
 
-def clocker_old():
+def clocker_legacy_function(): # defunk and non-working but beautifully conceived 
     '''Let the clocked function work at full speed while possibl, then wait
     until the period ends that allows it to go again.'''
 
