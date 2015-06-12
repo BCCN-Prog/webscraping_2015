@@ -6,3 +6,13 @@ Weather underground:
 	from datetime import date
 	date = date.today()
 4) pandize(build_url('Berlin'),'Berlin',date)
+
+
+Here are the standard columns that every plugins pandize function should have. Missing values should be denoted as NaNs.
+
+['Provider','ref_date','city','pred_offset','Station ID', 'Date', 'Quality Level', 'Air Temperature', \
+    'Vapor Pressure', 'Degree of Coverage', 'Air Pressure', 'Rel Humidity', \
+    'Wind Speed', 'Max Air Temp', 'Min Air Temp', 'Min Groundlvl Temp', \
+    'Max Wind Speed', 'Precipitation', 'Precipitation Ind', 'Hrs of Sun', \
+    'Snow Depth','realfeelhigh','realfeellow','winddirection','maxuv','snowamount', \
+    'tstormprob']
