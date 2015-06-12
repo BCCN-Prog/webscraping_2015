@@ -37,12 +37,16 @@ def build_url(city):
     forecasturl = 'http://api.wunderground.com/api/'+key+\
     '/forecast10day'+cityname+'.json'
     return forecasturl
-
-def pandize(str_data, cityname, date):
+    
+def temp_debugging_helper_function(url):
     page = urllib.request.urlopen(str_data)
     read = page.read()
     decoded = read.decode('utf8')
     data = json.loads(decoded)
+    return data
+
+def pandize(str_data, cityname, date):
+    data = json.loads(str_data)
     table = pd.DataFrame(columns = ['ref_date','city','pred_offset','Station ID', \
 'Date', 'Quality Level', 'Air Temperature', 'Vapor Pressure', 'Degree of Coverage', \
 'Air Pressure', 'Rel Humidity', 'Wind Speed', 'Max Air Temp', 'Min Air Temp', \
