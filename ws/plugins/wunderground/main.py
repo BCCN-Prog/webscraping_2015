@@ -39,10 +39,9 @@ def build_url(city):
     return forecasturl
     
 def temp_debugging_helper_function(url):
-    page = urllib.request.urlopen(str_data)
+    page = urllib.request.urlopen(url)
     read = page.read()
-    decoded = read.decode('utf8')
-    data = json.loads(decoded)
+    data = read.decode('utf8')
     return data
 
 def pandize(str_data, cityname, date):
