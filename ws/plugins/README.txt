@@ -9,5 +9,6 @@ Here are the standard columns that every plugins pandize function should have. M
 meaning of the columns:
 ref_date: day on which the forecast was pulled
 prediction_offset: days from ref_date into the future
+Quality Level:
 
-units: for all columns, stick to the DWD units.
+units: C for temperature; mm for rain/precipitation; cm for snow; kmh for wind speed
