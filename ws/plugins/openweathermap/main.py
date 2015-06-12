@@ -1,6 +1,7 @@
 from time import sleep
 import pandas as pd
 import numpy as np
+import json
 from datetime import timedelta
 import urllib
 
@@ -24,10 +25,10 @@ def pandize(str_data, cityname, date):
     quite sure if rain is the only variable where this is the case. So if there is 
     an error while running this method, this could possibly be it.
     '''
-    page = urllib.request.urlopen(str_data)
-    read = page.read()
-    decoded = read.decode('utf8')
-    data = json.loads(decoded)
+#    page = urllib.request.urlopen(str_data)
+#    read = page.read()
+#    decoded = read.decode('utf8')
+    data = json.loads(str_data)
     table = pd.DataFrame(columns = ['ref_date','city','pred_offset','Station ID', \
 'Date', 'Quality Level', 'Air Temperature', 'Vapor Pressure', 'Degree of Coverage', \
 'Air Pressure', 'Rel Humidity', 'Wind Speed', 'Max Air Temp', 'Min Air Temp', \
