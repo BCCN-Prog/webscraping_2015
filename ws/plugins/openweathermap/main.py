@@ -2,6 +2,7 @@ from time import sleep
 import pandas as pd
 import numpy as np
 from datetime import timedelta
+import urllib
 
 def build_url(city):
     # check whether input is a string
@@ -16,15 +17,17 @@ def build_url(city):
 
     return url
 
-def pandize(data, cityname, date):
-    '''
-    Takes JSON-files from openweathermap and turns it into a panda dataframe.    
-    
+def pandize(str_data, cityname, date):
+    '''      
     REMARK: I noticed that some forecasts include 'rain' and others don't. 
     Therefore, I used an if statement to verify if rain is a key or not. I am not 
     quite sure if rain is the only variable where this is the case. So if there is 
     an error while running this method, this could possibly be it.
     '''
+    page = urllib.request.urlopen(str_data)
+    read = page.read()
+    decoded = read.decode('utf8')
+    data = json.loads(decoded)
     table = pd.DataFrame(columns = ['ref_date','city','pred_offset','Station ID', \
 'Date', 'Quality Level', 'Air Temperature', 'Vapor Pressure', 'Degree of Coverage', \
 'Air Pressure', 'Rel Humidity', 'Wind Speed', 'Max Air Temp', 'Min Air Temp', \
@@ -61,3 +64,4 @@ date\
 ,np.NaN\
 ,np.NaN]
     return table
+
