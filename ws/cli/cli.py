@@ -1,5 +1,6 @@
-from ws.plugins_master import get_citylist, store_forecasts
+from ws.plugins_master import get_citylist
 from ws.plugins_master import store_forecasts
+from ws.plugins_master import pandize_forecasts
 from ws.plugins import list_plugins
 import logging
 import getopt
@@ -22,10 +23,15 @@ def cli(argv):
     pname = None
     city = None
     verbosity = logging.WARNING
+    pandize = False
+    newer_than = 0
+    database_filepath = 'forecast_database.csv'
 
     try:
         opts, args = getopt.getopt(argv[1:], 'h', ['verbosity=', 'provider=',
-                                                  'city=', 'folder='])
+                                                   'city=', 'folder=',
+                                                   'pandize', 'newer-than=',
+                                                   'database='])
     except getopt.GetoptError:
         print(('Because you obviously did not read README.txt, '
               'I will print it for you.'))
@@ -53,6 +59,12 @@ def cli(argv):
             sys.exit()
         elif opt == '--provider':
             pname = arg
+        elif opt == '--pandize':
+            pandize = True
+        elif opt == '--newer-than':
+            newer_than = float(arg)
+        elif opt == '--database':
+            database_filepath = arg
 
     # attributes https://docs.python.org/3/library/logging.html#logrecord-attributes
     logging.basicConfig(format=("%(asctime)s "
@@ -68,6 +80,10 @@ def cli(argv):
         pname = list_plugins()
     else:
         pname = pname.split(",")
+
+    if pandize == True:
+        pandize_forecasts(pname, database_filepath, basepath, newer_than)
+        return
 
 
     if len(city) < 10:
