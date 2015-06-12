@@ -4,6 +4,7 @@ import pandas as pd
 import json
 import logging
 import re
+import pprint
 
 
 def get_city_index(city):
@@ -52,20 +53,22 @@ def build_url(city):
     +'TIRecord;wxd/v2/WMRecord%29/%28en_US/'+city_index\
     +':1:GM%29?api=01119904-40b2-4f81-94a0-57867d0fd22c'
     return url
-    
+
 # DI Record is what we want (forecast for a week or so)
-    
-def pandize(url, cityname, date):
-    page = urllib.request.urlopen(url)
-    read = page.read()
-    decoded = read.decode('utf8')
-    data = json.loads(decoded)
-    table = pd.DataFrame(columns = ['ref_date','city','pred_offset','Min Air Temp','Max Air Temp','avg_wind_speed',\
-    'avg_wind_direction','max_wind_speed','max_wind_direction','avg_humidity'\
-    ,'percp_total','percp_day','percp_night','snow_total','snow_day','snow_night'])
-    dig = data[3]['doc']['DIData']
-    today = data[0]['doc']['MOData']
-    return dig, data, today
+
+def pandize(data, cityname, date):
+    data = json.loads(data)
+    table = pd.DataFrame(columns = (['ref_date', 'city', 'pred_offset',
+                                     'Min Air Temp', 'Max Air Temp',
+                                     'avg_wind_speed', 'avg_wind_direction',
+                                     'max_wind_speed', 'max_wind_direction',
+                                     'avg_humidity', 'percp_total',
+                                     'percp_day', 'percp_night', 'snow_total',
+                                     'snow_day', 'snow_night']))
+    #dig = data[3]['doc']['DIData']
+    #today = data[0]['doc']['MOData']
+    pprint.pprint(data)
+    #return dig, data, today
 '''
     for i in range(9):
         forecast = data["forecast"]["simpleforecast"]["forecastday"][i]
