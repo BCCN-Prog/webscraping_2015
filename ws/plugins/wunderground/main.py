@@ -90,7 +90,7 @@ def clocker(key_well_):
     arg = (len(key_well_)+1)*0.2
     time.sleep(arg) # 2 seconds at the moment
 
-def clocker_old():
+def clocker_legacy_function(): # defunk and non-working but beautifully conceived 
     '''Let the clocked function work at full speed while possibl, then wait
     until the period ends that allows it to go again.'''
 
