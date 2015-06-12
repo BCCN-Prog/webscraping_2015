@@ -16,8 +16,8 @@ def build_url(city):
     '''
     input must be a string, containing the city name alone
     '''
-
-    url = 'http://api.wunderground.com/api/'+return_wundergroud_key()+\
+    key= return_wundergroud_key()
+    url = 'http://api.wunderground.com/api/'+key+\
     '/geolookup/conditions/q/DL/'+city+'.json'
     page = urllib.request.urlopen(url)
     read = page.read()
@@ -34,7 +34,7 @@ def build_url(city):
         except:
             raise bad.City()
 
-    forecasturl = 'http://api.wunderground.com/api/'+return_wundergroud_key()+\
+    forecasturl = 'http://api.wunderground.com/api/'+key+\
     '/forecast10day'+cityname+'.json'
     return forecasturl
 
@@ -93,8 +93,9 @@ def clocktester(n):
         clocktesterarray[i] = time.time()
         clocker()
 
-def clocker():
-    time.sleep(0.0112) # = ~ 1/85 (there are 90 keys)
+def clocker(key_well_):
+    arg = (len(key_well_)+1)*0.2
+    time.sleep(arg) # 2 seconds at the moment
 
 def clocker_old():
     '''Let the clocked function work at full speed while possibl, then wait
@@ -135,19 +136,19 @@ def return_wundergroud_key():
 
     try:
         if len(wunderground_keys_) > 0:
-            clocker()
+            clocker(key_well_)
             pop = wunderground_keys_.pop()
             pickle.dump(wunderground_keys_, open( 'wunderground_keys_', "wb" ))
             return pop
         else:
             wunderground_keys_ = key_well_.copy()
-            clocker()
+            clocker(key_well_)
             pop = wunderground_keys_.pop()
             pickle.dump(wunderground_keys_, open( 'wunderground_keys_', "wb" ))
             return pop
     except:
         wunderground_keys_ = key_well_.copy()
-        clocker()
+        clocker(key_well_)
         pop = wunderground_keys_.pop()
         pickle.dump(wunderground_keys_, open( 'wunderground_keys_', "wb" ))
         return pop
