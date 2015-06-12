@@ -122,6 +122,8 @@ def forecasts_newer_than(newer_than, basepath=''):
 def pandize_plugin_forecasts(forecast_lists, pname, database_filepath):
     p = load_plugin(str(pname))
     for forecast_list in forecast_lists:
+        logging.debug('pname %s city %s date %s', pname, forecast_list[1],
+                      forecast_list[2])
         pandas_table = p.pandize(*forecast_list)
         # XXX: maltimore works on this function
         #insert_into_master_frame(pandas_table, database_filepath)
