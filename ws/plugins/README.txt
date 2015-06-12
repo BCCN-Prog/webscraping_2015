@@ -16,3 +16,9 @@ Here are the standard columns that every plugins pandize function should have. M
     'Max Wind Speed', 'Precipitation', 'Precipitation Ind', 'Hrs of Sun', \
     'Snow Depth','realfeelhigh','realfeellow','winddirection','maxuv','snowamount', \
     'tstormprob']
+
+meaning of the columns:
+ref_date: day on which the forecast was pulled
+prediction_offset: days from ref_date into the future
+
+units: for all columns, stick to the DWD units.
