@@ -1,3 +1,10 @@
+The webscraping program scrapes the four providers of weather forecasts, accuweather,
+openweathermap, weather.com and weatherunderground for for their forecasts for
+essentially all cities / weather stations in Germany. For every provider, the
+forecast that lasts the longest into the future is selected. The forecasts are
+stored in text-form (either json or xml). It is optional to parse the forecasts
+into python-pandas data format.
+
 If you want to start the webscraping you should first start your Command Window
 and go to this directory. From here you can use the following command (note that
 you need to have Python 3 installed):
@@ -23,11 +30,9 @@ possible, just separate them by a comma without spaces):
 --database:	database where forecasts are stored. Default is
 			forecast_database.csv.
 
---newer-than:   only pandize forecasts that are newer than this time, provided
+--newer-than:   only parse forecasts that are newer than this time, provided
 			in UTC POSIX time. Default is 0, which means all
-			forecasts newer than 1 January 1970. Higher precision
-			than seconds can be provided as a decimal number using a
-			dot decimal.
+			forecasts newer than 1 January 1970.
 
 --verbosity:	set the amount of information printed on the command line.
 			Possible levels are <=0, 1 and 2<=. The larger number
@@ -35,9 +40,10 @@ possible, just separate them by a comma without spaces):
 			levels correspond to logging.WARNING, logging.INFO and
 			logging.DEBUG. Default is 0.
 
---pandize:	pandize forecasts from the providers --provider in the folder
-			--folder that are newer than --newer-than. The pandized
-			forecasts are inserted into the database --database.
+--pandize:	parse forecasts from the providers --provider in the folder
+			--folder that are newer than --newer-than into python
+			pandas format. The pandized forecasts are inserted 
+			into the database --database.
 			
 For example, to get the forecasts from accuweather and wunderground for Berlin,
 Bremen and Munich and save them into the folder myForecasts you have to

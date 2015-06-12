@@ -139,6 +139,7 @@ def insert_into_master_frame(pandas_part):
     global master_frame
     master_frame = master_frame.append(pandas_part)
 
+
 # yes, this is terrible, but there's no way around it (that's not extremely
 # inconvenient). This is a global variable that will be modified by the 
 # function 

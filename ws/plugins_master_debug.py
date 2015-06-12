@@ -133,12 +133,15 @@ def forecasts_newer_than(newer_than, basepath=''):
 
 def pandize_plugin_forecasts(forecast_lists, pname, database_filepath):
     p = load_plugin(str(pname))
+    idx = 1
     for forecast_list in forecast_lists:
         logging.debug('pname %s city %s date %s', pname, forecast_list[1],
                       forecast_list[2])
         pandas_table = p.pandize(*forecast_list)
         # XXX: maltimore works on this function
         insert_into_master_frame(pandas_table)
+        print(idx)
+        idx +=1
     
     # the following function has to be called in the end
     # save_master_frame_ito_disk(database_filepath)
@@ -174,9 +177,6 @@ master_frame = pd.DataFrame(columns=
 #    data = fd.read()
 #td = datetime.datetime.today()
 #a = p.pandize(data,'Albstadt',td)
-
-
-b = 'hello'
 
 pnames = ["accuweather"]
 my_basepath = "/home/maltimore/Dropbox/Studium/programmierprojekt/webscraping/forecasts/"
