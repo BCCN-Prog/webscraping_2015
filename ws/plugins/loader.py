@@ -3,7 +3,6 @@ import re
 import importlib as imp
 import ws.bad as bad
 
-
 def load_plugin(plugin):
     """Return instance of plugin.
 

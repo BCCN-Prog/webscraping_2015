@@ -1,4 +1,16 @@
-from .plugins import *
+#from plugins import *
+#import time
+#import pickle
+#import os
+#import logging
+#import bad as bad
+#import urllib.error
+#import http.client
+#from tools import misc
+#import multiprocessing
+#import pandas as pd
+
+from ws.plugins import *
 import time
 import pickle
 import os
@@ -6,10 +18,9 @@ import logging
 import ws.bad as bad
 import urllib.error
 import http.client
-from .tools import misc
+from ws.tools import misc
 import multiprocessing
 import pandas as pd
-import datetime
 
 def generate_forecast_filepath(pname, city, basepath=''):
     """Generate forecast filepath.
