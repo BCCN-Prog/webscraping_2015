@@ -86,13 +86,6 @@ date\
 ###############################
 ################################
 
-clocktesterarray = np.zeros(500)
-def clocktester(n):
-    ''' manual testing tool for clocker() function.'''
-    for i in range(n):
-        clocktesterarray[i] = time.time()
-        clocker()
-
 def clocker(key_well_):
     arg = (len(key_well_)+1)*0.2
     time.sleep(arg) # 2 seconds at the moment
