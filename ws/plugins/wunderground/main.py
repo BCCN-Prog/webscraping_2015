@@ -46,16 +46,16 @@ def temp_debugging_helper_function(url):
 
 def pandize(str_data, cityname, date):
     data = json.loads(str_data)
-    table = pd.DataFrame(columns = ['ref_date','city','pred_offset','Station ID', \
-'Date', 'Quality Level', 'Air Temperature', 'Vapor Pressure', 'Degree of Coverage', \
-'Air Pressure', 'Rel Humidity', 'Wind Speed', 'Max Air Temp', 'Min Air Temp', \
-'Min Groundlvl Temp', 'Max Wind Speed', 'Precipitation', 'Precipitation Ind', \
-'Hrs of Sun', 'Snow Depth','realfeelhigh','realfeellow','winddirection','maxuv', \
-'snowamount', 'tstormprob'])
+    table = pd.DataFrame(columns = ['Provider','ref_date','city','pred_offset', \
+'Station ID','Date','Quality Level','Air Temperature','Vapor Pressure', \
+'Degree of Coverage','Air Pressure', 'Rel Humidity', 'Wind Speed', 'Max Air Temp', \
+'Min Air Temp','Min Groundlvl Temp', 'Max Wind Speed', 'Precipitation', \
+'Precipitation Ind','Hrs of Sun', 'Snow Depth'])
     for i in range(9):
         forecast = data["forecast"]["simpleforecast"]["forecastday"][i]
         table.loc[i] = [\
-date\
+'wunderground'
+,date\
 ,cityname\
 ,int(i)\
 ,np.NaN\
@@ -74,13 +74,7 @@ date\
 ,forecast["qpf_allday"]["mm"]\
 ,np.NaN\
 ,np.NaN\
-,forecast["snow_allday"]["cm"]\
-,np.NaN\
-,np.NaN\
-,np.NaN\
-,np.NaN\
-,np.NaN\
-,np.NaN]
+,forecast["snow_allday"]["cm"]]
     return table
 
 ###############################
@@ -124,6 +118,7 @@ def return_wundergroud_key():
     'e709118692e74123',\
     '15858ca917d7dfae',\
     'a930fdbbb56c3b59',\
+    'c64c1dd8e5350991',\
     '3ef23167f819b269'\
     ]
 
