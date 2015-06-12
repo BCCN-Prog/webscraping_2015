@@ -14,8 +14,7 @@ Here are the standard columns that every plugins pandize function should have. M
     'Vapor Pressure', 'Degree of Coverage', 'Air Pressure', 'Rel Humidity', \
     'Wind Speed', 'Max Air Temp', 'Min Air Temp', 'Min Groundlvl Temp', \
     'Max Wind Speed', 'Precipitation', 'Precipitation Ind', 'Hrs of Sun', \
-    'Snow Depth','realfeelhigh','realfeellow','winddirection','maxuv','snowamount', \
-    'tstormprob']
+    'Snow Depth']
 
 meaning of the columns:
 ref_date: day on which the forecast was pulled
