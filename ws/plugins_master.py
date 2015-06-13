@@ -57,6 +57,11 @@ def store_forecast(city, pname, basepath=''):
     continue_loop = True
     while continue_loop:
         try:
+            try:
+                url = p.build_url(str(city))
+            except bad.City:
+                logging.error('plugin %s cannot deal with city %s', pname, city)
+                return -1
             forecast_data = misc.download_from_url(url)
             continue_loop = False
             if failcounter == 0:
