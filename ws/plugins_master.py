@@ -31,7 +31,8 @@ def generate_forecast_filepath(pname, city, basepath=''):
 
 
 def get_citylist():
-    """Return list with all city names."""
+    """Return list with all city
+    names."""
     fp = os.path.join(os.path.dirname(os.path.realpath(__file__)), 'citylist.dump')
     citylist = pickle.load(open(fp, 'rb'))
     citylist = [str(i) for i in citylist]
@@ -57,6 +58,11 @@ def store_forecast(city, pname, basepath=''):
     continue_loop = True
     while continue_loop:
         try:
+            try:
+                url = p.build_url(str(city))
+            except bad.City:
+                logging.error('plugin %s cannot deal with city %s', pname, city)
+                return -1
             forecast_data = misc.download_from_url(url)
             continue_loop = False
             if failcounter == 0:
@@ -125,24 +131,35 @@ def pandize_plugin_forecasts(forecast_lists, pname, database_filepath):
         logging.debug('pname %s city %s date %s', pname, forecast_list[1],
                       forecast_list[2])
         pandas_table = p.pandize(*forecast_list)
-        # XXX: maltimore works on this function
-        #insert_into_master_frame(pandas_table, database_filepath)
+        insert_into_master_frame(pandas_table)
 
-
+# this is the overall pandize function that will loop over all plugins
+# and then call pandize_plugin_forecasts separately for each plugin
 def pandize_forecasts(pnames, database_filepath='', basepath='', newer_than=0):
+    global master_frame    
     forecast_lists = forecasts_newer_than(newer_than, basepath)
     for pname in list(pnames):
         pandize_plugin_forecasts(forecast_lists[pname], pname,
                                  database_filepath)
+    
+    # save the master pandas dataframe
+    # this ist just TEMPORARY
+    pickle.dump(master_frame, open("master_pandas_file.dump", "wb"))
 
 def insert_into_master_frame(pandas_part):
     global master_frame
-    master_frame = master_frame.append(pandas_part)
+    
+    if type(pandas_part) == pd.core.frame.DataFrame:
+       master_frame = master_frame.append(pandas_part)
+    else:       
+       logging.debug("One pandized row not entered into master frame because" + \
+               " received -1 from pandize function. This an expected problem" + \
+               " unless you would see it happening a lots (hundreds) of times")
+        
 
-
-# yes, this is terrible, but there's no way around it (that's not extremely
-# inconvenient). This is a global variable that will be modified by the 
-# function 
+# yes, this solution  of having the master frame as a global variable is terrible,
+# but there's no way around it (that's not extremely
+# inconvenient).
 master_frame = pd.DataFrame(columns=
     np.array(['Provider','ref_date','city','pred_offset','Station ID', 'Date', \
         'Quality Level', 'Air Temperature', \
