@@ -131,7 +131,7 @@ def pandize_plugin_forecasts(forecast_lists, pname, database_filepath):
                       forecast_list[2])
         pandas_table = p.pandize(*forecast_list)
         # XXX: maltimore works on this function
-        #insert_into_master_frame(pandas_table, database_filepath)
+        insert_into_master_frame(pandas_table)
 
 
 def pandize_forecasts(pnames, database_filepath='', basepath='', newer_than=0):
@@ -142,8 +142,13 @@ def pandize_forecasts(pnames, database_filepath='', basepath='', newer_than=0):
 
 def insert_into_master_frame(pandas_part):
     global master_frame
-    master_frame = master_frame.append(pandas_part)
-
+    
+    if type(pandas_part) == pd.core.frame.DataFrame:
+       master_frame = master_frame.append(pandas_part)
+    else:       
+       print("One pandized row not entered into master frame because" + \
+               " received -1 from pandize function")
+        
 
 # yes, this is terrible, but there's no way around it (that's not extremely
 # inconvenient). This is a global variable that will be modified by the 

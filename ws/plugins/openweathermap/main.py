@@ -31,10 +31,7 @@ def pandize(str_data, cityname, date):
 'Degree of Coverage','Air Pressure','Rel Humidity','Wind Speed','Max Air Temp', \
 'Min Air Temp','Min Groundlvl Temp','Max Wind Speed','Precipitation', \
 'Precipitation Ind','Hrs of Sun','Snow Depth'])
-    print(data)
-    print('')
-    print('')
-    if data.has_key("list"):
+    if "list" in data.keys():
         for i in range(13):
             forecast = data["list"][i]
             table.loc[i] = [\
