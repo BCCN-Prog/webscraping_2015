@@ -11,6 +11,9 @@ import pandas as pd
 import numpy as np
 import ws.bad as bad
 from datetime import timedelta
+import os
+mydir = os.path.abspath(os.path.dirname(__file__))
+
 
 def build_url(city):
     '''
@@ -80,12 +83,35 @@ def pandize(str_data, cityname, date):
 ###############################
 ################################
 
+
+def url_storage_function(n):
+    city_list = pickle.load(open(os.path.join(mydir, 'citylist.dump'), 'rb'))
+    #rank = len(city_list)
+    cities = []
+    urls= []
+    failures =[]
+    
+    for city in city_list[:n]:
+        try:
+            url = build_url(city)
+        except bad.City:
+            url = '0'
+            failures.append(city)
+        urls.append(url)
+        cities.append(city)
+    storage = np.array([cities,urls])
+    dropped = np.array(failures)
+    return storage.T, dropped
+            
+            
+    
+
 def clocker(key_well_):
     arg = (len(key_well_)+1)*0.2
     time.sleep(arg) # 2 seconds at the moment
 
 def clocker_legacy_function(): # defunk and non-working but beautifully conceived 
-    '''Let the clocked function work at full speed while possibl, then wait
+    '''Let the clocked function work at full speed while possible, then wait
     until the period ends that allows it to go again.'''
 
     global wunderground_keys_time_ticks_
@@ -105,8 +131,9 @@ def clocker_legacy_function(): # defunk and non-working but beautifully conceive
             wunderground_keys_time_ticks_[0] = time.time()
 
 
+
 def return_wundergroud_key():
-    wunderground_keys_ = pickle.load(open('wunderground_keys_', "rb"))
+    wunderground_keys_ = pickle.load(open(os.path.join(mydir, 'wunderground_keys_'), 'rb'))
                 
 
     key_well_ = [\
@@ -126,17 +153,17 @@ def return_wundergroud_key():
         if len(wunderground_keys_) > 0:
             clocker(key_well_)
             pop = wunderground_keys_.pop()
-            pickle.dump(wunderground_keys_, open( 'wunderground_keys_', "wb" ))
+            pickle.dump(wunderground_keys_, open(os.path.join(mydir, 'wunderground_keys_'), "wb" ))
             return pop
         else:
             wunderground_keys_ = key_well_.copy()
             clocker(key_well_)
             pop = wunderground_keys_.pop()
-            pickle.dump(wunderground_keys_, open( 'wunderground_keys_', "wb" ))
+            pickle.dump(wunderground_keys_, open(os.path.join(mydir, 'wunderground_keys_'), "wb" ))
             return pop
     except:
         wunderground_keys_ = key_well_.copy()
         clocker(key_well_)
         pop = wunderground_keys_.pop()
-        pickle.dump(wunderground_keys_, open( 'wunderground_keys_', "wb" ))
+        pickle.dump(wunderground_keys_, open(os.path.join(mydir, 'wunderground_keys_'), "wb" ))
         return pop
