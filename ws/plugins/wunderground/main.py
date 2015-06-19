@@ -84,14 +84,14 @@ def pandize(str_data, cityname, date):
 ################################
 
 
-def url_storage_function(n):
+def url_storage_function():
     city_list = pickle.load(open(os.path.join(mydir, 'citylist.dump'), 'rb'))
     #rank = len(city_list)
     cities = []
     urls= []
     failures =[]
     
-    for city in city_list[:n]:
+    for city in city_list[]:
         try:
             url = build_url(city)
         except bad.City:
