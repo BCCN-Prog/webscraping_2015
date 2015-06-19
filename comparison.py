@@ -67,5 +67,31 @@ def get_data_dwd(city,date,dwd_path):
     :type string
     :return: dataFrame containing relevant dwd data
     """
-    
+
     pass
+
+
+def get_date_forecast(city, provider, date, offset, forecast_dataframe):
+    """Returns the row of the forecast_dataframe corresponding to the given city, provider, date
+    and offset.
+
+    :param city: city name
+    :type string
+    :param provider: provider name
+    :type string
+    :param date: date of the day for which to get the forecast
+    type: datetime (python package datetime.datetime)
+    :param offset: day of forecast minus day where forecast was made
+    :type int
+    :param forecast_dataframe:
+    :type pandas dataframe
+    :return: pandas dataframe row of forecast_dataframe corresponding to the
+    given parameters
+    """
+    pass
+
+
+
+def update_forecasts(date, forecast_path, dwd_path, errors_path):
+    pass
+
