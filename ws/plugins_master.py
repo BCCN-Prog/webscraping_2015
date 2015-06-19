@@ -44,7 +44,6 @@ def store_forecast(city, pname, basepath=''):
     """Store forecast for city from plugin pname."""
     logging.debug('args city=%s pname=%s basepath=%s', city, pname,
                  basepath)
-
     forecast_data = None
     p = load_plugin(str(pname))
 
@@ -151,8 +150,9 @@ def insert_into_master_frame(pandas_part):
     
     if type(pandas_part) == pd.core.frame.DataFrame:
        master_frame = master_frame.append(pandas_part)
+       logging.info("Pandized successfully")
     else:       
-       logging.debug("One pandized row not entered into master frame because" + \
+       logging.info("One pandized row not entered into master frame because" + \
                " received -1 from pandize function. This an expected problem" + \
                " unless you would see it happening a lots (hundreds) of times")
         
