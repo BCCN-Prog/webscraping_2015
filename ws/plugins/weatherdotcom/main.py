@@ -5,6 +5,7 @@ import json
 import logging
 import re
 import pprint
+import numpy
 
 
 def get_city_index(city):
@@ -57,42 +58,71 @@ def build_url(city):
 # DI Record is what we want (forecast for a week or so)
 
 def pandize(data, cityname, date):
-    data = json.loads(data)
-    table = pd.DataFrame(columns = (['ref_date', 'city', 'pred_offset',
-                                     'Min Air Temp', 'Max Air Temp',
-                                     'avg_wind_speed', 'avg_wind_direction',
-                                     'max_wind_speed', 'max_wind_direction',
-                                     'avg_humidity', 'percp_total',
-                                     'percp_day', 'percp_night', 'snow_total',
-                                     'snow_day', 'snow_night']))
-    #dig = data[3]['doc']['DIData']
-    #today = data[0]['doc']['MOData']
-    pprint.pprint(data)
-    #return dig, data, today
-'''
-    for i in range(9):
-        forecast = data["forecast"]["simpleforecast"]["forecastday"][i]
-        table.loc[i] = [\
-pd.to_datetime([\
-str(data["forecast"]["simpleforecast"]["forecastday"][0]['date']['day'])+'.'+\
-str(data["forecast"]["simpleforecast"]["forecastday"][0]['date']['month'])+'.'+\
-str(data["forecast"]["simpleforecast"]["forecastday"][0]['date']['year'])\
-], dayfirst=True)\
-,cityname\
-,int(i)\
-,forecast["low"]['celsius']\
-,forecast["high"]['celsius']\
-,forecast["avewind"]['kph']
-,forecast["avewind"]['degrees']\
-,forecast["maxwind"]['kph']\
-,forecast["maxwind"]['degrees']\
-,forecast["avehumidity"]\
-,forecast["qpf_allday"]["mm"]\
-,forecast["qpf_day"]["mm"]\
-,forecast["qpf_night"]["mm"]\
-,forecast["snow_allday"]["cm"]\
-,forecast["snow_day"]["cm"]\
-,forecast["snow_night"]["cm"]]
-    return table
+    """
 
-'''
+    Column names
+    ------------
+    ref_date:           date                                        (argument)
+    city:               cityname                                    (argument)
+    pred_offset:        date + (locValDay - date)                   (integer)
+    Station ID:         NaN
+    Date:               ref_date + pred_offset
+    Quality Level:      snsblWx
+    Air Temperature:    Parse from altPhrase.   (MOData 'tmpC')
+    Vapor Pressure:     NaN
+    Degree of Coverage: ????
+    Air Pressure:       NaN     (MOData 'pres')
+    Rel Humidity:       NaN     (MOData 'rH')
+    Wind Speed:         NaN     (MOData 'wSpdK')
+    Max Air Temp:       Parse from altPhrase.   (MOData 'hIC')
+    Min Air Temp:       Parse from altPhrase.
+    Min Groundlvl Temp: NaN
+    Max Wind Speed:     NaN
+    Precipitation:              (MOdata '_prcp24Mm')
+    Precipitation Ind:  ????
+    Hrs of Sun:                 (MOData 'sunset' - 'sunrise')
+    Snow Depth:                 (MOData 'snwDep')
+    """
+
+    nforecasts = 9
+    provider = 'weatherdotcom'
+
+    data = json.loads(data)
+    table = pd.DataFrame(columns = (['Provider', 'ref_date', 'city',
+                                     'pred_offset', 'Station ID', 'Date',
+                                     'Quality Level', 'Air Temperature',
+                                     'Vapor Pressure', 'Degree of Coverage',
+                                     'Air Pressure', 'Rel Humidity', 'Wind Speed',
+                                     'Max Air Temp', 'Min Air Temp',
+                                     'Min Groundlvl Temp', 'Max Wind Speed',
+                                     'Precipitation', 'Precipitation Ind',
+                                     'Hrs of Sun', 'Snow Depth']))
+
+    # Forecast for today
+    today = data[0]['doc']['MOData']
+
+    sunrise = datetime.datetime.strptime(today['_sunriseISOLocal'][:-len('.000+02:00')], "%Y-%m-%dT%H:%M:%S")
+    sunset = datetime.datetime.strptime(today['_sunsetISOLocal'][:-len('.000+02:00')], "%Y-%m-%dT%H:%M:%S")
+    sunhrs = (sunset - sunrise).total_seconds() / 3600
+
+
+    table.loc[0] = ([provider, date, cityname, 0, np.nan, date,
+                     today['snsblWx'], today['tmpC'], np.nan, np.nan,
+                     today['pres'], today['rH'], today['wSpdK'], np.nan,
+                     np.nan, np.nan, np.nan, today['_prcp24Mm'], np.nan,
+                     sunhrs, today['snwDep']])
+
+    # Forecasts for upcoming days
+    dig = data[3]['doc']['DIData']
+
+    for i in range(nforecasts):
+        forecast = data["forecast"]["simpleforecast"]["forecastday"][i]
+
+
+        table.loc[i] = ([provider, date, cityname, int(i), forecast["low"]['celsius'],
+            forecast["high"]['celsius'], forecast["avewind"]['kph'],
+            forecast["avewind"]['degrees'], forecast["maxwind"]['kph'],
+            forecast["maxwind"]['degrees'], forecast["avehumidity"],
+            forecast["qpf_allday"]["mm"], forecast["qpf_day"]["mm"],
+            forecast["qpf_night"]["mm"], forecast["snow_allday"]["cm"],
+            forecast["snow_day"]["cm"], forecast["snow_night"]["cm"]])
