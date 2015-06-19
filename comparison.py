@@ -1,7 +1,10 @@
 
 
 def get_score_for_city(city, error_path):
-    """reads in a city and the error_path and displays the score
+    """reads in a city and the error_path and displays the score for all providers.
+    score is a matrix (measures X offsets)
+    for each entry in the matrix we will average over date, and get the standard deviation
+    we will also display the average absolute error.
 
     :param city: city for which the weather forecast is for
     :type string
@@ -80,7 +83,7 @@ def get_date_forecast(city, provider, date, offset, forecast_dataframe):
     :param provider: provider name
     :type string
     :param date: date of the day for which to get the forecast
-    type: datetime (python package datetime.datetime)
+    :type datetime (python package datetime.datetime)
     :param offset: day of forecast minus day where forecast was made
     :type int
     :param forecast_dataframe:
@@ -91,7 +94,18 @@ def get_date_forecast(city, provider, date, offset, forecast_dataframe):
     pass
 
 
-
 def update_forecasts(date, forecast_path, dwd_path, errors_path):
+    """adds to the errors file error entry for a specific date
+
+    :param date: date for which we want to calculate the errors
+    :type datetime (python package datetime.datetime)
+    :param forecast_path: path to the forecast master dataframe
+    :type string
+    :param dwd_path: path to dwd downloaded data
+    :type string
+    :param errors_path: path to the errors file that should be updated
+    :type string
+    :return:
+    """
     pass
 
