@@ -1,4 +1,16 @@
-from .plugins import *
+#from plugins import *
+#import time
+#import pickle
+#import os
+#import logging
+#import bad as bad
+#import urllib.error
+#import http.client
+#from tools import misc
+#import multiprocessing
+#import pandas as pd
+
+from ws.plugins import *
 import time
 import pickle
 import os
@@ -6,7 +18,7 @@ import logging
 import ws.bad as bad
 import urllib.error
 import http.client
-from .tools import misc
+from ws.tools import misc
 import multiprocessing
 import pandas as pd
 import datetime
@@ -31,8 +43,7 @@ def generate_forecast_filepath(pname, city, basepath=''):
 
 
 def get_citylist():
-    """Return list with all city
-    names."""
+    """Return list with all city names."""
     fp = os.path.join(os.path.dirname(os.path.realpath(__file__)), 'citylist.dump')
     citylist = pickle.load(open(fp, 'rb'))
     citylist = [str(i) for i in citylist]
@@ -58,11 +69,6 @@ def store_forecast(city, pname, basepath=''):
     continue_loop = True
     while continue_loop:
         try:
-            try:
-                url = p.build_url(str(city))
-            except bad.City:
-                logging.error('plugin %s cannot deal with city %s', pname, city)
-                return -1
             forecast_data = misc.download_from_url(url)
             continue_loop = False
             if failcounter == 0:
@@ -127,39 +133,31 @@ def forecasts_newer_than(newer_than, basepath=''):
 
 def pandize_plugin_forecasts(forecast_lists, pname, database_filepath):
     p = load_plugin(str(pname))
+    idx = 1
     for forecast_list in forecast_lists:
         logging.debug('pname %s city %s date %s', pname, forecast_list[1],
                       forecast_list[2])
         pandas_table = p.pandize(*forecast_list)
+        # XXX: maltimore works on this function
         insert_into_master_frame(pandas_table)
+        print(idx)
+        idx +=1
+    
+    # the following function has to be called in the end
+    # save_master_frame_ito_disk(database_filepath)
 
-# this is the overall pandize function that will loop over all plugins
-# and then call pandize_plugin_forecasts separately for each plugin
 def pandize_forecasts(pnames, database_filepath='', basepath='', newer_than=0):
-    global master_frame    
     forecast_lists = forecasts_newer_than(newer_than, basepath)
     for pname in list(pnames):
         pandize_plugin_forecasts(forecast_lists[pname], pname,
                                  database_filepath)
-    
-    # save the master pandas dataframe
-    # this ist just TEMPORARY
-    pickle.dump(master_frame, open("master_pandas_file.dump", "wb"))
 
 def insert_into_master_frame(pandas_part):
     global master_frame
+    master_frame = master_frame.append(pandas_part)
     
-    if type(pandas_part) == pd.core.frame.DataFrame:
-       master_frame = master_frame.append(pandas_part)
-    else:       
-       logging.debug("One pandized row not entered into master frame because" + \
-               " received -1 from pandize function. This an expected problem" + \
-               " unless you would see it happening a lots (hundreds) of times")
-        
 
-# yes, this solution  of having the master frame as a global variable is terrible,
-# but there's no way around it (that's not extremely
-# inconvenient).
+# THIS STUFF below IS HERE TO STAY
 master_frame = pd.DataFrame(columns=
     np.array(['Provider','ref_date','city','pred_offset','Station ID', 'Date', \
         'Quality Level', 'Air Temperature', \
@@ -167,3 +165,21 @@ master_frame = pd.DataFrame(columns=
         'Wind Speed', 'Max Air Temp', 'Min Air Temp', 'Min Groundlvl Temp', \
         'Max Wind Speed', 'Precipitation', 'Precipitation Ind', 'Hrs of Sun', \
         'Snow Depth']))
+
+
+
+
+# the following stuff is TO BE DELETED
+#p = load_plugin("openweathermap")
+#
+#path = "/home/maltimore/Dropbox/Studium/programmierprojekt/webscraping/forecasts/albstadt/openweathermap/1434109586s3661375.forecast"
+#with open(path,'r') as fd:
+#    data = fd.read()
+#td = datetime.datetime.today()
+#a = p.pandize(data,'Albstadt',td)
+
+pnames = ["accuweather"]
+my_basepath = "/home/maltimore/Dropbox/Studium/programmierprojekt/webscraping/forecasts/"
+pandize_forecasts(pnames, basepath = my_basepath)
+
+
