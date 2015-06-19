@@ -31,29 +31,35 @@ def pandize(str_data, cityname, date):
 'Degree of Coverage','Air Pressure','Rel Humidity','Wind Speed','Max Air Temp', \
 'Min Air Temp','Min Groundlvl Temp','Max Wind Speed','Precipitation', \
 'Precipitation Ind','Hrs of Sun','Snow Depth'])
-    for i in range(13):
-        forecast = data["list"][i]
-        table.loc[i] = [\
-'openweathermap'\
-,date\
-,cityname\
-,date+timedelta(days=i)\
-,np.NaN\
-,np.NaN\
-,np.NaN\
-,forecast['temp']['day']\
-,np.NaN\
-,forecast['clouds']\
-,forecast['pressure']\
-,forecast['humidity']\
-,forecast['speed']\
-,forecast['temp']['max']\
-,forecast['temp']['min']\
-,np.NaN\
-,np.NaN\
-,forecast['rain'] if 'rain' in forecast.keys() else np.NaN\
-,np.NaN\
-,np.NaN\
-,np.NaN]
-    return table
+    print(data)
+    print('')
+    print('')
+    if data.has_key("list"):
+        for i in range(13):
+            forecast = data["list"][i]
+            table.loc[i] = [\
+                            'openweathermap'\
+                            ,date\
+                            ,cityname\
+                            ,date+timedelta(days=i)\
+                            ,np.NaN\
+                            ,np.NaN\
+                            ,np.NaN\
+                            ,forecast['temp']['day']\
+                            ,np.NaN\
+                            ,forecast['clouds']\
+                            ,forecast['pressure']\
+                            ,forecast['humidity']\
+                            ,forecast['speed']\
+                            ,forecast['temp']['max']\
+                            ,forecast['temp']['min']\
+                            ,np.NaN\
+                            ,np.NaN\
+                            ,forecast['rain'] if 'rain' in forecast.keys() else np.NaN\
+                            ,np.NaN\
+                            ,np.NaN\
+                            ,np.NaN]
+        return table
+    else:
+        return -1
 
