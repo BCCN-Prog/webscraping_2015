@@ -55,3 +55,17 @@ def get_score(dwd_data, forecast_data):
     for col in comparison_columns:
         errors.append(dwd_data[col]-forecast_data[col])
     return errors
+
+def get_data_dwd(city,date,dwd_path):
+    """reads in the city, date and dwd_path and returns the data queried from the dwd path
+
+    :param city: city for which the weather forecast is for
+    :type string
+    :param date: date for which the weather forecast is for
+    :type datetime
+    :param dwd_path: path to the corresponding dwd data
+    :type string
+    :return: dataFrame containing relevant dwd data
+    """
+    
+    pass
