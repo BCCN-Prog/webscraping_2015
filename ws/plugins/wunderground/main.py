@@ -91,7 +91,7 @@ def url_storage_function():
     urls= []
     failures =[]
     
-    for city in city_list[]:
+    for city in city_list:
         try:
             url = build_url(city)
         except bad.City:
