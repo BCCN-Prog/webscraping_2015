@@ -6,6 +6,8 @@ import logging
 import re
 import pprint
 import numpy
+import datetime
+import numpy as np
 
 
 def get_city_index(city):
@@ -58,33 +60,6 @@ def build_url(city):
 # DI Record is what we want (forecast for a week or so)
 
 def pandize(data, cityname, date):
-    """
-
-    Column names
-    ------------
-    ref_date:           date                                        (argument)
-    city:               cityname                                    (argument)
-    pred_offset:        date + (locValDay - date)                   (integer)
-    Station ID:         NaN
-    Date:               ref_date + pred_offset
-    Quality Level:      snsblWx
-    Air Temperature:    Parse from altPhrase.   (MOData 'tmpC')
-    Vapor Pressure:     NaN
-    Degree of Coverage: ????
-    Air Pressure:       NaN     (MOData 'pres')
-    Rel Humidity:       NaN     (MOData 'rH')
-    Wind Speed:         NaN     (MOData 'wSpdK')
-    Max Air Temp:       Parse from altPhrase.   (MOData 'hIC')
-    Min Air Temp:       Parse from altPhrase.
-    Min Groundlvl Temp: NaN
-    Max Wind Speed:     NaN
-    Precipitation:              (MOdata '_prcp24Mm')
-    Precipitation Ind:  ????
-    Hrs of Sun:                 (MOData 'sunset' - 'sunrise')
-    Snow Depth:                 (MOData 'snwDep')
-    """
-
-    nforecasts = 9
     provider = 'weatherdotcom'
 
     data = json.loads(data)
@@ -105,9 +80,8 @@ def pandize(data, cityname, date):
     sunset = datetime.datetime.strptime(today['_sunsetISOLocal'][:-len('.000+02:00')], "%Y-%m-%dT%H:%M:%S")
     sunhrs = (sunset - sunrise).total_seconds() / 3600
 
-
     table.loc[0] = ([provider, date, cityname, 0, np.nan, date,
-                     today['snsblWx'], today['tmpC'], np.nan, np.nan,
+                     today['wx'], today['tmpC'], np.nan, np.nan,
                      today['pres'], today['rH'], today['wSpdK'], np.nan,
                      np.nan, np.nan, np.nan, today['_prcp24Mm'], np.nan,
                      sunhrs, today['snwDep']])
@@ -115,14 +89,40 @@ def pandize(data, cityname, date):
     # Forecasts for upcoming days
     dig = data[3]['doc']['DIData']
 
-    for i in range(nforecasts):
-        forecast = data["forecast"]["simpleforecast"]["forecastday"][i]
+    count = 1
+    for i, fc in enumerate(dig):
+        # We already have Today from above, also throw away the nights
+        if fc['dyPrtNm'] == 'Today':
+            continue
+        elif fc['dyPrtNm'] == 'Tonight':
+            continue
+        elif 'night' in fc['dyPrtNm']:
+            continue
+        # We have two forecasts for Sundays, one 12h and one 24h.
+        elif fc['dyPrtNm'] == 'Sunday' and fc['dur'] == 12:
+            continue
 
+        altPhrase = fc['altPhrase']
 
-        table.loc[i] = ([provider, date, cityname, int(i), forecast["low"]['celsius'],
-            forecast["high"]['celsius'], forecast["avewind"]['kph'],
-            forecast["avewind"]['degrees'], forecast["maxwind"]['kph'],
-            forecast["maxwind"]['degrees'], forecast["avehumidity"],
-            forecast["qpf_allday"]["mm"], forecast["qpf_day"]["mm"],
-            forecast["qpf_night"]["mm"], forecast["snow_allday"]["cm"],
-            forecast["snow_day"]["cm"], forecast["snow_night"]["cm"]])
+        # Temperature of the day (lows are for night according to the official
+        # web interface)
+        m1 = re.search('High (?:|near |around )([0-9]+)C', altPhrase)
+        m2 = re.search('Highs ([0-9]+) to ([0-9]+)C', altPhrase)
+        high_temp = np.nan
+        if m1:
+            high_temp = int(m1.group(1))
+        elif m2:
+            # This is what the official web interface does.
+            high_temp = (int(m2.group(1)) + int(m2.group(2))) / 2
+
+        if np.isnan(high_temp):
+            logging.error('No temperature in the forecast! altPhrase = %s', altPhrase)
+
+        table.loc[count] = ([provider, date, cityname, count, np.nan, date,
+                     fc['snsblWx'], high_temp, np.nan, np.nan,
+                     np.nan, np.nan, np.nan, np.nan,
+                     np.nan, np.nan, np.nan, np.nan, np.nan,
+                     np.nan, np.nan])
+        count += 1
+
+    return table
