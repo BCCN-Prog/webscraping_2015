@@ -97,6 +97,9 @@ def url_storage_function():
         except bad.City:
             url = '0'
             failures.append(city)
+        except:
+            url = '1'
+            failures.append(city)
         urls.append(url)
         cities.append(city)
     storage = np.array([cities,urls])
