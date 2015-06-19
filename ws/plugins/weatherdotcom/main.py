@@ -98,8 +98,8 @@ def pandize(data, cityname, date):
             continue
         elif 'night' in fc['dyPrtNm']:
             continue
-        # We have two forecasts for Sundays, one 12h and one 24h.
-        elif fc['dyPrtNm'] == 'Sunday' and fc['dur'] == 12:
+        # We have two forecasts for some days, one 12h and one 24h.
+        elif fc['dur'] == 12 and dig[i+1]['dyPrtNm'] == fc['dyPrtNm'] and dig[i+1]['dur'] == 24:
             continue
 
         altPhrase = fc['altPhrase']
