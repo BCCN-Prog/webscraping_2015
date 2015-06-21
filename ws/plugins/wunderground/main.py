@@ -17,17 +17,18 @@ mydir = os.path.abspath(os.path.dirname(__file__))
 wug_urls_book = pickle.load(open(os.path.join(mydir, 'cities_urls'), 'rb'))
 
 def build_url(city):
-    '''
-    assumes cities are called only from the city list, existing on 20.6.15
-    '''
-    city_dex = np.where(wug_urls_book[:,0]== city)[0][0]
-    if wug_urls_book[city_dex,1] == '0':
+    
+    try:
+        city_dex = np.where(wug_urls_book[:,0]== city)[0][0]
+        if wug_urls_book[city_dex,1] == '0':
+            raise bad.City()
+        else:
+            static_url = list(wug_urls_book[city_dex,1])
+            dynamic_key = list(return_wundergroud_key())
+            static_url[32:48] = dynamic_key
+            return ''.join(static_url)
+    except IndexError:
         raise bad.City()
-    else:
-        static_url = list(wug_urls_book[city_dex,1])
-        dynamic_key = list(return_wundergroud_key())
-        static_url[32:48] = dynamic_key
-        return ''.join(static_url)
 
 def pandize(str_data, cityname, date):
     data = json.loads(str_data)
