@@ -14,38 +14,20 @@ from datetime import timedelta
 import os
 mydir = os.path.abspath(os.path.dirname(__file__))
 
+wug_urls_book = pickle.load(open(os.path.join(mydir, 'cities_urls'), 'rb'))
 
 def build_url(city):
     '''
-    input must be a string, containing the city name alone
+    assumes cities are called only from the city list, existing on 20.6.15
     '''
-    key= return_wundergroud_key()
-    url = 'http://api.wunderground.com/api/'+key+\
-    '/geolookup/conditions/q/DL/'+city+'.json'
-    page = urllib.request.urlopen(url)
-    read = page.read()
-    decoded = read.decode('utf8')
-    data = json.loads(decoded)
-
-    if "location" in data.keys():     # "location" case
-        cityname =  data["location"]["l"]
-    else:                               # "Berlin" case (ambiguity)
-        try:
-            for cities in data["response"]["results"]:
-                if cities["country"] == "DL":
-                    cityname = cities["l"]
-        except:
-            raise bad.City()
-
-    forecasturl = 'http://api.wunderground.com/api/'+key+\
-    '/forecast10day'+cityname+'.json'
-    return forecasturl
-    
-def temp_debugging_helper_function(url):
-    page = urllib.request.urlopen(url)
-    read = page.read()
-    data = read.decode('utf8')
-    return data
+    city_dex = np.where(wug_urls_book[:,0]== city)[0][0]
+    if wug_urls_book[city_dex,1] == '0':
+        raise bad.City()
+    else:
+        static_url = list(wug_urls_book[city_dex,1])
+        dynamic_key = list(return_wundergroud_key())
+        static_url[32:48] = dynamic_key
+        return ''.join(static_url)
 
 def pandize(str_data, cityname, date):
     data = json.loads(str_data)
@@ -81,7 +63,39 @@ def pandize(str_data, cityname, date):
     return table
 
 ###############################
-################################
+################################    
+
+def url_builder(city):
+    '''
+    input must be a string, containing the city name alone
+    '''
+    key= return_wundergroud_key()
+    url = 'http://api.wunderground.com/api/'+key+\
+    '/geolookup/conditions/q/DL/'+city+'.json'
+    page = urllib.request.urlopen(url)
+    read = page.read()
+    decoded = read.decode('utf8')
+    data = json.loads(decoded)
+
+    if "location" in data.keys():     # "location" case
+        cityname =  data["location"]["l"]
+    else:                               # "Berlin" case (ambiguity)
+        try:
+            for cities in data["response"]["results"]:
+                if cities["country"] == "DL":
+                    cityname = cities["l"]
+        except:
+            raise bad.City()
+
+    forecasturl = 'http://api.wunderground.com/api/'+key+\
+    '/forecast10day'+cityname+'.json'
+    return forecasturl
+    
+def temp_debugging_helper_function(url):
+    page = urllib.request.urlopen(url)
+    read = page.read()
+    data = read.decode('utf8')
+    return data
 
 
 def url_storage_function():
@@ -90,8 +104,10 @@ def url_storage_function():
     cities = []
     urls= []
     failures =[]
+    i = 0
     
     for city in city_list:
+        print("doing "+str(i))
         try:
             url = build_url(city)
         except bad.City:
@@ -102,6 +118,7 @@ def url_storage_function():
             failures.append(city)
         urls.append(url)
         cities.append(city)
+        i += 1
     storage = np.array([cities,urls])
     dropped = np.array(failures)
     return storage.T, dropped
@@ -110,7 +127,7 @@ def url_storage_function():
     
 
 def clocker(key_well_):
-    arg = (len(key_well_)+1)*0.2
+    arg = 12.2 / len(key_well_)
     time.sleep(arg) # 2 seconds at the moment
 
 def clocker_legacy_function(): # defunk and non-working but beautifully conceived 
