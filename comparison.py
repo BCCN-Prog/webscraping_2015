@@ -88,7 +88,7 @@ def get_data_dwd(city,date,dwd_path):
     if len(dd)==1:
         dd = '0'+dd
     date_for_wl = yyyy+mm+dd
-    dataFrame = wl.load_dataframe(city,date_for_wl,date_for_wl,False)
+    dataFrame = wl.load_dataframe(city,date_for_wl,date_for_wl,True)
 
     os.chdir(curr_wd)
     return dataFrame
@@ -127,12 +127,12 @@ def update_errors(date, forecast_path, dwd_path, errors_path):
     :type string
     :return:
     """
-    citylist = getCitylist()
+    citylist = ['berlin','hamburg','bremen','stuttgart']
     providerlist = ['accuweather', 'openweathermap', 'weatherdotcom']
     
     for city in citylist:
         dwdData = get_data_dwd(city,date,dwd_path)
-        
+        dwdData = dwdData[list(dwdData.keys())[0]]
         for provider in providerlist:
             forecastData = load_forecasts(city,provider,date,forecast_path)
             offset_range = 7
@@ -174,7 +174,7 @@ def load_forecasts(city,provider,date,forecast_path):
     data_provider = data_city[data_city['Provider']==provider]
     
     # cut the time 
-    data_provider['Date'] = data_provider['Date'].apply(cut_time)
+    data_provider.loc[:,('Date')] = data_provider.loc[:,('Date')].map(cut_time,na_action='ignore')
 
     return data_provider[data_provider['Date']==date]
     
