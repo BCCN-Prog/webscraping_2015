@@ -108,7 +108,8 @@ def store_forecasts(cities, pnames, basepath=''):
     """
     # delete the old temporary directory that stores forecasts to be pandized later
     basepath_temp = os.path.join(basepath, 'temp')
-    os.remove(basepath_temp)
+    if os.path.exists("/home/el/myfile.txt"):
+        os.remove(basepath_temp)
     
     for pname in list(pnames):
         p = multiprocessing.Process(target=store_forecasts_loop,
