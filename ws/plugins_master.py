@@ -129,9 +129,13 @@ def pandize_plugin_forecasts(forecast_lists, pname, database_filepath):
     for forecast_list in forecast_lists:
         logging.debug('pname %s city %s date %s', pname, forecast_list[1],
                       forecast_list[2])
-        pandas_table = p.pandize(*forecast_list)
-        insert_into_master_frame(pandas_table)
-
+        try:
+            pandas_table = p.pandize(*forecast_list)
+            insert_into_master_frame(pandas_table)
+        except Exception:
+            logging.error("Error while parsing one forecast in " + str(pname))
+            
+            
 # this is the overall pandize function that will loop over all plugins
 # and then call pandize_plugin_forecasts separately for each plugin
 def pandize_forecasts(pnames, database_filepath='', basepath='', newer_than=0):
