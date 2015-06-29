@@ -106,6 +106,10 @@ def store_forecasts(cities, pnames, basepath=''):
     Each plugin gets its own process. This way a plugin can rate limit without
     blocking the others.
     """
+    # delete the old temporary directory that stores forecasts to be pandized later
+    basepath_temp = os.path.join(basepath, 'temp')
+    os.remove(basepath_temp)
+    
     for pname in list(pnames):
         p = multiprocessing.Process(target=store_forecasts_loop,
                                     args=(cities, pname, basepath))
