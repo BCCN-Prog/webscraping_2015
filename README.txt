@@ -14,23 +14,23 @@ python3 webscraping.py --provider=my_provider --city=my_city --folder=my_folder
 The flags have the following options(for providers and city several options are
 possible, just separate them by a comma without spaces):
 
---provider:	accuweather,weatherdotcom,wunderground,openweathermap
+--provider:	        accuweather,weatherdotcom,wunderground,openweathermap
 			(default is all providers)
 			
---city: 	almost any german city name(if misspelled
+--city: 	        almost any german city name(if misspelled
 			or not included you will get an error,
 			default is all cities)
 			
---folder: 	specify the folder where you want to
+--folder: 	        specify the folder where you want to
 			save the forecasts relative to the
 			webscraping folder(if the folder does
 			not exist it will be created, default is
 			forecasts)
 
---database:	database where forecasts are stored. Default is
+--database:	        database where forecasts are stored. Default is
 			forecast_database.csv.
 
---newer-than:   only parse forecasts that are newer than this time, provided
+--newer-than:           only parse forecasts that are newer than this time, provided
 			in UTC POSIX time. Default is 0, which means all
 			forecasts newer than 1 January 1970. You can use 
 			http://	www.epochconverter.com/
@@ -38,16 +38,22 @@ possible, just separate them by a comma without spaces):
 			the time in seconds (not miliseconds).
 			
 
---verbosity:	set the amount of information printed on the command line.
+--verbosity:	        set the amount of information printed on the command line.
 			Possible levels are <=0, 1 and 2<=. The larger number
 			the more verbose is the output. Programming wise these
 			levels correspond to logging.WARNING, logging.INFO and
 			logging.DEBUG. Default is 0.
 
---pandize:	parse forecasts from the providers --provider in the folder
+--pandize:	        parse forecasts from the providers --provider in the folder
 			--folder that are newer than --newer-than into python
 			pandas format. The pandized forecasts are inserted 
 			into the database --database.
+
+--pandize_temporary:    parse those forecasts that were temporarily saved in the last
+			webscraping. This is especially useful if scrape the forecasts
+			every day. You can call pandize_temporary some time after the
+			scraping finished to put the last forecasts into the master
+			dataframe.
 			
 For example, to get the forecasts from accuweather and wunderground for Berlin,
 Bremen and Munich and save them into the folder myForecasts you have to
