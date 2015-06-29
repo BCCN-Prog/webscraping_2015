@@ -59,11 +59,10 @@ def get_score(dwd_data, forecast_data):
     Precipitation, Snow Depth
     """
 
-    errors = []
-    comparison_columns = ['Air Temperature', 'Rel Humidity', 'Wind Speed', 'Max Air Temp', 'Min Air Temp',
-    'Precipitation', 'Snow Depth']
-    for col in comparison_columns:
-        errors.append(dwd_data[col]-forecast_data[col])
+    errors = {'Air Temperature':0, 'Rel Humidity':0, 'Wind Speed':0, 'Max Air Temp':0, 'Min Air Temp':0,
+    'Precipitation':0, 'Snow Depth':0}
+    for col in errors.keys():
+       errors[col] = dwd_data[col]-forecast_data[col]
     return errors
 
 def get_data_dwd(city,date,dwd_path):
@@ -115,7 +114,7 @@ def get_date_forecast(city, provider, date, offset, forecast_dataframe):
     pass
 
 
-def update_forecasts(date, forecast_path, dwd_path, errors_path):
+def update_errors(date, forecast_path, dwd_path, errors_path):
     """adds to the errors file error entry for a specific date
 
     :param date: date for which we want to calculate the errors
@@ -128,6 +127,28 @@ def update_forecasts(date, forecast_path, dwd_path, errors_path):
     :type string
     :return:
     """
+    citylist = getCitylist()
+    providerlist = ['accuweather', 'openweathermap', 'weatherdotcom']
+    
+    for city in citylist:
+        dwdData = get_data_dwd(city,date,dwd_path)
+        
+        for provider in providerlist:
+            forecastData = load_forecasts(city,provider,date,forecast_path)
+            offset_range = 7
+            for offset in range(offset_range):
+                
+                date_forecast = get_date_forecast(city,provider,date,offset,forecastData)
+                scores = get_score(dwdData,date_forecast)
+                scores['offset'] = offset
+                scores['city'] = city
+                scores['date'] = date
+
+                errorData.append(scores,ignore_index=True)               
+    
+    with open(error_path,'rb') as f:
+        errorData = pickle.load(f)
+    pickle.dump(errorData, open("master_errors_file.dump", "wb"))
     pass
 
 def load_forecasts(city,provider,date,forecast_path):
