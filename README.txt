@@ -32,7 +32,8 @@ possible, just separate them by a comma without spaces):
 
 --newer-than:   only parse forecasts that are newer than this time, provided
 			in UTC POSIX time. Default is 0, which means all
-			forecasts newer than 1 January 1970.
+			forecasts newer than 1 January 1970. You can use http://www.epochconverter.com/
+			to convert a human readable date to POSIX time.
 
 --verbosity:	set the amount of information printed on the command line.
 			Possible levels are <=0, 1 and 2<=. The larger number
