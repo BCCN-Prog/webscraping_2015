@@ -88,7 +88,7 @@ def get_data_dwd(city,date,dwd_path):
     if len(dd)==1:
         dd = '0'+dd
     date_for_wl = yyyy+mm+dd
-    dataFrame = wl.weather_loading(city,date_for_wl,date_for_wl,False)
+    dataFrame = wl.load_dataframe(city,date_for_wl,date_for_wl,False)
 
     os.chdir(curr_wd)
     return dataFrame
