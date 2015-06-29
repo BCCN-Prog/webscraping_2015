@@ -86,11 +86,11 @@ def cli(argv):
         pname = pname.split(",")
 
     if pandize == True:
-        pandize_forecasts(pname, database_filepath, basepath, newer_than)
+        pandize_forecasts(pname, database_filepath, basepath, newer_than, city)
         return
     
     if pandize_temporary == True:
-        pandize_temporary_forecasts(pname, database_filepath, basepath)
+        pandize_temporary_forecasts(pname, database_filepath, basepath, city)
         return
 
 

@@ -115,10 +115,17 @@ def store_forecasts(cities, pnames, basepath=''):
         p.start()
 
 
-def forecasts_newer_than(newer_than, basepath=''):
+def forecasts_newer_than(newer_than, basepath='', cities='all'):
+    if cities == 'all':
+        cities = os.listdir(basepath)
+    
     forecast_lists = {}
-    for city in os.listdir(basepath):
+    for city in cities:
         if city == 'temp':
+            continue
+        
+        if city not in os.listdir(basepath):
+            logging.info("One of the cities you wanted to pandize was not found in folder")
             continue
 
         for provider in os.listdir(os.path.join(basepath, city)):
@@ -151,9 +158,9 @@ def pandize_plugin_forecasts(forecast_lists, pname, database_filepath):
             
 # this is the overall pandize function that will loop over all plugins
 # and then call pandize_plugin_forecasts separately for each plugin
-def pandize_forecasts(pnames, database_filepath='', basepath='', newer_than=0):
+def pandize_forecasts(pnames, database_filepath='', basepath='', newer_than=0, cities='all'):
     global master_frame    
-    forecast_lists = forecasts_newer_than(newer_than, basepath)
+    forecast_lists = forecasts_newer_than(newer_than, basepath, cities)
     logging.debug("pandize forecasts was called for the following providers (next line)")
     logging.debug(pnames)
     for pname in list(pnames):
@@ -166,11 +173,11 @@ def pandize_forecasts(pnames, database_filepath='', basepath='', newer_than=0):
     logging.info("Done with pandizing, saving to disk now!")
     pickle.dump(master_frame, open("master_pandas_file.dump", "wb"))
     
-def pandize_temporary_forecasts(pnames, database_filepath='', basepath=''):
+def pandize_temporary_forecasts(pnames, database_filepath='', basepath='', cities='all'):
     basepath_temp = os.path.join(basepath,'temp')
     if os.path.exists(basepath_temp):
         logging.debug("Temporary files exist, starting to pandize them")
-        pandize_forecasts(pnames, database_filepath, basepath_temp)
+        pandize_forecasts(pnames, database_filepath, basepath_temp, cities)
     else:
         logging.error("There are no temporary files in the basepath you provided")
     
