@@ -1,4 +1,4 @@
-
+import os
 
 def get_score_for_city(city, error_path):
     """reads in a city and the error_path and displays the score for all providers.
@@ -61,17 +61,31 @@ def get_score(dwd_data, forecast_data):
 
 def get_data_dwd(city,date,dwd_path):
     """reads in the city, date and dwd_path and returns the data queried from the dwd path
-
+    
     :param city: city for which the weather forecast is for
     :type string
     :param date: date for which the weather forecast is for
     :type datetime
-    :param dwd_path: path to the corresponding dwd data
+    :param dwd_path: path to the database repository (where the file weather_loading.py is)
     :type string
     :return: dataFrame containing relevant dwd data
     """
+    curr_wd = os.getcwd()
+    os.chdir(dwd_path)
+            
+    import weather_loading as wl
+    yyyy =  str(date.year)
+    mm = str(date.month)
+    dd = str(date.day)
+    if len(mm)==1:
+        mm = '0'+mm
+    if len(dd)==1:
+        dd = '0'+dd
+    date_for_wl = yyyy+mm+dd
+    dataFrame = wl.weather_loading(city,date_for_wl,date_for_wl,False)
 
-    pass
+    os.chdir(curr_wd)
+    return dataFrame
 
 
 def get_date_forecast(city, provider, date, offset, forecast_dataframe):
