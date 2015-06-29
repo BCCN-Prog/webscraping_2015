@@ -107,10 +107,7 @@ def store_forecasts(cities, pnames, basepath=''):
     Each plugin gets its own process. This way a plugin can rate limit without
     blocking the others.
     """
-    # delete the old temporary directory that stores forecasts to be pandized later
-    basepath_temp = os.path.join(basepath, 'temp')
-    if os.path.exists(basepath_temp):
-        shutil.rmtree(basepath_temp)
+
     
     for pname in list(pnames):
         p = multiprocessing.Process(target=store_forecasts_loop,
@@ -121,7 +118,11 @@ def store_forecasts(cities, pnames, basepath=''):
 def forecasts_newer_than(newer_than, basepath=''):
     forecast_lists = {}
     for city in os.listdir(basepath):
+        if city == 'temp':
+            continue
+
         for provider in os.listdir(os.path.join(basepath, city)):
+            logging.debug(provider)
             if provider not in forecast_lists:
                 forecast_lists[provider] = []
             for forecast in os.listdir(os.path.join(basepath, city, provider)):
@@ -139,7 +140,7 @@ def forecasts_newer_than(newer_than, basepath=''):
 def pandize_plugin_forecasts(forecast_lists, pname, database_filepath):
     p = load_plugin(str(pname))
     for forecast_list in forecast_lists:
-        logging.debug('pname %s city %s date %s', pname, forecast_list[1],
+        logging.debug('Pandizing provider %s city %s date %s', pname, forecast_list[1],
                       forecast_list[2])
         try:
             pandas_table = p.pandize(*forecast_list)
@@ -153,20 +154,29 @@ def pandize_plugin_forecasts(forecast_lists, pname, database_filepath):
 def pandize_forecasts(pnames, database_filepath='', basepath='', newer_than=0):
     global master_frame    
     forecast_lists = forecasts_newer_than(newer_than, basepath)
+    logging.debug("pandize forecasts was called for the following providers (next line)")
+    logging.debug(pnames)
     for pname in list(pnames):
-        pandize_plugin_forecasts(forecast_lists[pname], pname,
-                                 database_filepath)
+        if pname in forecast_lists:
+            pandize_plugin_forecasts(forecast_lists[pname], pname,
+                                     database_filepath)
     
     # save the master pandas dataframe
     # this ist just TEMPORARY
+    logging.info("Done with pandizing, saving to disk now!")
     pickle.dump(master_frame, open("master_pandas_file.dump", "wb"))
     
 def pandize_temporary_forecasts(pnames, database_filepath='', basepath=''):
-    basepath = os.path.join(basepath,'temp')
-    if os.path.exists(basepath):
-        pandize_forecasts(pnames, database_filepath, basepath)
+    basepath_temp = os.path.join(basepath,'temp')
+    if os.path.exists(basepath_temp):
+        logging.debug("Temporary files exist, starting to pandize them")
+        pandize_forecasts(pnames, database_filepath, basepath_temp)
     else:
         logging.error("There are no temporary files in the basepath you provided")
+    
+    # delete the temporary directory that stores the just pandized forecasts
+    if os.path.exists(basepath_temp):
+        shutil.rmtree(basepath_temp)
 
 def insert_into_master_frame(pandas_part):
     global master_frame
@@ -184,8 +194,10 @@ def insert_into_master_frame(pandas_part):
 # but there's no way around it (that's not extremely
 # inconvenient).
 if os.path.exists("master_pandas_file.dump"):
+    logging.info("Found a pandas master frame, loading it..")
     master_frame = pickle.load(open("master_pandas_file.dump", "rb"))
 else:
+    logging.info("Didn't find a pandas master frame, creating one...")
     master_frame = pd.DataFrame(columns=
         np.array(['Provider','ref_date','city','pred_offset','Station ID', 'Date', \
             'Quality Level', 'Air Temperature', \
