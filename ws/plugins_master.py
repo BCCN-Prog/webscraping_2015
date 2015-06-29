@@ -11,6 +11,7 @@ import multiprocessing
 import pandas as pd
 import datetime
 import numpy as np
+import shutil
 
 def generate_forecast_filepath(pname, city, basepath=''):
     """Generate forecast filepath.
@@ -109,7 +110,7 @@ def store_forecasts(cities, pnames, basepath=''):
     # delete the old temporary directory that stores forecasts to be pandized later
     basepath_temp = os.path.join(basepath, 'temp')
     if os.path.exists(basepath_temp):
-        os.remove(basepath_temp)
+        shutil.rmtree(basepath_temp)
     
     for pname in list(pnames):
         p = multiprocessing.Process(target=store_forecasts_loop,
