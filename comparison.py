@@ -1,4 +1,5 @@
 import os
+import pickle
 
 def get_score_for_city(city, error_path):
     """reads in a city and the error_path and displays the score for all providers.
@@ -17,7 +18,7 @@ def get_score_for_city(city, error_path):
 
 
 def load_error_data(city, provider, error_path):
-    """
+    """Loads the error file and returns the error data for the specific city and provider given in the query 
 
     :param city: city for which the weather forecast is for
     :type string
@@ -27,9 +28,15 @@ def load_error_data(city, provider, error_path):
     :type string
     :return: dataFrame containing all errors for a city and provider
     """
-
-    error_data = 0
-    return error_data
+    # load the file
+    with open(error_path,'rb') as f:
+        error_data = pickle.load(f)
+        
+    # get rows with the correct city and provider
+    error_data_city = error_data[error_data['city']==city]
+    
+    return error_data_city[error_data_city['Provider']==provider]
+    
 
 def get_score(dwd_data, forecast_data):
     """Gets a single pandas table rows of the dwd data and forecast_data and
@@ -123,3 +130,40 @@ def update_forecasts(date, forecast_path, dwd_path, errors_path):
     """
     pass
 
+def load_forecasts(city,provider,date,forecast_path):
+    """reads in the city, provider, date and forecast_path and returns the data queried from the forecast path
+
+    :param city: city for which the weather forecast is for
+    :type string
+    :param provider: provider for which the weather forecast is for
+    :type string
+    :param date: date for which the weather forecast is for, e.g. '2015-06-29'
+    :type datetime
+    :param dwd_path: path to the corresponding dwd data
+    :type string
+    :return: dataFrame containing relevant dwd data
+    """
+    
+    # load the file
+    with open(forecast_path,'rb') as f:
+        data = pickle.load(f)
+        
+    # get rows with the correct city, provider and date
+    data_city = data[data['city']==city]
+    data_provider = data_city[data_city['Provider']==provider]
+    
+    # cut the time 
+    data_provider['Date'] = data_provider['Date'].apply(cut_time)
+
+    return data_provider[data_provider['Date']==date]
+    
+def cut_time(date_frmt):
+    """ cuts the time of the datetime format
+    
+    :param date_frmt: date in the format %Y-%m-%d %H:%M:%S
+    :type datetime
+    :return: date in the format %Y-%m-%d
+    """
+    frmt = '%Y-%m-%d'
+    return date_frmt.strftime(frmt)
+    
