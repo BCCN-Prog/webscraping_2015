@@ -160,6 +160,13 @@ def pandize_forecasts(pnames, database_filepath='', basepath='', newer_than=0):
     # save the master pandas dataframe
     # this ist just TEMPORARY
     pickle.dump(master_frame, open("master_pandas_file.dump", "wb"))
+    
+def pandize_temporary_forecasts(pnames, database_filepath='', basepath=''):
+    basepath = os.path.join(basepath,'temp')
+    if os.path.exists(basepath):
+        pandize_forecasts(pnames, database_filepath, basepath)
+    else:
+        logging.error("There are no temporary files in the basepath you provided")
 
 def insert_into_master_frame(pandas_part):
     global master_frame
@@ -176,10 +183,13 @@ def insert_into_master_frame(pandas_part):
 # yes, this solution  of having the master frame as a global variable is terrible,
 # but there's no way around it (that's not extremely
 # inconvenient).
-master_frame = pd.DataFrame(columns=
-    np.array(['Provider','ref_date','city','pred_offset','Station ID', 'Date', \
-        'Quality Level', 'Air Temperature', \
-        'Vapor Pressure', 'Degree of Coverage', 'Air Pressure', 'Rel Humidity', \
-        'Wind Speed', 'Max Air Temp', 'Min Air Temp', 'Min Groundlvl Temp', \
-        'Max Wind Speed', 'Precipitation', 'Precipitation Ind', 'Hrs of Sun', \
-        'Snow Depth']))
+if os.path.exists("master_pandas_file.dump"):
+    master_frame = pickle.load(open("master_pandas_file.dump", "rb"))
+else:
+    master_frame = pd.DataFrame(columns=
+        np.array(['Provider','ref_date','city','pred_offset','Station ID', 'Date', \
+            'Quality Level', 'Air Temperature', \
+            'Vapor Pressure', 'Degree of Coverage', 'Air Pressure', 'Rel Humidity', \
+            'Wind Speed', 'Max Air Temp', 'Min Air Temp', 'Min Groundlvl Temp', \
+            'Max Wind Speed', 'Precipitation', 'Precipitation Ind', 'Hrs of Sun', \
+            'Snow Depth']))
