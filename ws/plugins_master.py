@@ -79,9 +79,15 @@ def store_forecast(city, pname, basepath=''):
 
         if continue_loop == False:
             break
-
+        
+    # save the data to disk
     filepath = generate_forecast_filepath(pname, city, basepath)
     misc.save_to_disk(forecast_data, filepath)
+    
+    # save all the data also into a temporary directory
+    basepath_temp = os.path.join(basepath, 'temp')
+    filepath_temp = generate_forecast_filepath(pname, city, basepath_temp)
+    misc.save_to_disk(forecast_data, filepath_temp)
 
     return forecast_data
 
