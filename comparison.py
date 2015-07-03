@@ -2,6 +2,7 @@ import os
 import pickle
 import pandas as pd
 import datetime
+import numpy as np
 
 def get_score_for_city(city, error_path):
     """reads in a city and the error_path and displays the score for all providers.
@@ -164,11 +165,10 @@ def update_errors(date, forecast_path="", dwd_path="", errors_path=""):
         dwdData = get_data_dwd(city,date,dwd_path)
         dwdData = dwdData[list(dwdData.keys())[0]]
         for provider in providerlist:
-            forecastData = load_forecasts(city,provider,date,forecast_path)
+            forecastData = load_forecasts(city, provider, date, forecast_path)
             offset_range = 7
             for offset in range(offset_range):
-
-                date_forecast = get_date_forecast(city,provider,date,offset,forecastData)
+                date_forecast = forecastData[forecastData['pred_offset'].astype(int) == int(offset)]
                 scores = get_score(dwdData, date_forecast)
                 scores['offset'] = offset
                 scores['city'] = city
