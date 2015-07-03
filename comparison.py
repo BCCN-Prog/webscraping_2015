@@ -67,13 +67,16 @@ def get_score(dwd_data, forecast_data, provider):
 
     temp_min_max = ['Max Air Temp', 'Min Air Temp']
     errors = {}
-    errors['Max Air Temp'] = dwd_data['Max Air Temp']-forecast_data['Max Air Temp']
-    errors['Min Air Temp'] = dwd_data['Min Air Temp']-forecast_data['Min Air Temp']
+    errors['Air Temperature'] = (dwd_data['Air Temperature']-forecast_data['Air Temperature']).values
 
     if provider =='weatherdotcom':
         errors['Precipitation'] = None
+        errors['Min Air Temp'] = None
+        errors['Max Air Temp'] = None
     else:
         errors['Precipitation'] = (dwd_data['Precipitation']-forecast_data['Precipitation'].fillna()).values
+        errors['Max Air Temp'] = (dwd_data['Max Air Temp']-forecast_data['Max Air Temp']).values
+        errors['Min Air Temp'] = (dwd_data['Min Air Temp']-forecast_data['Min Air Temp']).values
 
     return errors
 
@@ -154,7 +157,7 @@ def update_errors(date, forecast_path="", dwd_path="", errors_path=""):
     else:
         print("Didn't find an error file, creating one...")
         errorData = pd.DataFrame(columns=
-                    np.array(['Provider', 'city','offset', 'date', \
+                    np.array(['Provider', 'city','offset', 'date', 'Air Temperature', \
                         'Max Air Temp', 'Min Air Temp', 'Precipitation']))
         print("I created an errors dataframe.")
     
