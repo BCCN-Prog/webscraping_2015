@@ -1,5 +1,6 @@
 import os
 import pickle
+import pandas as pd
 
 def get_score_for_city(city, error_path):
     """reads in a city and the error_path and displays the score for all providers.
@@ -117,7 +118,7 @@ def get_date_forecast(city, provider, date, offset, forecast_dataframe):
     
     return data_date[data_date['pred_offset']==offset]
 
-def update_errors(date, forecast_path, dwd_path, errors_path):
+def update_errors(date, forecast_path="", dwd_path="", errors_path=""):
     """adds to the errors file error entry for a specific date
 
     :param date: date for which we want to calculate the errors
@@ -130,6 +131,19 @@ def update_errors(date, forecast_path, dwd_path, errors_path):
     :type string
     :return:
     """
+    complete_errorpath = os.path.join(errors_path, "errorfile.csv")
+    
+    if os.path.exists(complete_errorpath):
+        print("Found errorfile, loading it...")
+        errorData = pd.read_csv(os.path.join(errors_path,"errorfile.csv"))
+        print("Successfully loaded the errorfile from " + complete_errorpath)
+    else:
+        print("Didn't find an error file, creating one...")
+        errorData = pd.DataFrame(columns=
+                    np.array(['Provider', 'city','pred_offset', 'Air Temperature', \
+                        'Max Air Temp', 'Min Air Temp', 'Precipitation']))
+        print("I created an errors dataframe.")
+    
     citylist = ['berlin','hamburg','bremen','stuttgart']
     providerlist = ['accuweather', 'openweathermap', 'weatherdotcom']
     
@@ -149,10 +163,8 @@ def update_errors(date, forecast_path, dwd_path, errors_path):
 
                 errorData.append(scores,ignore_index=True)               
     
-    with open(error_path,'rb') as f:
-        errorData = pickle.load(f)
-    pickle.dump(errorData, open("master_errors_file.dump", "wb"))
-    pass
+    errorData.to_csv(complete_errorpath)
+    print("Saved error data to " + complete_errorpath)
 
 def load_forecasts(city,provider,date,forecast_path):
     """reads in the city, provider, date and forecast_path and returns the data queried from the forecast path
