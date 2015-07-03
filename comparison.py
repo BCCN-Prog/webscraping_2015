@@ -190,7 +190,11 @@ def update_errors(end_date, forecast_path="", dwd_path="", errors_path="", start
 
 
 def load_forecasts(city, provider, date, forecast_path):
-    """reads in the city, provider, date and forecast_path and returns the data queried from the forecast path
+    """reads in the cierror_mat = np.zeros(7,4)
+for offset in np.arange(7):
+    for value in np.arange(4):
+        offset_mask = mat[:,0] == offset
+        error_mat[offset,value] = np.average(mat[offset_mask,value+1],axis=0)ty, provider, date and forecast_path and returns the data queried from the forecast path
 
     :param city: city for which the weather forecast is for
     :type string
@@ -233,3 +237,11 @@ def cut_time(date_frmt):
     """
     frmt = '%Y-%m-%d'
     return datetime.datetime.strptime(date_frmt.strftime(frmt),frmt)
+
+
+# sample code for the error computation
+error_mat = np.zeros(7,4)
+for offset in np.arange(7):
+    for value in np.arange(4):
+        offset_mask = mat[:,0] == offset
+        error_mat[offset,value] = np.average(mat[offset_mask,value+1],axis=0)
