@@ -54,8 +54,8 @@ def get_score(dwd_data, forecast_data):
     'Max Wind Speed', 'Precipitation', 'Precipitation Ind', 'Hrs of Sun', \
     'Snow Depth']
     :type: dataframe
-    :return:list of differences between dwd and forecast (dwd-forecast)
-    for the columns Air Temperature, Rel Humidity, Wind Speed, Max Air Temp, Min Air Temp
+    :return:dictionary of differences between dwd and forecast (dwd-forecast)
+    for the columns/keys Air Temperature, Rel Humidity, Wind Speed, Max Air Temp, Min Air Temp
     Precipitation, Snow Depth
     """
 
