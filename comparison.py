@@ -120,8 +120,11 @@ def get_date_forecast(city, provider, date, offset, forecast_dataframe):
     :return: pandas dataframe row of forecast_dataframe corresponding to the
     given parameters
     """
-    pass
-
+    data_city = forecast_dataframe[forecast_dataframe['city']==city]
+    data_prov = data_city[data_city['Provider']==provider]
+    data_date = data_prov[data_prov['Date']==date]
+    
+    return data_date[data_date['pred_offset']==offset]
 
 def update_errors(date, forecast_path, dwd_path, errors_path):
     """adds to the errors file error entry for a specific date
@@ -183,8 +186,9 @@ def load_forecasts(city, provider, date, forecast_path):
     data_provider = data_city[data_city['Provider']==provider]
     
     # cut the time 
-    data_provider.loc[:,('Date')] = data_provider.loc[:,('Date')].map(cut_time,na_action='ignore')
-
+    data_provider['Date'] = data_provider['Date'].map(cut_time,na_action='ignore')
+    data_provider['ref_date'] = data_provider['ref_date'].map(cut_time,na_action='ignore')
+    
     return data_provider[data_provider['Date']==date]
     
 def cut_time(date_frmt):
