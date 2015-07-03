@@ -1,5 +1,6 @@
 import os
 import pickle
+import pandas as pd
 import datetime
 
 def get_score_for_city(city, error_path):
@@ -125,10 +126,12 @@ def get_date_forecast(city, provider, date, offset, forecast_dataframe):
     data_prov = data_city[data_city['Provider']==provider]
     data_date = data_prov[data_prov['ref_date']==date]
 
-
+    if provider == 'openweathermap':
+        data_date[(data_date['pred_offset'].values-data_date['ref_date'])]
+        
     return data_date[data_date['pred_offset'] == offset]
 
-def update_errors(date, forecast_path, dwd_path, errors_path):
+def update_errors(date, forecast_path="", dwd_path="", errors_path=""):
     """adds to the errors file error entry for a specific date
 
     :param date: date for which we want to calculate the errors
@@ -141,6 +144,19 @@ def update_errors(date, forecast_path, dwd_path, errors_path):
     :type string
     :return:
     """
+    complete_errorpath = os.path.join(errors_path, "errorfile.csv")
+    
+    if os.path.exists(complete_errorpath):
+        print("Found errorfile, loading it...")
+        errorData = pd.read_csv(os.path.join(errors_path,"errorfile.csv"))
+        print("Successfully loaded the errorfile from " + complete_errorpath)
+    else:
+        print("Didn't find an error file, creating one...")
+        errorData = pd.DataFrame(columns=
+                    np.array(['Provider', 'city','pred_offset', 'Air Temperature', \
+                        'Max Air Temp', 'Min Air Temp', 'Precipitation']))
+        print("I created an errors dataframe.")
+    
     citylist = ['berlin','hamburg','bremen','stuttgart']
     providerlist = ['accuweather', 'openweathermap', 'weatherdotcom']
     
@@ -159,11 +175,10 @@ def update_errors(date, forecast_path, dwd_path, errors_path):
                 scores['date'] = date
 
                 errorData.append(scores,ignore_index=True)               
-    
-    with open(errors_path,'rb') as f:
-        errorData = pickle.load(f)
-    pickle.dump(errorData, open("master_errors_file.dump", "wb"))
-    pass
+
+    errorData.to_csv(complete_errorpath)
+    print("Saved error data to " + complete_errorpath)
+
 
 def load_forecasts(city, provider, date, forecast_path):
     """reads in the city, provider, date and forecast_path and returns the data queried from the forecast path
@@ -192,12 +207,11 @@ def load_forecasts(city, provider, date, forecast_path):
         data_provider['Date'] = data_provider['Date'].map(cut_time,na_action='ignore')
         data_provider['ref_date'] = data_provider['ref_date'].map(cut_time,na_action='ignore')
 
-
     else:
         data_provider['ref_date'] = data_provider['ref_date'].map(cut_time,na_action='ignore')
         data_provider['Date'] = data_provider['pred_offset'].map(cut_time, na_action='ignore')
         data_provider['pred_offset'] = data_provider['Date'] - data_provider['ref_date']
-
+    
     return data_provider[data_provider['Date'] == date]
 
     
@@ -209,5 +223,5 @@ def cut_time(date_frmt):
     :return: date in the format %Y-%m-%d
     """
     frmt = '%Y-%m-%d'
-    return datetime.strptime(date_frmt.strftime(frmt))
+    return datetime.datetime.strptime(date_frmt.strftime(frmt),frmt)
     
