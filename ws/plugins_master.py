@@ -169,10 +169,10 @@ def pandize_forecasts(pnames, database_filepath='', basepath='', newer_than=0, c
                                      database_filepath)
     
     # save the master pandas dataframe
-    # this ist just TEMPORARY
     logging.info("Done with pandizing, saving to disk now!")
     pickle.dump(master_frame, open("master_pandas_file.dump", "wb"))
-    
+    master_frame.to_csv("master_pandas_file.csv")
+
 def pandize_temporary_forecasts(pnames, database_filepath='', basepath='', cities='all'):
     basepath_temp = os.path.join(basepath,'temp')
     if os.path.exists(basepath_temp):
