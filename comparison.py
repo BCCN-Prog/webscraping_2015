@@ -111,8 +111,11 @@ def get_date_forecast(city, provider, date, offset, forecast_dataframe):
     :return: pandas dataframe row of forecast_dataframe corresponding to the
     given parameters
     """
-    pass
-
+    data_city = forecast_dataframe[forecast_dataframe['city']==city]
+    data_prov = data_city[data_city['Provider']==provider]
+    data_date = data_prov[data_prov['Date']==date]
+    
+    return data_date[data_date['pred_offset']==offset]
 
 def update_errors(date, forecast_path, dwd_path, errors_path):
     """adds to the errors file error entry for a specific date
