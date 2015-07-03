@@ -118,7 +118,7 @@ def store_forecasts(cities, pnames, basepath=''):
 def forecasts_newer_than(newer_than, basepath='', cities='all'):
     if cities == 'all':
         cities = os.listdir(basepath)
-    
+
     forecast_lists = {}
     for city in cities:
         if city == 'temp':
@@ -159,7 +159,7 @@ def pandize_plugin_forecasts(forecast_lists, pname, database_filepath):
 # this is the overall pandize function that will loop over all plugins
 # and then call pandize_plugin_forecasts separately for each plugin
 def pandize_forecasts(pnames, database_filepath='', basepath='', newer_than=0, cities='all'):
-    global master_frame    
+    global master_frame
     forecast_lists = forecasts_newer_than(newer_than, basepath, cities)
     logging.debug("pandize forecasts was called for the following providers (next line)")
     logging.debug(pnames)
@@ -177,7 +177,7 @@ def pandize_temporary_forecasts(pnames, database_filepath='', basepath='', citie
     basepath_temp = os.path.join(basepath,'temp')
     if os.path.exists(basepath_temp):
         logging.debug("Temporary files exist, starting to pandize them")
-        pandize_forecasts(pnames, database_filepath, basepath_temp, cities)
+        pandize_forecasts(pnames, database_filepath, basepath_temp, 0, cities)
     else:
         logging.error("There are no temporary files in the basepath you provided")
     
