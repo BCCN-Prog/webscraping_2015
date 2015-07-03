@@ -177,8 +177,9 @@ def load_forecasts(city,provider,date,forecast_path):
     data_provider = data_city[data_city['Provider']==provider]
     
     # cut the time 
-    data_provider.loc[:,('Date')] = data_provider.loc[:,('Date')].map(cut_time,na_action='ignore')
-
+    data_provider['Date'] = data_provider['Date'].map(cut_time,na_action='ignore')
+    data_provider['ref_date'] = data_provider['ref_date'].map(cut_time,na_action='ignore')
+    
     return data_provider[data_provider['Date']==date]
     
 def cut_time(date_frmt):
