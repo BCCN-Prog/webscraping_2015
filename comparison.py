@@ -38,7 +38,7 @@ def load_error_data(city, provider, error_path):
     return error_data_city[error_data_city['Provider']==provider]
     
 
-def get_score(dwd_data, forecast_data):
+def get_score(dwd_data, forecast_data, provider):
     """Gets a single pandas table rows of the dwd data and forecast_data and
     returns scalar error-values for each column
 
@@ -57,12 +57,21 @@ def get_score(dwd_data, forecast_data):
     :return:dictionary of differences between dwd and forecast (dwd-forecast)
     for the columns/keys Air Temperature, Rel Humidity, Wind Speed, Max Air Temp, Min Air Temp
     Precipitation, Snow Depth
+    openweathermap nan = 0 and rain in millimeters
+    accuweather - rain in millimeters. only supplies min and max temperature
+    weatherdotcom - gives rain only for today
     """
 
-    errors = {'Air Temperature':0, 'Rel Humidity':0, 'Wind Speed':0, 'Max Air Temp':0, 'Min Air Temp':0,
-    'Precipitation':0, 'Snow Depth':0}
-    for col in errors.keys():
-       errors[col] = dwd_data[col]-forecast_data[col]
+    temp_min_max = ['Max Air Temp', 'Min Air Temp']
+    errors = {}
+    errors['Max Air Temp'] = dwd_data['Max Air Temp']-forecast_data['Max Air Temp']
+    errors['Min Air Temp'] = dwd_data['Min Air Temp']-forecast_data['Min Air Temp']
+
+    if provider =='weatherdotcom':
+        errors['Precipitation'] = None
+    else:
+        errors['Precipitation'] = (dwd_data['Precipitation']-forecast_data['Precipitation'].fillna()).values
+
     return errors
 
 def get_data_dwd(city,date,dwd_path):
@@ -139,19 +148,19 @@ def update_errors(date, forecast_path, dwd_path, errors_path):
             for offset in range(offset_range):
                 
                 date_forecast = get_date_forecast(city,provider,date,offset,forecastData)
-                scores = get_score(dwdData,date_forecast)
+                scores = get_score(dwdData, date_forecast)
                 scores['offset'] = offset
                 scores['city'] = city
                 scores['date'] = date
 
                 errorData.append(scores,ignore_index=True)               
     
-    with open(error_path,'rb') as f:
+    with open(errors_path,'rb') as f:
         errorData = pickle.load(f)
     pickle.dump(errorData, open("master_errors_file.dump", "wb"))
     pass
 
-def load_forecasts(city,provider,date,forecast_path):
+def load_forecasts(city, provider, date, forecast_path):
     """reads in the city, provider, date and forecast_path and returns the data queried from the forecast path
 
     :param city: city for which the weather forecast is for
