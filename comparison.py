@@ -125,9 +125,7 @@ def get_date_forecast(city, provider, date, offset, forecast_dataframe):
     data_prov = data_city[data_city['Provider']==provider]
     data_date = data_prov[data_prov['ref_date']==date]
 
-    if provider == 'openweathermap':
-        data_date[(data_date['pred_offset'].values-data_date['ref_date'])]
-    else:
+
     return data_date[data_date['pred_offset'] == offset]
 
 def update_errors(date, forecast_path, dwd_path, errors_path):
@@ -194,11 +192,13 @@ def load_forecasts(city, provider, date, forecast_path):
         data_provider['Date'] = data_provider['Date'].map(cut_time,na_action='ignore')
         data_provider['ref_date'] = data_provider['ref_date'].map(cut_time,na_action='ignore')
 
-        return data_provider[data_provider['Date'] == date]
+
     else:
         data_provider['ref_date'] = data_provider['ref_date'].map(cut_time,na_action='ignore')
         data_provider['Date'] = data_provider['pred_offset'].map(cut_time, na_action='ignore')
         data_provider['pred_offset'] = data_provider['Date'] - data_provider['ref_date']
+
+    return data_provider[data_provider['Date'] == date]
 
     
 def cut_time(date_frmt):
@@ -209,5 +209,5 @@ def cut_time(date_frmt):
     :return: date in the format %Y-%m-%d
     """
     frmt = '%Y-%m-%d'
-    return date_frmt.strftime(frmt)
+    return datetime.strptime(date_frmt.strftime(frmt))
     
