@@ -154,7 +154,7 @@ def update_errors(date, forecast_path="", dwd_path="", errors_path=""):
     else:
         print("Didn't find an error file, creating one...")
         errorData = pd.DataFrame(columns=
-                    np.array(['Provider', 'city','pred_offset', 'Air Temperature', \
+                    np.array(['Provider', 'city','offset', 'date', \
                         'Max Air Temp', 'Min Air Temp', 'Precipitation']))
         print("I created an errors dataframe.")
     
@@ -173,6 +173,7 @@ def update_errors(date, forecast_path="", dwd_path="", errors_path=""):
                 scores['offset'] = offset
                 scores['city'] = city
                 scores['date'] = date
+                scores['Provider']
 
                 errorData.append(scores,ignore_index=True)               
 
