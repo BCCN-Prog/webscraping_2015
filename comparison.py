@@ -1,5 +1,6 @@
 import os
 import pickle
+import datetime
 
 def get_score_for_city(city, error_path):
     """reads in a city and the error_path and displays the score for all providers.
@@ -122,9 +123,12 @@ def get_date_forecast(city, provider, date, offset, forecast_dataframe):
     """
     data_city = forecast_dataframe[forecast_dataframe['city']==city]
     data_prov = data_city[data_city['Provider']==provider]
-    data_date = data_prov[data_prov['Date']==date]
-    
-    return data_date[data_date['pred_offset']==offset]
+    data_date = data_prov[data_prov['ref_date']==date]
+
+    if provider == 'openweathermap':
+        data_date[(data_date['pred_offset'].values-data_date['ref_date'])]
+    else:
+    return data_date[data_date['pred_offset'] == offset]
 
 def update_errors(date, forecast_path, dwd_path, errors_path):
     """adds to the errors file error entry for a specific date
@@ -149,7 +153,7 @@ def update_errors(date, forecast_path, dwd_path, errors_path):
             forecastData = load_forecasts(city,provider,date,forecast_path)
             offset_range = 7
             for offset in range(offset_range):
-                
+
                 date_forecast = get_date_forecast(city,provider,date,offset,forecastData)
                 scores = get_score(dwdData, date_forecast)
                 scores['offset'] = offset
@@ -184,12 +188,18 @@ def load_forecasts(city, provider, date, forecast_path):
     # get rows with the correct city, provider and date
     data_city = data[data['city']==city]
     data_provider = data_city[data_city['Provider']==provider]
-    
-    # cut the time 
-    data_provider['Date'] = data_provider['Date'].map(cut_time,na_action='ignore')
-    data_provider['ref_date'] = data_provider['ref_date'].map(cut_time,na_action='ignore')
-    
-    return data_provider[data_provider['Date']==date]
+
+    if provider != 'openweathermap':
+        # cut the time
+        data_provider['Date'] = data_provider['Date'].map(cut_time,na_action='ignore')
+        data_provider['ref_date'] = data_provider['ref_date'].map(cut_time,na_action='ignore')
+
+        return data_provider[data_provider['Date'] == date]
+    else:
+        data_provider['ref_date'] = data_provider['ref_date'].map(cut_time,na_action='ignore')
+        data_provider['Date'] = data_provider['pred_offset'].map(cut_time, na_action='ignore')
+        data_provider['pred_offset'] = data_provider['Date'] - data_provider['ref_date']
+
     
 def cut_time(date_frmt):
     """ cuts the time of the datetime format
