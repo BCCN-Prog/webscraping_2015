@@ -144,36 +144,41 @@ def update_errors(end_date, forecast_path="", dwd_path="", errors_path="", start
                         'Max Air Temp', 'Min Air Temp', 'Precipitation']))
         print("I created an errors dataframe.")
 
-    citylist = ['berlin','hamburg','bremen','stuttgart']
+    citylist = ['berlin']#,'hamburg','bremen','stuttgart']
     providerlist = ['accuweather', 'openweathermap', 'weatherdotcom']
 
-    for city in citylist:
-        dwdData = get_data_dwd(city,start_date, end_date,dwd_path)
-        dwdData = dwdData[list(dwdData.keys())[0]]
-        for date in dates:
-            for provider in providerlist:
-                forecastData = load_forecasts(city, provider, date, forecast_path)
-                offset_range = 7
-                for offset in range(offset_range):
-                    date_forecast = forecastData[forecastData['pred_offset'].astype(int) == int(offset)]
-                    scores = get_score(dwdData, date_forecast)
-                    scores['offset'] = offset
-                    scores['city'] = city
-                    #scores['date'] = date
-                    scores['Provider']
+    # load the file
+    with open(forecast_path,'rb') as f:
+        forecasts = pd.read_csv(f)
 
-                    errorData.append(scores,ignore_index=True)
+    for city in citylist:
+        dwd_data = get_data_dwd(city,start_date, end_date, dwd_path)
+        if not len(dwd_data):
+            print("no dwd data was found")
+            return
+        else:
+            dwd_data = dwd_data[list(dwd_data.keys())[0]]
+            for date in dates:
+                for provider in providerlist:
+                    print('provider: ' + provider)
+                    forecast_data = load_specific_forecast(city, provider, date, forecasts)
+                    offset_range = 7
+                    for offset in range(offset_range):
+                        date_forecast = forecast_data[forecast_data['pred_offset'].astype(int) == int(offset)]
+                        scores = get_score(dwd_data, date_forecast)
+                        scores['offset'] = offset
+                        scores['city'] = city
+                        #scores['date'] = date
+                        scores['Provider']
+
+                        errorData.append(scores,ignore_index=True)
 
     errorData.to_csv(complete_errorpath)
     print("Saved error data to " + complete_errorpath)
 
 
-def load_forecasts(city, provider, date, forecast_path):
-    """reads in the cierror_mat = np.zeros(7,4)
-for offset in np.arange(7):
-    for value in np.arange(4):
-        offset_mask = mat[:,0] == offset
-        error_mat[offset,value] = np.average(mat[offset_mask,value+1],axis=0)ty, provider, date and forecast_path and returns the data queried from the forecast path
+def load_specific_forecast(city, provider, date, forecasts):
+    """reads in the city, provider, date and forecast_path and returns the data queried from the forecast path
 
     :param city: city for which the weather forecast is for
     :type string
