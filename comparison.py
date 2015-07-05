@@ -4,6 +4,7 @@ import pandas as pd
 import datetime
 import numpy as np
 import click
+import weather_loading as wl
 
 
 def load_error_data(city, provider, error_path):
@@ -52,22 +53,20 @@ def get_score(dwd_data, forecast_data, provider):
     weatherdotcom - gives rain only for today
     """
 
-    temp_min_max = ['Max Air Temp', 'Min Air Temp']
-    errors = {}
-    errors['Air Temperature'] = (dwd_data['Air Temperature']-forecast_data['Air Temperature']).values
+    temp = (dwd_data['Air Temperature'].values-forecast_data['Air Temperature'].values)
 
     if provider =='weatherdotcom':
-        errors['Precipitation'] = None
-        errors['Min Air Temp'] = None
-        errors['Max Air Temp'] = None
+        prec = [None]
+        min_t = [None]
+        max_t = [None]
     else:
-        errors['Precipitation'] = (dwd_data['Precipitation']-forecast_data['Precipitation'].fillna()).values
-        errors['Max Air Temp'] = (dwd_data['Max Air Temp']-forecast_data['Max Air Temp']).values
-        errors['Min Air Temp'] = (dwd_data['Min Air Temp']-forecast_data['Min Air Temp']).values
+        prec = (dwd_data['Precipitation'].values-forecast_data['Precipitation'].fillna(0).values)
+        max_t = (dwd_data['Max Air Temp'].values-forecast_data['Max Air Temp'].values)
+        min_t = (dwd_data['Min Air Temp'].values-forecast_data['Min Air Temp'].values)
 
-    return errors
+    return [temp[0], max_t[0], min_t[0], prec[0]]
 
-def get_data_dwd(city,start_date, end_date,dwd_path):
+def get_data_dwd(city, start_date, end_date, dwd_path):
     """reads in the city, date and dwd_path and returns the data queried from the dwd path
     
     :param city: city for which the weather forecast is for
@@ -78,13 +77,12 @@ def get_data_dwd(city,start_date, end_date,dwd_path):
     :type string
     :return: dataFrame containing relevant dwd data
     """
-    curr_wd = os.getcwd()
-    os.chdir(dwd_path)
-            
-    import weather_loading as wl
-    dataFrame = wl.load_dataframe(city, str(start_date)[:-9].replace('-', ''), str(end_date)[:-9].replace('-', ''),True)
+    #curr_wd = os.getcwd()
+    #os.chdir(dwd_path)
 
-    os.chdir(curr_wd)
+    dataFrame = wl.load_dataframe(city, start_date.replace('-', ''), end_date.replace('-', ''),True)
+
+    #os.chdir(curr_wd)
     return dataFrame
 
 
@@ -116,12 +114,13 @@ def get_date_forecast(city, provider, date, offset, forecast_dataframe):
 
 
 
-def update_errors(end_date, forecast_path="", dwd_path="", errors_path="", start_date='2015-06-01'):
+def update_errors(end_date, dwd_path, forecast_path="master_pandas_file.csv", errors_path="", start_date='2015-06-01'):
     """adds to the errors file error entry for a specific date
 
-    :param date: date for which we want to calculate the errors
+    :param start_date: start of period to claculate erros
+    :param end_date: end of period to claculate erros
     :type datetime (python package datetime.datetime)
-    :param forecast_path: path to the forecast master dataframe
+    :param forecast_path: path to the forecast master dataframe. default - file is in the same directory
     :type string
     :param dwd_path: path to dwd downloaded data
     :type string
@@ -130,27 +129,18 @@ def update_errors(end_date, forecast_path="", dwd_path="", errors_path="", start
     :return:
     """
 
-    dates = pd.date_range(start_date, end_date, freq='D')
-    complete_errorpath = os.path.join(errors_path, "errorfile.csv")
-
-    if os.path.exists(complete_errorpath):
-        print("Found errorfile, loading it...")
-        errorData = pd.read_csv(os.path.join(errors_path,"errorfile.csv"))
-        print("Successfully loaded the errorfile from " + complete_errorpath)
-    else:
-        print("Didn't find an error file, creating one...")
-        errorData = pd.DataFrame(columns=
-                    np.array(['Provider', 'city','offset', 'date', 'Air Temperature', \
-                        'Max Air Temp', 'Min Air Temp', 'Precipitation']))
-        print("I created an errors dataframe.")
-
-    citylist = ['berlin']#,'hamburg','bremen','stuttgart']
-    providerlist = ['accuweather', 'openweathermap', 'weatherdotcom']
-
-    # load the file
+    # load the forecasts file
     with open(forecast_path,'rb') as f:
         forecasts = pd.read_csv(f)
 
+    dates = pd.date_range(start_date, end_date, freq='D')
+    complete_errorpath = os.path.join(errors_path, "errorfile.csv")
+    citylist = ['berlin','hamburg','bremen','stuttgart']
+    providerlist = ['accuweather', 'openweathermap', 'weatherdotcom']
+
+    errors_cols = ['Provider', 'city','offset', 'Air Temperature', \
+                        'Max Air Temp', 'Min Air Temp', 'Precipitation']
+    errorData = pd.DataFrame(columns = errors_cols)
     for city in citylist:
         dwd_data = get_data_dwd(city,start_date, end_date, dwd_path)
         if not len(dwd_data):
@@ -159,21 +149,25 @@ def update_errors(end_date, forecast_path="", dwd_path="", errors_path="", start
         else:
             dwd_data = dwd_data[list(dwd_data.keys())[0]]
             for date in dates:
+                print('date: ' + str(date))
                 for provider in providerlist:
+                    dwd_data_date = dwd_data[dwd_data.index == date]
                     print('provider: ' + provider)
                     forecast_data = load_specific_forecast(city, provider, date, forecasts)
                     offset_range = 7
                     for offset in range(offset_range):
+                        print('offset: ' + str(offset))
                         date_forecast = forecast_data[forecast_data['pred_offset'].astype(int) == int(offset)]
-                        scores = get_score(dwd_data, date_forecast)
-                        scores['offset'] = offset
-                        scores['city'] = city
-                        #scores['date'] = date
-                        scores['Provider']
+                        scores = [provider, city, offset, ]
+                        scores += get_score(dwd_data_date, date_forecast, provider)
+                        # print(pd.DataFrame(columns = errors_cols, data = np.matrix(scores)))
+                        errorData = \
+                        errorData.append(pd.DataFrame(columns = errors_cols, data = np.matrix(scores)))
 
-                        errorData.append(scores,ignore_index=True)
-
-    errorData.to_csv(complete_errorpath)
+    if os.path.isfile(complete_errorpath):
+        errorData.to_csv(complete_errorpath, mode = 'a', header=False)
+    else:
+         errorData.to_csv(complete_errorpath)
     print("Saved error data to " + complete_errorpath)
 
 
@@ -186,62 +180,76 @@ def load_specific_forecast(city, provider, date, forecasts):
     :type string
     :param date: date for which the weather forecast is for, e.g. '2015-06-29'
     :type datetime
-    :param dwd_path: path to the corresponding dwd data
-    :type string
+    :param forecasts: dataframe containing all forecasts
+    :type pandas dataframe
     :return: dataFrame containing relevant dwd data
     """
-    
-    # load the file
-    with open(forecast_path,'rb') as f:
-        data = pickle.load(f)
-        
+
     # get rows with the correct city, provider and date
-    data_city = data[data['city']==city]
+    data_city = forecasts[forecasts['city']==city]
     data_provider = data_city[data_city['Provider']==provider]
 
     if provider != 'openweathermap':
         # cut the time
-        data_provider['Date'] = data_provider['Date'].map(cut_time,na_action='ignore')
-        data_provider['ref_date'] = data_provider['ref_date'].map(cut_time,na_action='ignore')
+        data_provider.loc[:, 'Date'] = data_provider.loc[:, 'Date'].map(cut_time, na_action='ignore')
+        data_provider.loc[:, 'ref_date'] = data_provider.loc[:,'ref_date'].map(cut_time, na_action='ignore')
 
     else:
-        data_provider['ref_date'] = data_provider['ref_date'].map(cut_time,na_action='ignore')
-        data_provider['Date'] = data_provider['pred_offset'].map(cut_time, na_action='ignore')
-        data_provider['pred_offset'] = data_provider['Date'] - data_provider['ref_date']
+        data_provider.loc[:, 'ref_date'] = data_provider.loc[:,'ref_date'].map(cut_time,na_action='ignore')
+        data_provider.loc[:, 'Date'] = data_provider.loc[:,'pred_offset'].map(cut_time, na_action='ignore')
+        data_provider.loc[:, 'pred_offset'] = (data_provider.loc[:,'Date'] - data_provider['ref_date']).\
+            map(lambda delta: delta/np.timedelta64(1, 'D'), na_action='ignore')
     
     return data_provider[data_provider['Date'] == date]
 
-    
+
 def cut_time(date_frmt):
     """ cuts the time of the datetime format
     
     :param date_frmt: date in the format %Y-%m-%d %H:%M:%S
-    :type datetime
+    :type datetime or string
     :return: date in the format %Y-%m-%d
     """
+
     frmt = '%Y-%m-%d'
-    return datetime.datetime.strptime(date_frmt.strftime(frmt),frmt)
+    if isinstance(date_frmt, str):
+        res = datetime.datetime.strptime(date_frmt[:10], frmt)
+    if isinstance(date_frmt, datetime.datetime):
+        res = datetime.datetime.strptime(date_frmt.strftime(frmt),frmt)
+    return res
 
 @click.option("--errors_path", type=click.STRING, default="")
-def main(errors_path):
-    citylist = ['berlin','hamburg','bremen','stuttgart']
+@click.option("--update_errors", type=click.BOOL, default=False)
+@click.option("--forecast_path", type=click.STRING, default="master_pandas_file.csv")
+@click.option("--dwd_path", type=click.STRING, default="/Users/smartMac/webscraping/")
+def main(errors_path, forecast_path, dwd_path):
+
+    #complete_errorpath = os.path.join(errors_path, "errorfile.csv")
+    #diffs = pd.read_csv()
+    update_errors('2015-06-26', dwd_path, forecast_path , errors_path, start_date='2015-06-21')
+    '''
+    citylist = ['berlin']#,'hamburg','bremen','stuttgart']
     providerlist = ['accuweather', 'openweathermap', 'weatherdotcom']
 
     errors = np.zeros((len(providerlist), len(citylist), 7))
     for i, provider in enumerate(providerlist):
         for j, city in enumerate(citylist):
+            print('city: ' + city)
+            print('provider: ' + provider)
             diff = load_error_data(city, provider, errors_path).values
 
             mat = diff['offset','Air Temperature'].values.squeeze()
 
-            errors[i,j,:] = diff
+            errors[i,j,:] = diff'''
 
 if __name__ == '__main__':
     main()
 
+'''
 # sample code for the error computation
 overall_mean_square_error = np.zeros((7,4,3)) # offset x values x providers
-mat = diff['offset', 'Air Temperature', 'Max Air Temp', 'Min Air Temp', 'Precipitation'].as_matrix()
+diff = load_error_data(city, provider, errors_path).values
+mat = ['offset', 'Air Temperature', 'Max Air Temp', 'Min Air Temp', 'Precipitation'].as_matrix()
 error_mat = np.zeros(7,4)
 mean_square_error = np.zeros((7,4))
 
@@ -251,4 +259,5 @@ for offset in np.arange(7):
         error_mat[offset,:] = np.average(mat[offset_mask,value+1],axis=0)
         mean_square_error = np.linalg.norm(mat[offset_mask,value+1], axis=0)
     
-overall_mean_square_error[:,:,provider_idx] = mean_square_error
+overall_mean_square_error[:,:,provider_idx] = mean_square_error'''
+
