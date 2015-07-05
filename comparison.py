@@ -3,21 +3,7 @@ import pickle
 import pandas as pd
 import datetime
 import numpy as np
-
-def get_score_for_city(city, error_path):
-    """reads in a city and the error_path and displays the score for all providers.
-    score is a matrix (measures X offsets)
-    for each entry in the matrix we will average over date, and get the standard deviation
-    we will also display the average absolute error.
-
-    :param city: city for which the weather forecast is for
-    :type string
-    :param error_path: path to error data
-    :type string
-    :return: None
-    """
-
-    pass
+import click
 
 
 def load_error_data(city, provider, error_path):
@@ -32,8 +18,9 @@ def load_error_data(city, provider, error_path):
     :return: dataFrame containing all errors for a city and provider
     """
     # load the file
-    with open(error_path,'rb') as f:
-        error_data = pickle.load(f)
+    complete_errorpath = os.path.join(error_path, "errorfile.csv")
+    with open(complete_errorpath,'rb') as f:
+        error_data = pd.read_csv(f)
         
     # get rows with the correct city and provider
     error_data_city = error_data[error_data['city']==city]
@@ -80,7 +67,7 @@ def get_score(dwd_data, forecast_data, provider):
 
     return errors
 
-def get_data_dwd(city,date,dwd_path):
+def get_data_dwd(city,start_date, end_date,dwd_path):
     """reads in the city, date and dwd_path and returns the data queried from the dwd path
     
     :param city: city for which the weather forecast is for
@@ -95,15 +82,7 @@ def get_data_dwd(city,date,dwd_path):
     os.chdir(dwd_path)
             
     import weather_loading as wl
-    yyyy =  str(date.year)
-    mm = str(date.month)
-    dd = str(date.day)
-    if len(mm)==1:
-        mm = '0'+mm
-    if len(dd)==1:
-        dd = '0'+dd
-    date_for_wl = yyyy+mm+dd
-    dataFrame = wl.load_dataframe(city,date_for_wl,date_for_wl,True)
+    dataFrame = wl.load_dataframe(city, str(start_date)[:-9].replace('-', ''), str(end_date)[:-9].replace('-', ''),True)
 
     os.chdir(curr_wd)
     return dataFrame
@@ -168,10 +147,10 @@ def update_errors(end_date, forecast_path="", dwd_path="", errors_path="", start
     citylist = ['berlin','hamburg','bremen','stuttgart']
     providerlist = ['accuweather', 'openweathermap', 'weatherdotcom']
 
-    for date in dates:
-        for city in citylist:
-            dwdData = get_data_dwd(city,date,dwd_path)
-            dwdData = dwdData[list(dwdData.keys())[0]]
+    for city in citylist:
+        dwdData = get_data_dwd(city,start_date, end_date,dwd_path)
+        dwdData = dwdData[list(dwdData.keys())[0]]
+        for date in dates:
             for provider in providerlist:
                 forecastData = load_forecasts(city, provider, date, forecast_path)
                 offset_range = 7
@@ -233,3 +212,20 @@ def cut_time(date_frmt):
     """
     frmt = '%Y-%m-%d'
     return datetime.datetime.strptime(date_frmt.strftime(frmt),frmt)
+
+@click.option("--errors_path", type=click.STRING, default="")
+def main(errors_path):
+    citylist = ['berlin','hamburg','bremen','stuttgart']
+    providerlist = ['accuweather', 'openweathermap', 'weatherdotcom']
+
+    errors = np.zeros((len(providerlist), len(citylist), 7))
+    for i, provider in enumerate(providerlist):
+        for j, city in enumerate(citylist):
+            diff = load_error_data(city, provider, errors_path).values
+
+            mat = diff['offset','Air Temperature'].values.squeeze()
+
+            errors[i,j,:] = diff
+
+if __name__ == '__main__':
+    main()
