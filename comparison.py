@@ -169,7 +169,11 @@ def update_errors(end_date, forecast_path="", dwd_path="", errors_path="", start
 
 
 def load_forecasts(city, provider, date, forecast_path):
-    """reads in the city, provider, date and forecast_path and returns the data queried from the forecast path
+    """reads in the cierror_mat = np.zeros(7,4)
+for offset in np.arange(7):
+    for value in np.arange(4):
+        offset_mask = mat[:,0] == offset
+        error_mat[offset,value] = np.average(mat[offset_mask,value+1],axis=0)ty, provider, date and forecast_path and returns the data queried from the forecast path
 
     :param city: city for which the weather forecast is for
     :type string
@@ -229,3 +233,17 @@ def main(errors_path):
 
 if __name__ == '__main__':
     main()
+
+# sample code for the error computation
+overall_mean_square_error = np.zeros((7,4,3)) # offset x values x providers
+mat = diff['offset', 'Air Temperature', 'Max Air Temp', 'Min Air Temp', 'Precipitation'].as_matrix()
+error_mat = np.zeros(7,4)
+mean_square_error = np.zeros((7,4))
+
+for offset in np.arange(7):
+    for value in np.arange(4):
+        offset_mask = mat[:,0] == (offset+1)
+        error_mat[offset,:] = np.average(mat[offset_mask,value+1],axis=0)
+        mean_square_error = np.linalg.norm(mat[offset_mask,value+1], axis=0)
+    
+overall_mean_square_error[:,:,provider_idx] = mean_square_error
