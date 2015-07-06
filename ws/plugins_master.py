@@ -172,7 +172,8 @@ def pandize_forecasts(pnames, database_filepath='', basepath='', newer_than=0, c
     # this ist just TEMPORARY
     logging.info("Done with pandizing, saving to disk now!")
     pickle.dump(master_frame, open("master_pandas_file.dump", "wb"))
-    
+    print("Pandizing finished successfully, saved to disk and exiting now...")
+
 def pandize_temporary_forecasts(pnames, database_filepath='', basepath='', cities='all'):
     basepath_temp = os.path.join(basepath,'temp')
     if os.path.exists(basepath_temp):

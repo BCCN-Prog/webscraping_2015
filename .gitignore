@@ -63,5 +63,7 @@ docs/_build/
 
 # PyBuilder
 target/
+
 wunderground_keys_
 wunderground_keys_
+nohup.out
