@@ -4,7 +4,7 @@ import pandas as pd
 import datetime
 import numpy as np
 import click
-import weather_loading as wl
+#import weather_loading as wl
 
 
 def load_error_data(city, provider, error_path):
@@ -241,7 +241,7 @@ def cut_time(date_frmt):
 @click.option("--dwd_path", type=click.STRING, default="/Users/smartMac/webscraping/")
 def main(errors_path, forecast_path, dwd_path, update_errors_file):
 
-    citylist = ['berlin']#,'hamburg','bremen','stuttgart']
+    citylist = ['berlin','hamburg','bremen','stuttgart']
     providerlist = ['accuweather' , 'openweathermap', 'weatherdotcom']
     complete_errorpath = os.path.join(errors_path, "errorfile.csv")
 
