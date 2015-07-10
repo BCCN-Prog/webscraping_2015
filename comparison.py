@@ -5,6 +5,8 @@ import datetime
 import numpy as np
 import click
 import weather_loading as wl
+import matplotlib.pyplot as plt
+plt.style.use('ggplot')
 
 
 def load_error_data(city, provider, error_path):
@@ -55,16 +57,16 @@ def get_score(dwd_data, forecast_data, provider):
 
     if not len(forecast_data) or not len(dwd_data):
         return [None,None,None,None]
-    temp = (dwd_data['Air Temperature'].values-forecast_data['Air Temperature'].values)
+    temp = (dwd_data['Air Temperature'].values - forecast_data['Air Temperature'].values)
 
     if provider =='weatherdotcom':
         prec = [None]
         min_t = [None]
         max_t = [None]
     else:
-        prec = (dwd_data['Precipitation'].values-forecast_data['Precipitation'].fillna(0).values)
-        max_t = (dwd_data['Max Air Temp'].values-forecast_data['Max Air Temp'].values)
-        min_t = (dwd_data['Min Air Temp'].values-forecast_data['Min Air Temp'].values)
+        prec = (dwd_data['Precipitation'].values - forecast_data['Precipitation'].fillna(0).values)
+        max_t = (dwd_data['Max Air Temp'].values - forecast_data['Max Air Temp'].values)
+        min_t = (dwd_data['Min Air Temp'].values - forecast_data['Min Air Temp'].values)
 
     return [temp[0], max_t[0], min_t[0], prec[0]]
 
@@ -217,7 +219,6 @@ def load_specific_forecast(city, provider, date, forecasts):
     
     return data_provider[data_provider['Date'] == date]
 
-
 def cut_time(date_frmt):
     """ cuts the time of the datetime format
     
@@ -266,6 +267,7 @@ def main(errors_path, forecast_path, dwd_path, update_errors_file):
     res_frame_mean = pd.DataFrame(columns = res_cols)
     res_frame_bias = pd.DataFrame(columns = res_cols)
     res_frame_norm = pd.DataFrame(columns = res_cols)
+    res_frame_abs_mean = pd.DataFrame(columns = res_cols)
     for provider in providerlist:
         diffs_prov = diffs[diffs.loc[:,'Provider']==provider]
         for city in citylist:
@@ -274,7 +276,7 @@ def main(errors_path, forecast_path, dwd_path, update_errors_file):
             for offset in range(7):
                 score = [provider, city, offset]
                 g = groups.get_group(offset)
-                score_mean = score + [g.loc[:,val].astype(float).mean() for val in values_names_list]
+                score_mean = score + [g.loc[:, val].astype(float).mean() for val in values_names_list]
                 res_frame_mean = res_frame_mean.append(pd.DataFrame(columns = res_cols, data = np.matrix(score_mean)))
 
                 score_var = score + [g.loc[:,val].std() for val in values_names_list]
@@ -282,7 +284,15 @@ def main(errors_path, forecast_path, dwd_path, update_errors_file):
 
                 score_norm = score + [np.sqrt(np.square(g.loc[:,val].dropna()).sum()) / np.sqrt(len(g.loc[:,val].dropna()))\
                                       for val in values_names_list]
+
                 res_frame_norm = res_frame_norm.append(pd.DataFrame(columns = res_cols, data = np.matrix(score_norm)))
+
+                score_abs_man = score + [np.abs(g.loc[:, val].dropna()).sum() / len(g.loc[:,val].dropna())\
+                                      if len(g.loc[:,val].dropna()) > 0 else None for val in values_names_list]
+
+                res_frame_abs_mean = res_frame_abs_mean.append(pd.DataFrame(columns = res_cols, data = np.matrix(score_abs_man)))
+
+
 
     print('mean error: ')
     print(res_frame_mean)
@@ -290,6 +300,50 @@ def main(errors_path, forecast_path, dwd_path, update_errors_file):
     print(res_frame_bias)
     print('RMS error')
     print(res_frame_norm)
+    print('Mean abs')
+    print(res_frame_abs_mean)
+
+    #plot stuff
+    df_a_mean = res_frame_mean[res_frame_mean['provider']=='openweathermap']
+    df_a_bias = res_frame_bias[res_frame_bias['provider']=='openweathermap']
+
+    df_o_mean = res_frame_mean[res_frame_mean['provider']=='accuweather']
+    df_o_bias = res_frame_bias[res_frame_bias['provider']=='accuweather']
+
+    plt.figure()
+    plt.subplot(1,2,1)
+    plt.errorbar(df_a_mean['offset'].astype('int'), df_a_mean['Precipitation'].astype('float'), yerr =df_a_bias['Precipitation'].astype('float'), fmt='o', capthick=2)
+    plt.xlabel('offset in days')
+    plt.xlim((-0.5,6.5))
+    plt.title('openweathermap' + ': ' +'Precipitation')
+
+    plt.subplot(1,2,2)
+    plt.errorbar(df_o_mean['offset'].astype('int'), df_o_mean['Precipitation'].astype('float'), yerr =df_o_bias['Precipitation'].astype('float'), fmt='o', capthick=2)
+    plt.xlabel('offset in days')
+    plt.xlim((-0.5,6.5))
+    plt.title('accuweather' + ': ' +'Precipitation')
+
+
+    plt.figure()
+    plt.subplot(1,2,1)
+    plt.errorbar(df_o_mean['offset'].astype('int')+0.1, df_o_mean['Max Air Temp'].astype('float'), yerr =df_o_bias['Max Air Temp'].astype('float'), label = 'Max Air Temp', fmt='o', capthick=2)
+    plt.errorbar(df_o_mean['offset'].astype('int'), df_o_mean['Min Air Temp'].astype('float'), yerr =df_o_bias['Min Air Temp'].astype('float'), label = 'Min Air Temp', fmt='o', capthick=2)
+    plt.xlabel('offset in days')
+    plt.title('openweathermap')
+    plt.legend()
+
+    plt.subplot(1,2,2)
+    plt.errorbar(df_a_mean['offset'].astype('int')+0.1, df_a_mean['Max Air Temp'].astype('float'), yerr =df_a_bias['Max Air Temp'].astype('float'), label = 'Max Air Temp', fmt='o', capthick=2)
+    plt.errorbar(df_a_mean['offset'].astype('int'), df_a_mean['Min Air Temp'].astype('float'), yerr =df_a_bias['Min Air Temp'].astype('float'), label = 'Min Air Temp', fmt='o', capthick=2)
+    plt.xlabel('offset in days')
+    plt.title('accuweather')
+    plt.legend()
+
+
+
+    plt.show()
+
+
 
 
 if __name__ == '__main__':
