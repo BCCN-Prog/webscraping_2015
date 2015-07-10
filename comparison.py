@@ -4,10 +4,9 @@ import pandas as pd
 import datetime
 import numpy as np
 import click
-import weather_loading as wl
 import matplotlib.pyplot as plt
 plt.style.use('ggplot')
-import weather_loading as wl
+from weather_loading import load_dataframe
 
 
 
@@ -86,7 +85,7 @@ def get_data_dwd(city, start_date, end_date, dwd_path):
     #curr_wd = os.getcwd()
     #os.chdir(dwd_path)
 
-    dataFrame = wl.load_dataframe(city, start_date.replace('-', ''), end_date.replace('-', ''),True)
+    dataFrame = load_dataframe(city, start_date.replace('-', ''), end_date.replace('-', ''),True)
 
     #os.chdir(curr_wd)
     return dataFrame
@@ -148,8 +147,11 @@ def update_errors(end_date, dwd_path, forecast_path, complete_errorpath, start_d
                         'Max Air Temp', 'Min Air Temp', 'Precipitation']
     errorData = pd.DataFrame(columns = errors_cols)
     for city in citylist:
-        #print('city: ' + city)
-        dwd_data = get_data_dwd(city,start_date, end_date, dwd_path)
+        start = str(start_date)[:10].replace('-', '')
+        end = str(end_date)[:10].replace('-', '')
+        print(start)
+        print(end)
+        dwd_data = load_dataframe(city, start, end, True)
         if not len(dwd_data):
             print("no dwd data was found")
             return
