@@ -7,6 +7,8 @@ import click
 import weather_loading as wl
 import matplotlib.pyplot as plt
 plt.style.use('ggplot')
+import weather_loading as wl
+
 
 
 def load_error_data(city, provider, error_path):
