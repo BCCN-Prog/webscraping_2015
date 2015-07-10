@@ -172,6 +172,7 @@ def pandize_forecasts(pnames, database_filepath='', basepath='', newer_than=0, c
     logging.info("Done with pandizing, saving to disk now!")
     pickle.dump(master_frame, open("master_pandas_file.dump", "wb"))
     master_frame.to_csv("master_pandas_file.csv")
+    print("Pandizing finished successfully, saved to disk and exiting now...")
 
 def pandize_temporary_forecasts(pnames, database_filepath='', basepath='', cities='all'):
     basepath_temp = os.path.join(basepath,'temp')
